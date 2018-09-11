@@ -12,9 +12,8 @@
     <script src="js/imsky-holder-8220898/holder.min.js"></script>
     <title>首页</title>
     <style>
-       
-    </style>
-    
+            
+        </style>
 </head> 
 <body>
     <div class="container-fluid">
@@ -22,8 +21,8 @@
         <div id="slideBox" class="slideBox">
             <img src="img/index/logo.png" class="logo" alt="">
             <ul class="login">
-                <li>登陆</li>
-                <li>注册</li>
+                <li class="sign">登陆</li>
+                <li class="reg">注册</li>
             </ul>
             <div class="mengban">
                 <div class="hd">
@@ -93,7 +92,7 @@
                     <img src="img/index/lun1.png" alt="">
                     <div class="contai-box">
                         <img src="img/index/lun11.png" alt="">
-                        <p>悬赏大厅</p>
+                        <p>任务大厅</p>
                         <span>
                             宝赚网推出了一系列的网赚任务，会员接取任务后在
                             规定时间内完成，待审核人员审核完毕后即可得到赏金
@@ -347,31 +346,14 @@
     <script src="js/jquery-3.3.1.min.js"></script>
     <script src="js/layui/layui.js"></script>
     <script src="js/slick/slick.min.js"></script>
-    <script type="text/javascript">
-        var $331 = $;
-        $331(document).ready(function(){
-          $331('.slick-2').slick({
-                dots: false,
-                infinite: true,
-                slidesToShow: 5,
-                slidesToScroll: 1,
-            });
-            $331('.slick-prev,.slick-next').text('');
-            
-            layui.use('layer', function () {
-                var layer = layui.layer;
-            }); 
-            $('.task .logo,.pic,.answer,.article,.forum,.share').click(function () {
-                layer.msg('hello!')
-            })             
-        });
-      </script>
+    <script src="js/index.js"></script>
     <script src="js/jquery1.42.min.js"></script>
     <script src="js/jquery.SuperSlide.2.1.1.js"></script>
     <script type="text/javascript">
         var $190 = $;
         $190(".slideBox").slide({ mainCell: ".bd ul", autoPlay: false, effect: 'fold' });
     </script>
-    
+    <script src="js/public.js"></script>
+    <img src="img/index/qq.png" alt="">
 </body>
 </html>

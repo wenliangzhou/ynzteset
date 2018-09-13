@@ -16,10 +16,11 @@
             $('.sign').attr('open',true);
             index = layer.open({
                 type: 1,
-                
-                shade: 0,
+                offset: 'auto',
+                resize:false,
+                move: false,
+                shade: 0.8,
                 area:'auto',
-                offset: ['6%', '80%'],
                 title:'会员登录',
                 content: '<form id="login-box"><div class="form-group"><input type="text" class="form-control" name="user" id="user" placeholder="用户名/手机号/邮箱">'+
                 '</div><div class="form-group"><input type="password" name="password" class="form-control" id="password" placeholder="密码"></div><div class="checkbox">'+
@@ -31,11 +32,15 @@
            
             // 验证登陆表单
             if($('#user').val()===''){
-                layer.tips('用户名不能为空 !', '#user');
+                layer.tips('用户名不能为空 !', '#user',{
+                    anim: 6
+                });
                 return false;
             }
             if($('#password').val()===''){
-                layer.tips('密码不能为空 !', '#password');
+                layer.tips('密码不能为空 !', '#password',{
+                    anim: 6
+                });
                 return false;
             }
             console.log($('#login-box').serializeArray());

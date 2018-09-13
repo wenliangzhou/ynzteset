@@ -169,12 +169,16 @@
 
 .slideBox .prev{
     background: url(../img/index/left.png) center center no-repeat;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
 }
 .slideBox .prev:hover{
     background: url(../img/index/left2.png) center center no-repeat;
 }
 .slideBox .next{
     background: url(../img/index/right.png) center center no-repeat;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
 }
 .slideBox .next:hover{
     background: url(../img/index/right2.png) center center no-repeat;
@@ -607,6 +611,7 @@
 .seo-box img{
     width: 100%;
     height: auto;
+    margin-bottom: 3.8rem;
 }
 .seo-box .title{
     display: block;
@@ -638,10 +643,6 @@
     line-height: 2.1rem;
     letter-spacing: 0.3rem;
     margin-bottom: 2.5rem;
-}
-
-html{
-    font-size: 16px;
 }
 body {
     min-width: 1790px;

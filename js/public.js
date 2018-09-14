@@ -4,18 +4,16 @@
         $ = $331;
     }
     $(document).ready(function () {
-        var index; //弹框索引
+        
         layui.use(['layer'], function () {
-            var layer = layui.layer;
+           layer = layui.layer;
         });
         // 登陆弹出事件
         $('.sign').click(function () {
-            if($(this).attr('open')){
-                return false;
-            }
-            $('.sign').attr('open',true);
-            index = layer.open({
+            layer.open({
                 type: 1,
+                skin: 'sign-class',
+                shadeClose:true,
                 offset: 'auto',
                 resize:false,
                 move: false,
@@ -45,12 +43,45 @@
             }
             console.log($('#login-box').serializeArray());
         })
-        //点击关闭窗口
-        $(document).on('click','.layui-layer-close',function () {
-            $('.sign').attr('open',false);
-            layer.close(index);
-        })
         
+        // 右侧导航栏
+        $('.nav-item5').click(function () {
+            layer.open({
+                type: 1,
+                shadeClose:true,
+                offset: 'auto',
+                resize:false,
+                move: false,
+                closeBtn:false,
+                shade: 0.8,
+                skin: 'qiandao-class',
+                title:false,
+                content:$('.signin-box'),
+                end:function (){
+                    $('.signin-box').css('display','none');            
+                }
+            });
+        }); 
         
+        // 渲染签到
+        var mySchedule = new Schedule({
+            el: '#schedule-box',
+            // date: '2018-9-20',
+            clickCb: function (y,m,d) {
+                document.querySelector('#h3Ele').innerHTML = '日期：'+y+'-'+m+'-'+d	
+            },
+            nextMonthCb: function (y,m,d) {
+                document.querySelector('#h3Ele').innerHTML = '日期：'+y+'-'+m+'-'+d	
+            },
+            nextYeayCb: function (y,m,d) {
+                document.querySelector('#h3Ele').innerHTML = '日期：'+y+'-'+m+'-'+d	
+            },
+            prevMonthCb: function (y,m,d) {
+                document.querySelector('#h3Ele').innerHTML = '日期：'+y+'-'+m+'-'+d	
+            },
+            prevYearCb: function (y,m,d) {
+                document.querySelector('#h3Ele').innerHTML = '日期：'+y+'-'+m+'-'+d	
+            }
+        });
     });
 })();

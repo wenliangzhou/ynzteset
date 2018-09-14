@@ -15,6 +15,73 @@ html{
     html{
         font-size: 15px;
     }
+
+    #schedule-box{
+        width: 31.3rem;
+        margin: 0 auto;
+        font-size: 13px;
+    }
+    .schedule-hd{
+        display: flex;
+        justify-content: space-between;
+        padding: 0 15px;
+    }
+    .today{
+        flex: 1;
+        text-align: left;
+        font-size: 1.1rem;
+    }
+    .ul-box{
+        overflow: hidden;
+    }
+    .ul-box > li{
+        font-size: 1rem;
+        letter-spacing: 0.2rem;
+        float: left;
+        width: 14.28%;
+        text-align: center;
+    }
+    .other-month{
+        color: #999999;
+    }
+    .current-month{
+        color: #333333;
+    }
+    .today-style{
+        border-radius: 50%;
+        background: #58d321;
+    }
+    .arrow{
+        cursor: pointer;
+    }
+    .dayStyle{
+        display: inline-block;
+        width: 35px;
+        height: 35px;
+        border-radius: 50%;
+        text-align: center;
+        line-height: 35px;
+        cursor: pointer;
+    }
+    .current-month > .dayStyle:hover{
+        background: #00BDFF;
+        color: #ffffff;
+    }
+    .today-flag{
+        background: #00C2B1;
+        color: #fff;
+    }
+    .boxshaw{
+        box-shadow: 2px 2px 15px 2px #e3e3e3;
+    }
+    .selected-style {
+        background: #00BDFF;
+        color: #ffffff;
+    }
+    #h3Ele{
+        text-align: center;
+        padding: 10px;
+    }
 } 
 body{
     font-family: '微软雅黑';
@@ -123,15 +190,15 @@ ul{
     padding: 1.25rem;
     width: 280px;
 }
-.layui-layer{
+body .sign-class{ 
     border-radius: 0.5rem 0.5rem 0.5rem 0.5rem !important;
 }
-.layui-layer-page{
+.sign-class{
     left: auto !important;
     right: 10.1rem !important;
     top: 7.4rem !important;
 }
-.layui-layer-title{
+.sign-class .layui-layer-title{
     background-color: #ffe405 !important;
     border-radius: 0.5rem 0.5rem 0rem 0rem !important;
     font-size: 16px !important;
@@ -237,7 +304,7 @@ ul{
     right: 0px;
     z-index: 30;
     top: 50%;
-    margin-top: -18rem;
+    margin-top: -9rem;
 }
 .nav-wrapper .nav-item{
     width: 3rem;
@@ -303,24 +370,215 @@ ul{
 .nav-wrapper .nav-item8:hover{
     background:rgba(0, 0, 0, 0.64) url(../img/public/fankui2.png) center center no-repeat;    
 }
-.nav-wrapper .nav-item1::after{
-    content: '客服';
+
+.nav-wrapper .nav-item::after{
+    width: 6.25rem;
+    height: 2.125rem;
+    background: url(../img/public/tips.png) center center no-repeat;
+    background-size: 100% 100%;
+    opacity: 0;
+    top:50%;
+    line-height: 2.125rem;
+    text-align: center;
+    -moz-transition:visibility ease 1s, opacity ease 1s, left ease 1s;
+    -o-transition:visibility ease 1s,opacity ease 1s, left ease 1s;
+    -webkit-transition:visibility ease 1s,opacity ease 1s, left ease 1s;
+    transition:visibility ease 1s,opacity ease 1s, left ease 1s;
     display: block;
     position: absolute;
-    left: -100%;
-    top:50%;
-    margin-top: -1rem;
-    height: 2rem;
-    width: 3rem;
-    line-height: 2rem;
-    background: #e6e6e6;
-    text-align: center;
-    -moz-transition: top ease 300ms;
-    -o-transition: top ease 300ms;
-    -webkit-transition: top ease 300ms;
-    transition: top ease 300ms;
+    left: -12.3rem;
+    margin-top: -1.0625rem;
+    visibility: hidden;
+}
+.nav-wrapper .nav-item3::after{
+    content: '百度贴吧';
+}
+.nav-wrapper .nav-item4::after{
+    content: '新浪微博';
+}
+.nav-wrapper .nav-item5::after{
+    content: '我要签到';
+}
+.nav-wrapper .nav-item6::after{
+    content: '幸运转盘';
+}
+.nav-wrapper .nav-item7::after{
+    content: '活动专区';
+}
+.nav-wrapper .nav-item8::after{
+    content: '意见反馈';
+}
+.nav-wrapper .nav-item3:hover::after,.nav-wrapper .nav-item4:hover::after,.nav-wrapper .nav-item5:hover::after,
+.nav-wrapper .nav-item6:hover::after,.nav-wrapper .nav-item7:hover::after,.nav-wrapper .nav-item8:hover::after{
+    left: -6.3rem;
+    opacity:1;
+    visibility: visible;
+    cursor: pointer;
 }
 
-.nav-wrapper .nav-item1:hover::after{
-    top:0px;
+/* 签到css */
+.qiandao-class,.qiandao-class .layui-layer-content{
+    background:transparent !important;
+    width: 31.3rem !important;
+    height: 42.7rem !important;
+    overflow: visible !important;
+}
+.qiandao-class{
+    margin-top: 4rem !important;
+    color: #000000;
+}
+#schedule-box .cat{
+    width: 9.4rem;
+	height: 11.3rem;
+    position: absolute;
+    top: 0px;
+    left: 50%;
+    margin-left: -4.7rem;
+    margin-top: -8rem;
+}
+#schedule-box{
+    position: relative;
+    background: #ffffff;
+    margin: 0 auto;
+    border-radius: 3.1rem;
+    border-radius: 3.1rem;
+    width: 100%;
+    height: 100%;
+}
+#schedule-box::before{
+    content: '';
+    display: block;
+    width: 100%;
+    height: 3.1rem;
+    background: #ffe405;
+    border-top-right-radius: 3.1rem;
+    border-top-left-radius: 3.1rem;
+}
+.schedule-hd{
+    display: flex;
+    justify-content: space-between;
+}
+.today{
+    flex: 1;
+    text-align: left;
+    font-size: 1.1rem;
+    letter-spacing: 0.3rem;
+    height: 3.1rem;
+    line-height: 3.1rem;
+    border-bottom: 1px solid #e5e5e5;
+    padding: 0px 1.3rem;
+}
+.ul-box{
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    padding: 0px 0.4rem;
+}
+.week-ul{
+    height: 2.875rem;
+    width: 100%;
+    font-size: 1rem;
+    line-height: 2.875rem;
+    border-bottom: 1px solid #e5e5e5;
+}
+.week-ul > li{
+    letter-spacing: 0.3rem;
+    text-align: center;
+    width: 14.28%;
+}
+.schedule-bd > li{
+    font-size: 1rem;
+    letter-spacing: 0.1rem;
+    text-align: center;
+    width: 14.28%;
+    border-bottom: 1px solid #e5e5e5;
+    height: 2.25rem;
+    line-height: 2.25rem;
+}
+.other-month{
+    color: #999999;
+}
+.current-month{
+    color: #333333;
+}
+.today-style{
+    border-radius: 50%;
+    background: #58d321;
+}
+.arrow{
+    cursor: pointer;
+}
+.dayStyle{
+    display: inline-block;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 35px;
+    cursor: pointer;
+}
+.current-month > .dayStyle:hover{
+    background: #00BDFF;
+    color: #ffffff;
+}
+.today-flag{
+    background: #00C2B1;
+    color: #fff;
+}
+
+.selected-style {
+    background: #00BDFF;
+    color: #ffffff;
+}
+
+#schedule-box .btn-box{
+    height: 5.7rem;
+    display: flex;
+    justify-content: center;
+}
+#schedule-box .btn-box button{
+    width: 5rem;
+	height: 1.9rem;
+    background-color: #ffe405;
+    border-radius: 0.3rem;
+    padding: 0px;
+    line-height: 1.9rem;
+    border: none;
+    font-size: 1.1rem;
+    margin: 1.3rem;
+}
+#schedule-box .rule{
+    margin: 0px 1.3rem;
+    position: relative;
+    margin-bottom: 1.3rem;
+}
+#schedule-box .rule span{
+    font-size: 1.1rem;
+    display: inline-block;
+    padding-bottom: 0.6rem;
+    position: relative;
+}
+#schedule-box .rule::after{
+    border-bottom: 1px solid #e5e5e5;
+    position: absolute;
+    display: block;
+    content: '';
+    height: 1px;
+    bottom: 0px;
+    width: 100%;
+}
+#schedule-box .rule span::after{
+    display: block;
+    position: absolute;
+    content: '';
+    height: 1px;
+    bottom: 0px;
+    z-index: 5;
+    width: 100%;
+    background-color: #ffe405;
+}
+#schedule-box .guize{
+    margin: 0px 1.3rem;
+    font-size: 1rem;
+    line-height: 200%;
 }

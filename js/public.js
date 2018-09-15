@@ -97,11 +97,12 @@
         $(document).on('click','.qiandao-class .qiandao-btn,.qiandao-class .buqian-btn',function () {
             var btn = $(this)[0].className,
                 date = $('.schedule-bd .active').attr('title');
+                console.log(num);
                 if(btn =="qiandao-btn" && num !== numtoday){
                     layer.msg('只能签到当天');
                     return false;
-                }else if(btn =="buqian-btn" && num == numtoday){
-                    layer.msg('不能签到当天');
+                }else if(btn =="buqian-btn" && num == numtoday && num !== 'undefined'){
+                    layer.msg('不能补签当天');
                     return false;
                 }
             // 获取数据

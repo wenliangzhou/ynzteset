@@ -45,17 +45,18 @@
         })
         
         // 右侧导航栏
+        var qianindex;
         $('.nav-item5').click(function () {
             if($('.signin-box').css('display')=='block'){
                 return false;
             }
-            layer.open({
+            qianindex = layer.open({
                 type: 1,
                 shadeClose:true,
                 resize:false,
                 move: false,
                 closeBtn:false,
-                shade: 0.1,
+                shade: 0.8,
                 skin: 'qiandao-class',
                 title:false,
                 content:$('.signin-box'),
@@ -69,21 +70,48 @@
         var mySchedule = new Schedule({
             el: '#schedule-box',
             // date: '2018-9-20',
-            clickCb: function (y,m,d) {
-                document.querySelector('#h3Ele').innerHTML = '日期：'+y+'-'+m+'-'+d	
-            },
-            nextMonthCb: function (y,m,d) {
-                document.querySelector('#h3Ele').innerHTML = '日期：'+y+'-'+m+'-'+d	
-            },
-            nextYeayCb: function (y,m,d) {
-                document.querySelector('#h3Ele').innerHTML = '日期：'+y+'-'+m+'-'+d	
-            },
-            prevMonthCb: function (y,m,d) {
-                document.querySelector('#h3Ele').innerHTML = '日期：'+y+'-'+m+'-'+d	
-            },
-            prevYearCb: function (y,m,d) {
-                document.querySelector('#h3Ele').innerHTML = '日期：'+y+'-'+m+'-'+d	
+            
+        });
+        // 关闭
+        $(document).on('click','.qiandao-class .close-btn',function () {
+            layer.close(qianindex);
+        });
+        // 监听选择
+        var title,num,numtoday;
+        $(document).on('click','.qiandao-class .schedule-bd li span',function (e) {
+            if(e.target.className.indexOf('currentDate') > -1 && e.target.className.indexOf('qiandao') == -1){
+                    title = $(this).attr('title'),
+                    num = parseInt($(this).html()),
+                    numtoday = $('.schedule-bd .today-flag').html();
+                    
+                if(title){
+                    $('.today').html("日期 : " + title);
+                }
+                if(num <= numtoday){
+                    $('.schedule-bd li span').removeClass('active');
+                    $(this).addClass('active');
+                }
             }
+        });
+        // 取值 且等服务器 返回值添加样式
+        $(document).on('click','.qiandao-class .qiandao-btn,.qiandao-class .buqian-btn',function () {
+            var btn = $(this)[0].className,
+                date = $('.schedule-bd .active').attr('title');
+                if(btn =="qiandao-btn" && num !== numtoday){
+                    layer.msg('只能签到当天');
+                    return false;
+                }else if(btn =="buqian-btn" && num == numtoday){
+                    layer.msg('不能签到当天');
+                    return false;
+                }
+            // 获取数据
+            console.log(date);
+            if(!date){
+                layer.msg('请选择签到日期');
+            }
+            // 添加签到样式，标记
+            $('.schedule-bd .active').addClass('qiandao');
+            $('.schedule-bd li span').removeClass('active');
         });
     });
 })();

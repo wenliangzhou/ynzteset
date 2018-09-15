@@ -16,7 +16,7 @@
 		symbol = symbol || '-';
 		m = (m.toString())[1] ? m : '0'+m;
 		d = (d.toString())[1] ? d : '0'+d;
-		return '日期 : '+ y+symbol+m+symbol+d
+		return  y+symbol+m+symbol+d+'';
 	}
 
 	function Schedule (opt) {
@@ -50,12 +50,7 @@
 					default:
 						break;
 				};
-				if(e.target.className.indexOf('currentDate') > -1){
-					opt.clickCb && opt.clickCb(year, month+1, e.target.innerHTML);
-					selectedDate = e.target.title;
-					day = e.target.innerHTML;
-					render();
-				}
+				
 			},false)
 		}
 		var init = function () {
@@ -82,7 +77,7 @@
 			var scheduleBd = '<ul class="schedule-bd ul-box" ></ul>'; 
 			var rule = '<p class="btn-box"><button class="qiandao-btn">签到</button><button class="buqian-btn">补签</button></p><p class="rule"><span>签到规则<span></p>'+
 			'<p class="guize">补签使用30000赏金进行</p><p class="guize">周连续签到，奖励金额在周一重新计算</p><p class="guize">完整签到七日（包括补签）后可额外得50000赏金</p>'+
-			'<img class="cat" src="img/public/cat.png" alt="">';
+			'<img class="cat" src="img/public/cat.png" alt=""><img class="close-btn" src="img/public/close.png" alt="">';
 			el.innerHTML = scheduleHd + scheduleWeek  + scheduleBd + rule;
 			bindEvent();
 			render();
@@ -100,14 +95,14 @@
 					var nowDate = formartDate(year,month+1,(i+1-startWeek),'-');
 					var addClass = '';
 					selectedDate == nowDate && (addClass = 'selected-style');
-					formartDate(currentYear,currentMonth+1,currentDay,'-') == nowDate && (addClass = 'today-flag');
+					formartDate(currentYear,currentMonth+1,currentDay,'-') == nowDate && (addClass = 'today-flag active');
 					eleTemp.push('<li class="current-month" ><span title='+nowDate+' class="currentDate dayStyle '+addClass+'">'+(i+1-startWeek)+'</span></li>')
 				}else{
 					eleTemp.push('<li class="other-month"><span class="dayStyle">'+(i+1-(startWeek+fullDay))+'</span></li>')
 				}
 			}
 			el.querySelector('.schedule-bd').innerHTML = eleTemp.join('');
-			el.querySelector('.today').innerHTML = formartDate(year,month+1,day,'-');
+			el.querySelector('.today').innerHTML = "日期 : "+ formartDate(year,month+1,day,'-');
 		};
 		this.nextMonthFun = function () {
 			if(month+1 > 11){

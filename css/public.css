@@ -347,7 +347,7 @@ body .sign-class{
 }
 .qiandao-class,.qiandao-class .layui-layer-content{
     background:transparent !important;
-    width: 35rem !important;
+    width: 37rem !important;
 }
 .qiandao-class .layui-layer-content{
     padding: 10px;
@@ -364,6 +364,15 @@ body .sign-class{
     left: 50%;
     margin-left: -4.7rem;
     margin-top: -8rem;
+}
+#schedule-box .close-btn{
+    width: 2.6rem;
+	height: 2.6rem;
+    position: absolute;
+    top: 0px;
+    left: 100%;
+    /* margin-left: -8.7rem; */
+    margin-top: -6rem;
 }
 #schedule-box{
     position: relative;
@@ -527,10 +536,10 @@ body .sign-class{
     html{
         font-size: 15px;
     }
-
     /* 签到 */
     .qiandao-class,.qiandao-class .layui-layer-content{
         background:transparent !important;
+        width: 34rem !important;
     }
     .qiandao-class{
         color: #000000;
@@ -689,5 +698,12 @@ body .sign-class{
         margin: 0px 1.3rem;
         font-size: 0.9rem;
         line-height: 200%;
+    }
+
+    #schedule-box .active{
+        border: 2px solid yellow;
+    }
+    #schedule-box .qiandao{
+        background:#ffe405;
     }
 } 

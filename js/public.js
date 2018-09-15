@@ -46,14 +46,16 @@
         
         // 右侧导航栏
         $('.nav-item5').click(function () {
+            if($('.signin-box').css('display')=='block'){
+                return false;
+            }
             layer.open({
                 type: 1,
                 shadeClose:true,
-                offset: 'auto',
                 resize:false,
                 move: false,
                 closeBtn:false,
-                shade: 0.8,
+                shade: 0.1,
                 skin: 'qiandao-class',
                 title:false,
                 content:$('.signin-box'),

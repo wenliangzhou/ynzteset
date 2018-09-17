@@ -4,9 +4,7 @@ body{
     color: #000000;
     background: #f4f4f4;
 }
-.center{
-    margin: 0 auto;
-}
+
 .head{
     height: 75px;
     width: 894px;
@@ -18,6 +16,7 @@ body{
     position: absolute;
     right: 20px;
     bottom: 5px;
+    color: #333;
 }
 .main{
     width: 894px;

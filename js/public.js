@@ -23,7 +23,7 @@
                 content: '<form id="login-box"><div class="form-group"><input type="text" class="form-control" name="user" id="user" placeholder="用户名/手机号/邮箱">'+
                 '</div><div class="form-group"><input type="password" name="password" class="form-control" id="password" placeholder="密码"></div><div class="checkbox">'+
                 '<input id="remember" name="remember" type="checkbox" value="选择"><label for="remember"> 记住用户密码</label><a>密码找回</a></div><button class = "center-block" type="button" id="login-btn" class="btn btn-default">登录</button>'+
-                '<p>还没有账号? <a>立即注册</a></p><p>其他账号登录 : <span class="qq"></span><span class="wei"></span></p></form>'
+                '<p>还没有账号? <a href="reg.html" target="blank">立即注册</a></p><p>其他账号登录 : <span class="qq"></span><span class="wei"></span></p></form>'
             });
         });  
         $(document).on('click','#login-btn',function () {

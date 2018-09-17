@@ -2,6 +2,7 @@
 body{
     min-width: 1200px;
     color: #000000;
+    background: #f4f4f4;
 }
 .center{
     margin: 0 auto;
@@ -21,6 +22,8 @@ body{
 .main{
     width: 894px;
     margin-bottom: 30px;
+    background: #ffffff;
+    border-radius: 8px;
 }
 .main::after{
     display: block;
@@ -36,6 +39,8 @@ body{
     line-height: 50px;
     font-size: 24px;
     margin-bottom: 43px;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
 }
 .itemleft{
     float: left;
@@ -137,4 +142,8 @@ body{
 .sign-class{
     right: 50% !important;
     margin-right: -140px !important;
+}
+.footer{
+    background: white;
+    color: #000;
 }

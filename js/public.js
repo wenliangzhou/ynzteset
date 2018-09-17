@@ -6,7 +6,7 @@
     $(document).ready(function () {
         
         layui.use(['layer'], function () {
-           layer = layui.layer;
+         var  layer = layui.layer;
         });
         // 登陆弹出事件
         $('.sign').click(function () {

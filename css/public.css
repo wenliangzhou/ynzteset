@@ -342,6 +342,12 @@ body .sign-class{
 }
 
 /* 签到css */
+#schedule-box .active{
+    border: 2px solid yellow;
+}
+#schedule-box .qiandao{
+    background:#ffe405;
+}
 #schedule-box{
     display: none;
 }
@@ -698,12 +704,5 @@ body .sign-class{
         margin: 0px 1.3rem;
         font-size: 0.9rem;
         line-height: 200%;
-    }
-
-    #schedule-box .active{
-        border: 2px solid yellow;
-    }
-    #schedule-box .qiandao{
-        background:#ffe405;
     }
 } 

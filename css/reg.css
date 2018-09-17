@@ -1,46 +1,140 @@
-html{
-    font-size: 14px;
+
+body{
+    min-width: 1200px;
+    color: #000000;
 }
-.head .logo{
-    width: 9.7rem;
-    height: 4.6rem;
+.center{
+    margin: 0 auto;
 }
 .head{
-    width: 46.5%;
-    margin: 0 auto;
+    height: 75px;
+    width: 894px;
+    margin-top: 89px;
+    margin-bottom: 40px;
+    position: relative;
+}
+.head span{
+    position: absolute;
+    right: 20px;
+    bottom: 5px;
 }
 .main{
-    color: #000000;
-    width: 46.5%;
-	height: 29.9rem;
-	background-color: #ffffff;
-    border-radius: 8px;
-    margin: 0 auto;
-
+    width: 894px;
+    margin-bottom: 30px;
 }
-.main .left{
-    width: 55%;
-    height: 100%;
-}
-.main .right{
-    width: 45%;
-    height: 100%;
-}
-.main .left,.main .right{
-    padding-top: 40px;
-    padding-bottom: 40px;
+.main::after{
+    display: block;
+    content: '';
+    clear: both;
 }
 .main::before{
     display: block;
-    content: '欢迎登录';
-    width: 100%;
-    height: 3.1rem;
-    line-height: 3.1rem;
-    font-size: 1.5rem;
-    text-align: center;
+    height: 50px;
     background-color: #ffe405;
-    border-top-right-radius: 8px;
-    border-top-left-radius: 8px;
+    content: '欢迎注册';
+    text-align: center;
+    line-height: 50px;
+    font-size: 24px;
+    margin-bottom: 43px;
 }
-
-body{min-width: 1200px;}
+.itemleft{
+    float: left;
+    width: 56%;
+}
+.itemright{
+    float: left;
+    width: 44%;
+}
+.form-control{
+    font-size: 12px;
+}
+.form-horizontal{
+    border-right: dashed 1px #cccccc;
+}
+.form-horizontal .control-label{
+    font-weight: normal;
+    font-size: 14px;
+}
+.form-horizontal .form-group{
+    margin-bottom: 19px;
+}
+.getma{
+    float: right;
+    font-size: 12px;
+    height: 34px;
+    background-color: #f4f4f4;
+    border: solid 1px #e5e5e5;
+}
+.form-horizontal input{
+    background-color: #f4f4f4;
+}
+.checkbox label{
+    font-size: 12px;
+}
+.checkbox label a{
+    color: #d36f16;
+}
+.reg{
+    background-color: #ffe405;
+    font-size: 14px;
+}
+.reg:hover{
+    background-color: #ffe405;
+}
+.lian{
+    font-size: 12px;
+    color: #333333;
+}
+.lianxi{
+    float: left;
+}
+.lian::after{
+    display: block;
+    content: '';
+    clear: both;
+}
+.lian div:nth-child(2){
+    float: right;
+}
+.lian div:nth-child(2) span{
+    color: #d36f16;
+}
+.itemright .biaoti{
+    font-size: 16px;
+    width: 300px;
+	height: 40px;
+	background-color: #e5e5e5;
+    border: solid 1px #cccccc;
+    line-height: 40px;
+    text-align: center;
+}
+.itemright ul{
+    width: 300px;
+    height: 290px;
+    overflow: hidden;
+    font-size: 12px;
+    background-color: #f4f4f4;
+	border: solid 1px #cccccc;
+}
+.itemright ul div{
+    width: 300px;
+    height: 60px;
+    padding: 10px 0;
+}
+.itemright div img{
+    border-radius: 50%;
+    height: 100%;
+    margin-left: 20px;
+}
+.itemright ul div span{
+    line-height: 40px;
+    text-align: center;
+    margin-left: 15px;
+}
+.itemright ul div span:nth-child(3){
+    color: #d36f16;
+}
+.sign-class{
+    right: 50% !important;
+    margin-right: -140px !important;
+}

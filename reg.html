@@ -6,55 +6,92 @@
     <link rel="stylesheet" href="js/bootstrap-3.3.7-dist/css/bootstrap.min.css">    
     <link rel="stylesheet" href="css/public.css">
     <link rel="stylesheet" href="css/reg.css">
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/layui/layui.js"></script>
+    <script src="js/public.js"></script>
+    <script src="js/slick/slick.min.js"></script>
 </head>
 <body>
-    <div class="head">
+    <div class="head center">
         <img class="logo" src="img/public/logo.png" alt=""> <span>返回首页 ></span>
     </div>
-    <div class="main">
-        <div class="item left">
+    <div class="main center">
+        <div class="itemleft">
             <form class="form-horizontal">
                 <div class="form-group">
-                    <label for="inputEmail3" class="col-sm-2 control-label">手机号码:</label>
-                    <div class="col-sm-10">
+                    <label for="inputEmail3" class="col-sm-3 control-label">手机号码:</label>
+                    <div class="col-sm-7">
                         <input type="text" class="form-control" id="inputEmail3" placeholder="请输入手机号码/邮箱  ">
                     </div>
                 </div>
                 <div class="form-group">
-                    <label for="inputPassword3" class="col-sm-2 control-label">登录密码:</label>
-                    <div class="col-sm-10">
+                    <label for="inputPassword3" class="col-sm-3 control-label">登录密码:</label>
+                    <div class="col-sm-7">
                         <input type="password" class="form-control" id="inputPassword3" placeholder="由字母数组组成、长度6-16个字符">
                     </div>
                 </div>
                 <div class="form-group">
-                    <label for="inputPassword3" class="col-sm-2 control-label">确认密码:</label>
-                    <div class="col-sm-10">
+                    <label for="inputPassword3" class="col-sm-3 control-label">确认密码:</label>
+                    <div class="col-sm-7">
                         <input type="password" class="form-control" id="inputPassword3" placeholder="请确认密码">
                     </div>
                 </div>
                 <div class="form-group">
-                    <label for="inputPassword3" class="col-sm-2 control-label">短信验证码:</label>
-                    <div class="col-sm-10">
+                    <label for="inputPassword3" class="col-sm-3 control-label">短信验证码:</label>
+                    <div class="col-sm-7 form-inline">
                         <input type="text" class="form-control" id="inputPassword3" placeholder="请输入验证码">
+                        <button type="button" class="btn getma">获取验证码</button>
                     </div>
                 </div>
                 <div class="form-group">
-                    <div class="col-sm-offset-2 col-sm-10">
+                    <div class="col-sm-offset-3 col-sm-8">
                         <div class="checkbox">
                             <label>
-                                <input type="checkbox"> Remember me
+                                <input type="checkbox"> 我已经阅读并同意《<a>找财猫网络服务使用协议</a>》
                             </label>
                         </div>
                     </div>
                 </div>
                 <div class="form-group">
-                    <div class="col-sm-offset-2 col-sm-10">
-                        <button type="submit" class="btn btn-default">Sign in</button>
+                    <div class="col-sm-offset-3 col-sm-7">
+                        <button type="button" id="submit" class="btn btn-default btn-block reg">立即注册</button>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-sm-offset-3 col-sm-7 lian">
+                        <div class="lianxi">遇到问题联系客服哦</div><div>已有账号，<span class="denglu sign">登录</span></div>
                     </div>
                 </div>
             </form>
         </div>
-        <div class="item right"></div>
+        <div class="itemright">
+            <div class="center biaoti">最新消息</div>
+            <ul class="center vertical-center-4">
+                
+                <div>
+                    <img src="img/index/touxiang.png" alt=""><span>爱吃的兔子</span><span>注册了宝赚网会员</span>
+                </div>
+                <div>
+                    <img src="img/index/touxiang2.png" alt=""><span>爱吃的兔子</span><span>注册了宝赚网会员</span>
+                </div>
+                <div>
+                    <img src="img/index/touxiang3.png" alt=""><span>爱吃的兔子</span><span>注册了宝赚网会员</span>
+                </div>
+                <div>
+                    <img src="img/index/touxiang4.png" alt=""><span>爱吃的兔子</span><span>注册了宝赚网会员</span>
+                </div>
+                <div>
+                    <img src="img/index/touxiang5.png" alt=""><span>爱吃的兔子</span><span>注册了宝赚网会员</span>
+                </div>
+                <div>
+                    <img src="img/index/touxiang5.png" alt=""><span>爱吃的兔子</span><span>注册了宝赚网会员</span>
+                </div>
+                <div>
+                    <img src="img/index/touxiang5.png" alt=""><span>爱吃的兔子</span><span>注册了宝赚网会员</span>
+                </div>
+                
+            </ul>
+        </div>
     </div>
     <!-- footer -->
     <div class="footer">
@@ -68,6 +105,20 @@
             <img src="img/index/yejiao.png" alt="">
         </div>
     </div>
-    
+    <script>
+        $(document).ready(function () {
+            $(".vertical-center-4").slick({
+                dots: true,
+                vertical: true,
+                centerMode: true,
+                slidesToShow: 5,
+                slidesToScroll: 1,
+                autoplay:true,
+                prevArrow:'',
+                nextArrow:'',
+                autoplaySpeed: 1000
+            });
+        })
+    </script>
 </body>
 </html>

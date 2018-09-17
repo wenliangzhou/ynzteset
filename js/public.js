@@ -67,11 +67,13 @@
         }); 
         
         // 渲染签到
-        var mySchedule = new Schedule({
-            el: '#schedule-box',
-            // date: '2018-9-20',
-            
-        });
+        if($('#schedule-box')[0]){
+            var mySchedule = new Schedule({
+                el: '#schedule-box',
+                // date: '2018-9-20',
+            });
+        }
+        
         // 关闭
         $(document).on('click','.qiandao-class .close-btn',function () {
             layer.close(qianindex);

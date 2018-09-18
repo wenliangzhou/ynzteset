@@ -8,6 +8,30 @@
         layui.use(['layer'], function () {
          var  layer = layui.layer;
         });
+        // 弹出私人导航栏
+        $('.private-btn').click(function () {
+            var key = $('.private-btn').attr('key');
+            if (key === 'false') {
+                $('.private-btn').attr('key',true);
+                index = layer.open({
+                    type: 1,
+                    skin: 'private-class',
+                    shadeClose: true,
+                    closeBtn: false,
+                    offset: 'rt',
+                    resize: false,
+                    move: false,
+                    shade: 0,
+                    area: 'auto',
+                    title: false,
+                    content: '<div class="private-menu"><div class=""><img src="img/public/touxiang.png" alt=""><div><span>爱笑的兔子</span><span>ID : 153263</span></div></div>' +
+                        '<ul><li><a href="" target="blank">个人中心</a></li><li>赏金余额 : <span>10M</span></li><li>红包余额 : 200.5元</li><li><a href="" target="blank">加入我们</a></li><li><a href="" target="blank">私信</a></li><li class="tuichu">退出</li></ul></div>'
+                });
+            }else{
+                $('.private-btn').attr('key',false);
+                layer.close(index);
+            }
+        })
         // 登陆弹出事件
         $('.sign').click(function () {
             layer.open({

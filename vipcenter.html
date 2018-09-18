@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>会员中心</title>
-    <link rel="stylesheet" href="js/bootstrap-3.3.7-dist/css/bootstrap.min.css">    
+    <link rel="stylesheet" href="js/bootstrap-3.3.7-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="js/layui/css/layui.css">    
     <link rel="stylesheet" href="css/public.css">
     <link rel="stylesheet" href="css/vipcenter.css">
     <script src="js/jquery-3.3.1.min.js"></script>
@@ -16,39 +17,39 @@
         <li class="sign">登陆</li>
         <li><a class="reg" href="reg.html" target="blank">注册</a></li>
     </ul>
-    <img class="private-menu" src="img/public/menu.png" alt="">
-    <div class="nav-private">
-        <div class="head">
-            <img src="img/public/touxiang.png" alt="">
-            <div>
-                <span>爱笑的兔子</span>
-                <span>ID:21023232</span>
+    <img class="private-btn" key = "false" src="img/public/menu.png" alt="">
+    <nav class="nav-top">
+        <div class="nav-box center">
+            <img src="img/index/logo.png" alt="">
+            <ul class="nav-ul center">
+                <li>首页</li>
+                <li>任务大厅</li>
+                <li>悬赏大厅</li>
+                <li>定制中心</li>
+                <li>游戏试玩</li>
+                <li class="active">会员中心</li>
+                <li>兑换专区</li>
+                <li>新人专区</li>
+            </ul>
+        </div>
+    </nav>
+    <div class="banner">
+        <div class="mengban">
+            <img class="center" src="img/public/touxiang.png" alt="">
+            <p>会员_2103 （ID：21033468）</p>
+            <p>赏金余额：<span class="jinbi">10，004</span> &nbsp;&nbsp;红包余额：200.5元</p>
+            <div class="bar-box">
+                VIP进度 ：
+                <div class="layui-progress">
+                    <div class="layui-progress-bar" lay-percent="50%"></div>
+                </div>
             </div>
         </div>
-        <ul>
-            <li>个人中心</li>
-            <li>赏金余额:10M</li>
-            <li>红包余额:200.5元</li>
-            <li>加入我们</li>
-            <li>私信</li>
-            <li>退出</li>
-        </ul>
     </div>
-    <div class="nav-top">
-        <img src="img/public/logo.png" alt="">
-        <ul class="nav-box">
-            <li>首页</li>
-            <li>任务大厅</li>
-            <li>悬赏大厅</li>
-            <li>定制中心</li>
-            <li>游戏试玩</li>
-            <li class="active">会员中心</li>
-            <li>兑换专区</li>
-            <li>新人专区</li>
-        </ul>
-    </div>
-    <div class="bannerbox">
-        <img src="img/center/banner.png" alt="">
-    </div>
+    <script>
+        layui.use('element', function () {
+                var element = layui.element;
+            });
+    </script>
 </body>
 </html>

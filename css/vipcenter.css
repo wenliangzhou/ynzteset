@@ -1,3 +1,69 @@
 body{
     min-width: 1200px;
+    position: relative;
+}
+.banner{
+    overflow: hidden;
+    width: 100%;
+    height: 450px;
+    background: url(../img/center/banner.png) center center no-repeat;
+}
+.banner img{
+    width: 100%;
+    display: block;
+}
+.banner .mengban{
+    height: 450px;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.26);
+    overflow: hidden;
+}
+.nav-top{
+    background: transparent;
+}
+.mengban img{
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    display: block;
+    margin-top: 177px;
+}
+.mengban p:nth-child(2){
+    margin-top: 31px;
+}
+.mengban p{
+    text-align: center;
+    font-size: 14px;
+    color: #ffffff;
+    position: relative;
+    margin-bottom: 11px;
+}
+.mengban p span{
+    padding-right: 20px;
+}
+.mengban p .jinbi::after{
+    display: inline-block;
+    content: url(../img/center/jinbi.png);
+    position: absolute;
+    margin-left: 2px;
+    top: 2px;
+}
+.banner .layui-progress{
+    vertical-align: middle;
+}
+.banner .layui-progress-bar{
+    background-color: #ffe405;
+}
+.banner .layui-progress-bar,.layui-progress{
+    height: 14px;
+    width: 183px;
+}
+.banner .bar-box{
+    text-align: center;
+    color: #ffffff;
+    font-size: 14px;
+    vertical-align: middle;
+}
+.banner .bar-box .layui-progress{
+    display: inline-block;
 }

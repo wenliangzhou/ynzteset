@@ -75,7 +75,7 @@ ul{
 }
 .private-menu{
     width: 280px;
-    height: 406px;
+    height: 430px;
     border-radius: 12px 12px 0px 0px;
     background: rgba(0, 0, 0, 0.43);
     font-size: 14px;
@@ -109,9 +109,19 @@ ul{
     margin: 26px 53px;
     height: 20px;
     line-height: 20px;
+    position: relative;
 }
-.private-menu li:hover,.private-menu li a:hover{
+.private-menu li span::after{
+    display: inline-block;
+    content: url(../img/public/jinbi.png);
+    position: absolute;
+    margin-left: 2px;
+    top: 2px;
+}
+.private-menu li:hover,.private-menu li a:hover,
+.private-menu li a:focus{
     color: #d3bd0b;
+    text-decoration: none;
 }
 .private-menu li:nth-child(1)::before{
     content: url(../img/public/p1.png);
@@ -220,7 +230,13 @@ ul{
     float: left;
     margin-right: 100px;
 }
+.nav-top ul a{
+    color: #ffffff;
+}
 
+.nav-top ul a:hover,.nav-top ul a:focus{
+    text-decoration: none;
+}
 .nav-top ul{
     display: block;
     color: #ffffff;
@@ -238,6 +254,7 @@ ul{
     padding: 0px 10px;
     margin: 0px 10px;
 }
+.nav-top ul li:hover a,.nav-top ul li.active a,
 .nav-top ul li:hover,.nav-top ul li.active{
     background-color: #ffe405;
     color: #000000;

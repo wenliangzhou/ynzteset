@@ -9,10 +9,12 @@
     <link rel="stylesheet" href="css/public.css">
     <link rel="stylesheet" href="css/vipcenter.css">
     <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/YMDClass.js"></script>
     <script src="js/layui/layui.js"></script>
     <script src="js/public.js"></script>
 </head>
 <body>
+    <!-- 头部导航栏 -->
     <ul class="login">
         <li class="sign">登陆</li>
         <li><a class="reg" href="reg.html" target="blank">注册</a></li>
@@ -22,17 +24,18 @@
         <div class="nav-box center">
             <img src="img/index/logo.png" alt="">
             <ul class="nav-ul center">
-                <li>首页</li>
-                <li>任务大厅</li>
-                <li>悬赏大厅</li>
-                <li>定制中心</li>
-                <li>游戏试玩</li>
-                <li class="active">会员中心</li>
-                <li>兑换专区</li>
-                <li>新人专区</li>
+                <li><a href="javascript:void(0);" target="blank">首页</a></li>
+                <li><a href="javascript:void(0);" target="blank">任务大厅</a></li>
+                <li><a href="javascript:void(0);" target="blank">悬赏大厅</a></li>
+                <li><a href="javascript:void(0);" target="blank">定制中心</a></li>
+                <li><a href="javascript:void(0);" target="blank">游戏试玩</a></li>
+                <li class="active"><a href="javascript:void(0);" target="blank">会员中心</a></li>
+                <li><a href="javascript:void(0);" target="blank">兑换专区</a></li>
+                <li><a href="javascript:void(0);" target="blank">新人专区</a></li>
             </ul>
         </div>
     </nav>
+    <!-- banner部分 -->
     <div class="banner">
         <div class="mengban">
             <img class="center" src="img/public/touxiang.png" alt="">
@@ -46,10 +49,131 @@
             </div>
         </div>
     </div>
+    <!-- 主体部分 -->
+    <div class="main center">
+            <div class="layui-tab">
+                <div class="title">个人中心</div>
+                <ul class="nav-right layui-tab-title">
+                    <li class="layui-this">详细资料</li>
+                    <li>安全中心</li>
+                    <li>财富明细</li>
+                    <li>任务详情</li>
+                    <li>VIP详情</li>
+                    <li>申请提现</li>
+                    <li>提现明细</li>
+                    <li>提现记录</li>
+                    <li>兑换记录</li>
+                    <li>我的好友</li>
+                </ul>
+                <div class="layui-tab-content mainbox">
+                    <div class="layui-tab-item layui-show">
+                        <div class="ziliao">
+                            <span>
+                                详细资料
+                            </span>
+                        </div>
+                        <!-- form表单 -->
+                        <form class="form-horizontal form-ziliao">
+                            <div class="form-group">
+                                <label  class="col-sm-2 control-label">头像 ：</label>
+                                <div class="col-sm-10">
+                                        <div class="qcontainer">
+                                            <div class="film">
+                                                <div class="face front">
+                                                      
+                                                            <img src="img/center/touxiang.png">
+                                                        
+                                                           
+                                                </div>
+                                                
+                                                <div class="face back">
+                                                        <label for="kk">
+                                                                <img src="img/center/touxiang.png">
+                                                            </label>    
+                                                                <input type="file" id="kk">
+                                                    <div class="backtext">
+                                                        点击上传图片
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="nichen" class="col-sm-2 control-label">昵称 ：</label>
+                                <div class="col-sm-10">
+                                    <input type="text" class="form-control" id="nichen" placeholder="">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="xingming" class="col-sm-2 control-label">姓名 ：</label>
+                                <div class="col-sm-10">
+                                    <input type="text" class="form-control" id="xingming" placeholder="">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                    <label for="xingbie" class="col-sm-2 control-label">性别 ：</label>   
+                                <div class=" col-sm-10">
+                                    <div class="checkbox">
+                                        <label class="radio-inline">
+                                            <input type="radio" name="xingbie" id="inlineRadio1" value="option1"> 男
+                                        </label>
+                                        <label class="radio-inline">
+                                            <input type="radio" name="xingbie" id="inlineRadio2" value="option2"> 女
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                    <label for="shengri" class="col-sm-2 control-label">生日 ：</label>
+                                    <div class="col-sm-10 form-inline">
+                                        <select class="form-control year" name="year1"></select>
+                                        <select class="form-control month" name="month1"></select>
+                                        <select class="form-control day" name="day1"></select>
+                                    </div>
+                                </div>
+                            <div class="form-group">
+                                <label for="phone" class="col-sm-2 control-label">手机 ：</label>
+                                <div class="col-sm-10">
+                                    <input type="text" class="form-control" id="phone" placeholder="">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="email" class="col-sm-2 control-label">邮箱 ：</label>
+                                <div class="col-sm-10">
+                                    <input type="text" class="form-control" id="email" placeholder="">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="place" class="col-sm-2 control-label">地址 ：</label>
+                                <div class="col-sm-10">
+                                    <input type="text" class="form-control dizhi" id="place" placeholder="">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="col-sm-offset-2 col-sm-10">
+                                    <button type="button" id="submit" class="btn btn-default">保存</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="layui-tab-item">内容2</div>
+                    <div class="layui-tab-item">内容3</div>
+                    <div class="layui-tab-item">内容4</div>
+                    <div class="layui-tab-item">内容5</div>
+                </div>
+            </div>
+    </div>
     <script>
-        layui.use('element', function () {
-                var element = layui.element;
+        layui.use(['element','laydate'], function () {
+                var element = layui.element,
+                    laydate = layui.laydate;
+                    laydate.render({
+                        elem: '#shengri' //指定元素
+                    });
             });
+        new YMDselect('year1','month1','day1',2010,3,20);
+        
     </script>
 </body>
 </html>

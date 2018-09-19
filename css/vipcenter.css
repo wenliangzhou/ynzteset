@@ -67,3 +67,186 @@ body{
 .banner .bar-box .layui-progress{
     display: inline-block;
 }
+/* 主体部分CSS */
+.main{
+    width: 1200px;
+    margin-top: 40px;
+}
+.main .title{
+    position: absolute;
+    width: 180px;
+	height: 48px;
+    background-color: #ffe405;
+    color: #1f1f1f;
+    font-size: 16px;
+    text-align: center;
+    line-height: 48px;
+}
+.main .nav-right,.main .mainbox{
+    float: left;
+}
+.main .nav-right{
+    width: 180px;
+	height: 499px;
+    background-color: #1f1f1f;
+    margin-top: 48px;
+    padding-top: 5px;
+}
+.main .nav-right li{
+    display: block;
+    font-size: 16px;
+    line-height: 16px;
+    padding: 16px 0px;
+    color: #ffffff;
+}
+.main .nav-right .layui-this{
+    color: #ead109;
+}
+.main .nav-right .layui-this::after{
+    content: ' >';
+    display: inline-block !important;
+    position: absolute;
+    margin-left: 17px;
+    width: auto;
+    border: none;
+    top: auto;
+    left: auto;
+}
+.mainbox{
+    padding: 20px;
+    width: 1000px;
+	height: 711px;
+    border: solid 1px #e5e5e5;
+    margin-left: 20px;
+    font-size: 14px;
+    color: #333333;
+}
+.mainbox .ziliao{
+    border-bottom: #e6e6e6 solid 2px;
+    height: 34px;
+    line-height: 34px;
+}
+.mainbox .ziliao span{
+    display: inline-block;
+    height: 100%;
+    position: relative;
+}
+.mainbox .ziliao span::after{
+    display: block;
+    width: 100%;
+    position: absolute;
+    bottom: -2px;
+    content: '';
+    height: 2px;
+    background: #ffe405;
+    z-index: 2;
+}
+.form-ziliao .form-control{
+    height: 30px;
+    width: 220px;
+    line-height: 30px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    padding-right: 0px;
+}
+.form-ziliao .year{
+    width: 80px;
+}
+.form-ziliao .month,.form-ziliao .day{
+    width: 65px;
+}
+
+.form-ziliao label{
+    font-weight: normal;
+}
+.form-horizontal.form-ziliao .control-label{
+    padding-top: 4px;
+}
+.form-ziliao .form-group:nth-child(1){
+    margin-top: 20px;
+}
+.form-ziliao .form-group:nth-child(1) img{
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+}
+.form-ziliao{
+    margin-left: -45px;
+}
+.form-ziliao .checkbox{
+    padding: 0px; 
+    height: 30px;
+    margin-top: -2px;
+}
+.form-ziliao .form-control.dizhi{
+    width: 300px;
+}
+.form-ziliao .control-label{
+    padding-right: 0px;
+}
+.form-ziliao #submit{
+    width: 160px;
+	height: 36px;
+	background-color: #ffe405;
+    border-radius: 8px;
+}
+/* 反转 */
+.qcontainer {
+    perspective: 500;
+	-webkit-perspective: 500;
+	-moz-perspective: 500;
+	float: left;
+	width: 80px;
+	margin-right:20px;
+}
+.film {
+    width: 100%;
+    height: 80px;
+    
+    transform-style: preserve-3d;
+	-webkit-transform-style: preserve-3d;
+    -moz-transform-style: preserve-3d;
+    transition: 1s;
+    -moz-transition: 1s; /* Firefox 4 */
+    -webkit-transition: 1s; /* Safari 和 Chrome */
+    -o-transition: 1s; /* Opera */	
+}
+.qcontainer:hover .film {
+    transform: rotateY(180deg);
+	transform-style: preserve-3d;
+	-webkit-transform: rotateY(180deg); /* Safari and Chrome */
+	-webkit-transform-style: preserve-3d; /* Safari and Chrome */
+}
+.face {
+	position: absolute;
+	/* backface-visibility:hidden;
+    -webkit-backface-visibility:hidden;	
+    -moz-backface-visibility:hidden; 	
+    -ms-backface-visibility:hidden; 		 */
+}
+.face h3 {
+	color: white;
+	text-align: center;
+}
+.back {
+	transform: rotateY(180deg);
+	transform-style: preserve-3d;
+	-webkit-transform: rotateY(180deg); /* Safari and Chrome */
+	-webkit-transform-style: preserve-3d; /* Safari and Chrome */
+	width:80px;
+    height:80px;
+    position: relative;
+}
+.backtext{
+    height: 80px;
+    width: 80px;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    background: rgba(0 , 0, 0, 0.8);
+    border-radius: 50%;
+    color: #ffffff;
+    line-height: 80px;
+    text-align: center;
+    font-size: 13px;
+}

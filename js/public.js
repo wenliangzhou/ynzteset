@@ -25,7 +25,7 @@
                     area: 'auto',
                     title: false,
                     content: '<div class="private-menu"><div class=""><img src="img/public/touxiang.png" alt=""><div><span>爱笑的兔子</span><span>ID : 153263</span></div></div>' +
-                        '<ul><li><a href="" target="blank">个人中心</a></li><li>赏金余额 : <span>10M</span></li><li>红包余额 : 200.5元</li><li><a href="" target="blank">加入我们</a></li><li><a href="" target="blank">私信</a></li><li class="tuichu">退出</li></ul></div>'
+                        '<ul><li><a href="" target="blank">个人中心</a></li><li>赏金余额 : <span>10M</span></li><li>红包余额 : 200.5元</li><li><a href="" target="blank">每日任务</a></li><li><a href="" target="blank">加入我们</a></li><li><a href="" target="blank">私信</a></li><li class="tuichu">退出</li></ul></div>'
                 });
             }else{
                 $('.private-btn').attr('key',false);

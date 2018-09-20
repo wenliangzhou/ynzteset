@@ -202,7 +202,6 @@ body{
 .film {
     width: 100%;
     height: 80px;
-    
     transform-style: preserve-3d;
 	-webkit-transform-style: preserve-3d;
     -moz-transform-style: preserve-3d;
@@ -219,10 +218,10 @@ body{
 }
 .face {
 	position: absolute;
-	/* backface-visibility:hidden;
+	backface-visibility:hidden;
     -webkit-backface-visibility:hidden;	
     -moz-backface-visibility:hidden; 	
-    -ms-backface-visibility:hidden; 		 */
+    -ms-backface-visibility:hidden; 		
 }
 .face h3 {
 	color: white;
@@ -249,4 +248,109 @@ body{
     line-height: 80px;
     text-align: center;
     font-size: 13px;
+}
+#touxiang{
+    visibility: hidden;
+}
+
+/* 安全中心 CSS*/
+.safebox .safecenter::after{
+    content: '';
+    display: block;
+    clear: both;
+}
+.safebox .safecenter{
+    font-size: 14px;
+    color: #333333;
+}
+.safebox .safecenter li{
+    height: 46px;
+    line-height: 46px;
+    position: relative;
+}
+.safebox .safecenter li:nth-child(1){
+    margin-top: 12px;
+}
+.safebox .safecenter li span:nth-child(3){
+    font-size: 12px;
+    color: #169bd5;
+    display: inline-block;
+    width: 61px;
+    position: absolute;
+    right: 205px;
+}
+
+.safebox .safecenter li span:nth-child(1)::before{
+    content: '';
+    background: url(../img/center/key.png) center center no-repeat;
+    background-size: 13px 15px;
+    height: 46px;
+    width: 13px;
+    display: inline-block;
+    line-height: 46px;
+    position: absolute;
+    left: 65px;
+}
+.safebox .safecenter li span:nth-child(1){
+    margin-left: 178px;
+    display: inline-block;
+    width: 72px;
+}
+.safebox .safecenter li span:nth-child(2){
+    margin-left: 50px;
+}
+.bangphone,.bangbank,.banginformation,.bangpsw,
+.bangmibao,.bangtipsw{
+    display: none;
+}
+.tan-class{
+    width: 300px;
+    height: 368px;
+    border-radius: 12px !important;
+}
+.tan-class .layui-layer-content{
+    padding: 30px 20px;
+}
+.tan-class .layui-layer-title{
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+    background-color: #ffe405;
+    height: 40px;
+    color: #333333;
+}
+.bangphone .zhusi{
+    font-size: 12px;
+    color: #666666;
+    line-height: 200%;
+}
+.bangphone .zhusi span{
+    color: red;
+}
+.bangphone label,.bangphone .form-group div{
+    font-weight: normal;
+    font-size: 13px;
+    padding: 0px;
+}
+.bangphone .form-horizontal .form-group .form-control,
+.bangphone .form-horizontal .form-group{
+    margin: 0px;
+    height: 30px;
+}
+.bangphone .form-horizontal .form-group{
+    margin: 30px 0px;
+}
+.bangphone #yanzphone{
+    width: 100px;
+}
+.bangphone .getma{
+    background-color: #ffffff;
+	border-radius: 4px;
+    border: solid 1px #e5e5e5;
+    font-size: 13px;
+}
+.bangphone .bang-btn{
+    font-size: 14px;
+    background-color: #ffe405;
+    border-radius: 4px;
+    margin-left: 15px;
 }

@@ -12,6 +12,7 @@
     <script src="js/YMDClass.js"></script>
     <script src="js/layui/layui.js"></script>
     <script src="js/public.js"></script>
+    <script src="js/schedule.js"></script>
 </head>
 <body>
     <!-- 头部导航栏 -->
@@ -66,6 +67,7 @@
                     <li>我的好友</li>
                 </ul>
                 <div class="layui-tab-content mainbox">
+                    <!-- 详细资料 -->
                     <div class="layui-tab-item layui-show">
                         <div class="ziliao">
                             <span>
@@ -73,26 +75,22 @@
                             </span>
                         </div>
                         <!-- form表单 -->
-                        <form class="form-horizontal form-ziliao">
+                        <form id=form-ziliao" class="form-horizontal form-ziliao">
                             <div class="form-group">
                                 <label  class="col-sm-2 control-label">头像 ：</label>
                                 <div class="col-sm-10">
                                         <div class="qcontainer">
                                             <div class="film">
-                                                <div class="face front">
-                                                      
-                                                            <img src="img/center/touxiang.png">
-                                                        
-                                                           
-                                                </div>
-                                                
+                                                <div class="face front">           
+                                                    <img class="pic" src="img/center/touxiang.png">    
+                                                </div>                                              
                                                 <div class="face back">
-                                                        <label for="kk">
-                                                                <img src="img/center/touxiang.png">
-                                                            </label>    
-                                                                <input type="file" id="kk">
+                                                    <img class="pic" src="img/center/touxiang.png">        
                                                     <div class="backtext">
-                                                        点击上传图片
+                                                        <label for="touxiang">
+                                                            点击上传头像
+                                                        </label>    
+                                                        <input type="file" id="touxiang" name="touxiang">
                                                     </div>
                                                 </div>
                                             </div>
@@ -116,7 +114,7 @@
                                 <div class=" col-sm-10">
                                     <div class="checkbox">
                                         <label class="radio-inline">
-                                            <input type="radio" name="xingbie" id="inlineRadio1" value="option1"> 男
+                                            <input type="radio" name="xingbie" id="inlineRadio1" value="option1" checked> 男
                                         </label>
                                         <label class="radio-inline">
                                             <input type="radio" name="xingbie" id="inlineRadio2" value="option2"> 女
@@ -125,13 +123,13 @@
                                 </div>
                             </div>
                             <div class="form-group">
-                                    <label for="shengri" class="col-sm-2 control-label">生日 ：</label>
-                                    <div class="col-sm-10 form-inline">
-                                        <select class="form-control year" name="year1"></select>
-                                        <select class="form-control month" name="month1"></select>
-                                        <select class="form-control day" name="day1"></select>
-                                    </div>
+                                <label for="shengri" class="col-sm-2 control-label">生日 ：</label>
+                                <div class="col-sm-10 form-inline">
+                                    <select class="form-control year" name="year1"></select>
+                                    <select class="form-control month" name="month1"></select>
+                                    <select class="form-control day" name="day1"></select>
                                 </div>
+                            </div>
                             <div class="form-group">
                                 <label for="phone" class="col-sm-2 control-label">手机 ：</label>
                                 <div class="col-sm-10">
@@ -157,23 +155,131 @@
                             </div>
                         </form>
                     </div>
-                    <div class="layui-tab-item">内容2</div>
+                    <!-- 安全中心 -->
+                    <div class="layui-tab-item">
+                        <div class="ziliao">
+                            <span>
+                                安全中心
+                            </span>
+                        </div>
+                        <div class="safebox">
+                            <ul class="safecenter">
+                                <li>
+                                    <span>手机号码：</span>
+                                    <span>未绑定</span>
+                                    <span class="tan1">绑定手机号</span>
+                                </li>
+                                <li>
+                                    <span>银行信息：</span>
+                                    <span>未绑定</span>
+                                    <span class="tan2">绑定银行卡</span>
+                                </li>
+                                <li>
+                                    <span>真实信息：</span>
+                                    <span>未设置</span>
+                                    <span class="tan3">去设置</span>
+                                </li>
+                                <li>
+                                    <span>登录密码：</span>
+                                    <span>已设置</span>
+                                    <span class="tan4">修改</span>
+                                </li>
+                                <li>
+                                    <span>密保问题：</span>
+                                    <span>未设置</span>
+                                    <span class="tan5">去设置</span>
+                                </li>
+                                <li>
+                                    <span>提款密码：</span>
+                                    <span>未设置</span>
+                                    <span class="tan6">去设置</span>
+                                </li>
+                                <li>
+                                    <span>qq绑定：</span>
+                                    <span>未设置</span>
+                                    <span class="tan7">去设置</span>
+                                </li>
+                                <li>
+                                    <span>微信绑定：</span>
+                                    <span>未设置</span>
+                                    <span class="tan8">去设置</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- 财富明细 -->
                     <div class="layui-tab-item">内容3</div>
+                    <!-- 任务详情 -->
                     <div class="layui-tab-item">内容4</div>
+                    <!-- VIP详情 -->
                     <div class="layui-tab-item">内容5</div>
+                    <!-- 申请提现 -->
+                    <div class="layui-tab-item">内容5</div>
+                    <!-- 提现明细 -->
+                    <div class="layui-tab-item">内容5</div>
+                    <!-- 提现记录 -->
+                    <div class="layui-tab-item">内容5</div>
+                    <!-- 兑换记录 -->
+                    <div class="layui-tab-item">内容5</div>
+                    <!-- 我的好友 -->
+                    <div class="layui-tab-item">内容5</div>                    
                 </div>
             </div>
     </div>
-    <script>
-        layui.use(['element','laydate'], function () {
-                var element = layui.element,
-                    laydate = layui.laydate;
-                    laydate.render({
-                        elem: '#shengri' //指定元素
-                    });
-            });
-        new YMDselect('year1','month1','day1',2010,3,20);
-        
-    </script>
+    <script src="js/vipcenter.js"></script>
+    <!-- 侧边导航栏 -->
+    <div class="nav-wrapper">
+        <div class="nav-item nav-item1">
+        </div>
+        <div class="nav-item nav-item2"></div>
+        <div class="nav-item nav-item3"></div>
+        <div class="nav-item nav-item4"></div>
+        <div class="nav-item nav-item5"></div>
+        <div class="nav-item nav-item6"></div>
+        <div class="nav-item nav-item7"></div>
+        <div class="nav-item nav-item8"></div>
+    </div>
 </body>
+<!-- 侧边导航栏 -->
+<div id='schedule-box' class="boxshawv signin-box"></div>
+<!-- 手机绑定弹框 -->
+<div class="bangphone">
+    <p class="zhusi"><span>注：</span>请填写真实身份信息，若身份信息与提现信息不一致将会导致打款失败</p>
+    <form class="form-horizontal phone-form">
+        <div class="form-group">
+            <label for="phonenum" class="col-xs-3 control-label">绑定手机：</label>
+            <div class="col-xs-9">
+                <input type="email" class="form-control" name="phonenum" id="phonenum" placeholder="">
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="yanzphone" class="col-xs-3 control-label">验证码：</label>
+            <div class="col-xs-9 form-inline">
+                <input type="password" class="form-control" id="yanzphone" name="yanz" placeholder="">
+                <button type="button" class="btn getma">获取验证码</button>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-xs-offset-3 col-xs-9">
+                <button type="button"  class="btn btn-default bang-btn bang-phone-btn">立即绑定</button>
+            </div>
+        </div>
+    </form>
+</div>
+<div class="bangbank">
+    xxx
+</div>
+<div class="banginformation">
+    xxx
+</div>
+<div class="bangpsw">
+    xxx
+</div>
+<div class="bangmibao">
+    xxx
+</div>
+<div class="bangtipsw">
+    xxx
+</div>
+
 </html>

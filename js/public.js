@@ -8,6 +8,34 @@
         layui.use(['layer'], function () {
          var  layer = layui.layer;
         });
+        // 定义一个全局变量，把公用方法放在这个对象上
+        wlz = {
+            showImage:function(target,orign){
+                file = jQuery(orign)[0].files[0];
+                //添加图片路径到img src中进行预览
+                jQuery(target).attr('src',getObjectURL(file));
+                //不同浏览器下的路径不同
+                 function getObjectURL(file) {
+                      var url = null;
+                      if (window.createObjectURL != undefined) { // basic
+                        url = window.createObjectURL(file);
+                      } else if (window.URL != undefined) { // mozilla(firefox)
+                        url = window.URL.createObjectURL(file);
+                      } else if (window.webkitURL != undefined) { // webkit or chrome
+                        url = window.webkitURL.createObjectURL(file);
+                      }
+                      return url;
+                    }
+            },
+            zhuan:function (x) {
+                var obj = {};
+                x.forEach(item => {
+                    obj[item.name] = item.value;
+                });
+                return obj;
+            }
+        }
+        
         // 弹出私人导航栏
         $('.private-btn').click(function () {
             var key = $('.private-btn').attr('key');
@@ -140,5 +168,6 @@
             $('.schedule-bd .active').addClass('qiandao');
             $('.schedule-bd li span').removeClass('active');
         });
+        
     });
 })();

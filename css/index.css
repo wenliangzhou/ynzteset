@@ -1,6 +1,12 @@
 .container-fluid{
     padding: 0px;
 }
+
+.nav-top{
+    background: rgba(0, 0, 0, 0.64);
+    min-width: 1000px;
+}
+
 .slideBox .logo{
     position: absolute;
     z-index: 10;
@@ -678,6 +684,13 @@ body {
     }
     .slick-2{
         width: 1030px;
+    }
+    .nav-top .nav-box{
+        width: auto;
+    }
+    .nav-top ul{
+        position: absolute;
+        margin-left: 170px;
     }
 }
 

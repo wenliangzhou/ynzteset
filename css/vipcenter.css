@@ -318,39 +318,54 @@ body{
     height: 40px;
     color: #333333;
 }
-.bangphone .zhusi{
+.gong .zhusi{
     font-size: 12px;
     color: #666666;
     line-height: 200%;
 }
-.bangphone .zhusi span{
+.gong .zhusi span{
     color: red;
 }
-.bangphone label,.bangphone .form-group div{
+.gong label,.gong .form-group div{
     font-weight: normal;
     font-size: 13px;
     padding: 0px;
 }
-.bangphone .form-horizontal .form-group .form-control,
-.bangphone .form-horizontal .form-group{
+.gong .form-horizontal .form-group .form-control,
+.gong .form-horizontal .form-group{
     margin: 0px;
     height: 30px;
 }
-.bangphone .form-horizontal .form-group{
+.gong .form-horizontal .form-group{
     margin: 30px 0px;
 }
-.bangphone #yanzphone{
+.gong #yanzphone{
     width: 100px;
 }
-.bangphone .getma{
+.gong .getma{
     background-color: #ffffff;
 	border-radius: 4px;
     border: solid 1px #e5e5e5;
     font-size: 13px;
 }
-.bangphone .bang-btn{
+.gong .bang-btn{
     font-size: 14px;
     background-color: #ffe405;
     border-radius: 4px;
     margin-left: 15px;
+}
+.gong #pswma,.gong #pswtima{
+    width: 100px;
+}
+.bangpsw .form-horizontal .form-group,.bangtipsw .form-horizontal .form-group{
+    margin: 20px 0px;
+}
+.bangmibao select{
+    font-size: 13px;
+}
+.gong .col-xs-4{
+    white-space:nowrap;
+}
+.gong #pswtima{
+    width: 79px;
 }

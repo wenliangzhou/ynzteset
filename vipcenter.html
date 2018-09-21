@@ -25,7 +25,7 @@
         <div class="nav-box center">
             <img src="img/index/logo.png" alt="">
             <ul class="nav-ul center">
-                <li><a href="javascript:void(0);" target="blank">首页</a></li>
+                <li><a href="index.html" target="blank">首页</a></li>
                 <li><a href="javascript:void(0);" target="blank">任务大厅</a></li>
                 <li><a href="javascript:void(0);" target="blank">悬赏大厅</a></li>
                 <li><a href="javascript:void(0);" target="blank">定制中心</a></li>
@@ -243,13 +243,13 @@
 <!-- 侧边导航栏 -->
 <div id='schedule-box' class="boxshawv signin-box"></div>
 <!-- 手机绑定弹框 -->
-<div class="bangphone">
+<div class="bangphone gong">
     <p class="zhusi"><span>注：</span>请填写真实身份信息，若身份信息与提现信息不一致将会导致打款失败</p>
     <form class="form-horizontal phone-form">
         <div class="form-group">
             <label for="phonenum" class="col-xs-3 control-label">绑定手机：</label>
             <div class="col-xs-9">
-                <input type="email" class="form-control" name="phonenum" id="phonenum" placeholder="">
+                <input type="text" class="form-control" name="phonenum" id="phonenum" placeholder="">
             </div>
         </div>
         <div class="form-group">
@@ -266,20 +266,132 @@
         </div>
     </form>
 </div>
-<div class="bangbank">
-    xxx
+<div class="bangbank gong">
+    <p class="zhusi"><span>注：</span>请填写真实身份信息，若身份信息与提现信息不一致将会导致打款失败</p>
+    <form class="form-horizontal bank-form">
+        <div class="form-group">
+            <label for="" class="col-xs-3 control-label">开户银行：</label>
+            <div class="col-xs-9">
+                <input type="text" class="form-control" name="bankname" id="bankname" placeholder="">
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="" class="col-xs-3 control-label">银行卡号：</label>
+            <div class="col-xs-9">
+                <input type="text" class="form-control" name="banknum" id="banknum" placeholder="">
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-xs-offset-3 col-xs-9">
+                <button type="button"  class="btn btn-default bang-btn bang-bank-btn">立即绑定</button>
+            </div>
+        </div>
+    </form>
 </div>
-<div class="banginformation">
-    xxx
+<div class="banginformation gong">
+    <p class="zhusi"><span>注：</span>请填写真实身份信息，若身份信息与提现信息不一致将会导致打款失败</p>
+    <form class="form-horizontal real-form">
+        <div class="form-group">
+            <label for="" class="col-xs-3 control-label">真实姓名：</label>
+            <div class="col-xs-9">
+                <input type="text" class="form-control" name="realname" id="realname" placeholder="">
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="" class="col-xs-3 control-label">身份证号：</label>
+            <div class="col-xs-9">
+                <input type="text" class="form-control" name="realnum" id="realnum" placeholder="">
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-xs-offset-3 col-xs-9">
+                <button type="button"  class="btn btn-default bang-btn bang-real-btn">立即绑定</button>
+            </div>
+        </div>
+    </form>
 </div>
-<div class="bangpsw">
-    xxx
+<div class="bangpsw gong">
+    <p class="zhusi"><span>注：</span>请填写真实身份信息，若身份信息与提现信息不一致将会导致打款失败</p>
+    <form class="form-horizontal psw-form">
+        <div class="form-group">
+            <label for="psw" class="col-xs-3 control-label">输入密码：</label>
+            <div class="col-xs-9">
+                <input type="password" class="form-control" name="psw" id="psw" placeholder="">
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="pswa" class="col-xs-3 control-label">确认密码：</label>
+            <div class="col-xs-9">
+                <input type="password" class="form-control" name="pswa" id="pswa" placeholder="">
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="pswma" class="col-xs-3 control-label">验证码：</label>
+            <div class="col-xs-9 form-inline">
+                <input type="text" class="form-control" id="pswma" name="pswma" placeholder="">
+                <button type="button" class="btn getma">获取验证码</button>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-xs-offset-3 col-xs-9">
+                <button type="button"  class="btn btn-default bang-btn bang-psw-btn">立即绑定</button>
+            </div>
+        </div>
+    </form>
 </div>
-<div class="bangmibao">
-    xxx
+<div class="bangmibao gong">
+    <form class="form-horizontal mi-form">
+        <div class="form-group">
+            <label for="" class="col-xs-3 control-label">密保问题：</label>
+            <div class="col-xs-9">
+                <select class="form-control" name="mibao" id="mibao">
+                    <option value="0">你的父亲叫什么名字?</option>
+                    <option value="1">你的小学老师叫什么名字?</option>
+                    <option value="2">你的生日年份?</option>
+                </select>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="" class="col-xs-3 control-label">密保答案：</label>
+            <div class="col-xs-9">
+                <input type="text" class="form-control" name="mida" id="mida" placeholder="">
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-xs-offset-3 col-xs-9">
+                <button type="button"  class="btn btn-default bang-btn bang-mi-btn">立即绑定</button>
+            </div>
+        </div>
+    </form>
 </div>
-<div class="bangtipsw">
-    xxx
+<div class="bangtipsw gong">
+    <p class="zhusi"><span>注：</span>交易密码用于提现、兑奖等金融相关操作使用，请妥善保管，切勿泄露给他人</p>
+    <form class="form-horizontal pswti-form">
+        <div class="form-group">
+            <label for="pswti" class="col-xs-4 control-label">设置提款密码：</label>
+            <div class="col-xs-8">
+                <input type="password" class="form-control" name="pswti" id="pswti" placeholder="请输入6位数字的组合">
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="pswati" class="col-xs-4 control-label">确认提款密码：</label>
+            <div class="col-xs-8">
+                <input type="password" class="form-control" name="pswati" id="pswati" placeholder="">
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="pswati" class="col-xs-4 control-label">验证码：</label>
+            <div class="col-xs-8 form-inline">
+                <input type="text" class="form-control" id="pswtima" name="pswtima" placeholder="">
+                <button type="button" class="btn getma">获取验证码</button>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-xs-offset-3 col-xs-9">
+                <button type="button"  class="btn btn-default bang-btn bang-pswti-btn">立即绑定</button>
+            </div>
+        </div>
+    </form>
 </div>
 
 </html>

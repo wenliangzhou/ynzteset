@@ -33,6 +33,20 @@
                     obj[item.name] = item.value;
                 });
                 return obj;
+            },
+            btnTime:function (btn,time) {
+                var _this = this;
+                if(time == 0) {
+                    $(btn)[0].removeAttribute("disabled");
+                    $(btn).html("获取验证码");
+                } else {
+                    $(btn)[0].setAttribute("disabled", true);
+                    $(btn).html("重发("+time+")");
+                    time--;
+                    setTimeout(function() {
+                        _this.btnTime(btn,time);
+                        },1000)
+                }
             }
         }
         

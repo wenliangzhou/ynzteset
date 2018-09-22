@@ -67,6 +67,103 @@ body{
 .banner .bar-box .layui-progress{
     display: inline-block;
 }
+/* 表格通用css */
+.main table{
+    width: 893px;
+}
+.main .tablebox{
+    margin-left: 65px;
+}
+.tablebox>div{
+    display:block;
+    width: 420px;
+}
+.main .layui-laypage a,.main .layui-laypage span{
+    height: 25px;
+    line-height: 25px;
+    padding-left: 10px;
+    padding-right: 10px;
+    color: #000000;
+}
+.main .layui-laypage .layui-laypage-curr .layui-laypage-em{
+    background-color: #ffe405;
+    
+}
+.main .layui-laypage .layui-laypage-curr em{
+    color: #333333;
+}
+.main table th,.main table td{
+    text-align: center !important;
+    font-size: 12px;
+    color: #333333;
+    height: 40px;
+}
+.main table th{
+    background-color: #f4f5f9;
+}
+.condition{
+    margin-left: 65px;
+    height: 30px;
+    margin-top: 25px;
+    margin-bottom: 29px;
+    font-size: 12px;
+}
+.condition .biaoti{
+    display: inline-block;
+
+}
+.condition .layui-input{
+    width: 110px;
+    height: 30px;
+    display: inline-block;
+}
+.condition .tiao-btn{
+    display: inline-block;
+    vertical-align: top;
+}
+.condition .heng{
+    padding: 0px 10px;
+}
+.condition .cha{
+    width: 98px;
+	height: 30px;
+	background-color: #ffe405;
+    border-radius: 4px;
+    border: none;
+    margin-left: 20px;
+}
+.condition .tiao-btn::after{
+    display: block;
+    content: '';
+    clear: both;
+}
+.condition .tiao-btn li{
+    float: left;
+    display: block;
+    height: 30px;
+    line-height: 30px;
+    padding: 0px 18px;
+    border: solid 1px #e5e5e5;
+    margin-left: 10px;
+    cursor: pointer;
+    position: relative;
+}
+.condition .rili{
+    position: relative;
+    display: inline-block;
+    height: 30px;
+}
+.condition .rili::after{
+    display: block;
+    content: '';
+    position: absolute;
+    right: 10px;
+    background: url(../img/center/rili.png) center center no-repeat;
+    background-size: 100% 100%;
+    width: 16px;
+    height: 14px;
+    top: 8px;
+}
 /* 主体部分CSS */
 .main{
     width: 1200px;
@@ -278,6 +375,7 @@ body{
     width: 61px;
     position: absolute;
     right: 205px;
+    cursor: pointer; 
 }
 
 .safebox .safecenter li span:nth-child(1)::before{
@@ -369,3 +467,5 @@ body{
 .gong #pswtima{
     width: 79px;
 }
+
+/* 财富明细CSS */

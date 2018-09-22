@@ -208,7 +208,61 @@
                         </div>
                     </div>
                     <!-- 财富明细 -->
-                    <div class="layui-tab-item">内容3</div>
+                    <div class="layui-tab-item">
+                        <div class="ziliao">
+                            <span>
+                                财富明细
+                            </span>
+                        </div>
+                        <div class="moneybox">
+                            <div class="condition">
+                                <span class="biaoti">变化时间:</span>
+                                
+                                <span class="rili"><input type="text" class="layui-input time1" id="moneytime"></span>
+                                <span class="heng">-</span>
+                                <span class="rili"><input type="text" class="layui-input time2" id="moneytime2"></span>
+                                <ul class="tiao-btn">
+                                    <li num="1" class="li-active">全部</li>
+                                    <li num="2">今日</li>
+                                    <li num="3">近一周</li>
+                                </ul>
+                                <button class="cha">查询</button>
+                            </div>
+                            <div class="tablebox">
+                                <table class="layui-table" lay-skin="line">
+                                    <thead>
+                                        <tr>
+                                            <th>变化时间</th>
+                                            <th>变化原因</th>
+                                            <th>赏金变化</th>
+                                            <th>赏金金额</th>
+                                            <th>红包变化</th>
+                                            <th>红包金额</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="moneybox">
+                                        <tr>
+                                            <td>2018-12-32 16:20:36</td>
+                                            <td>新注册礼包</td>
+                                            <td>0</td>
+                                            <td>0m币</td>
+                                            <td>0</td>
+                                            <td>0元</td>
+                                        </tr>
+                                        <tr>
+                                            <td>2018-12-32 16:20:36</td>
+                                            <td>新注册礼包</td>
+                                            <td>0</td>
+                                            <td>0m币</td>
+                                            <td>0</td>
+                                            <td>0元</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <div id="moneyfan" class="center"></div>
+                            </div>
+                        </div>
+                    </div>
                     <!-- 任务详情 -->
                     <div class="layui-tab-item">内容4</div>
                     <!-- VIP详情 -->

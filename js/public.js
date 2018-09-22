@@ -4,9 +4,10 @@
         $ = $331;
     }
     $(document).ready(function () {
-        
-        layui.use(['layer'], function () {
-         var  layer = layui.layer;
+        var laypage;
+        layui.use(['laypage', 'layer'], function () {
+            var  layer = layui.layer;
+            laypage = layui.laypage;
         });
         // 定义一个全局变量，把公用方法放在这个对象上
         wlz = {
@@ -47,6 +48,44 @@
                         _this.btnTime(btn,time);
                         },1000)
                 }
+            },
+            tableRequsetDate:function ({url,fn,curr=1,limit=5,data="",pagebox,tablebox}={}) {
+                var _this = this,
+                    arr = [];
+                // $.ajaxSettings.async = false;
+                $.getJSON(url, {
+                    page: curr //向服务端传的参数，此处只是演示
+                    , limit: limit //多少条
+                    , can: data
+                }, function (res) {
+                    console.log(res);
+                    if (res == '') {
+                        $("#"+pagebox).html('<div class = "nothing">没有相关内容!!!</div>')
+                        $(tablebox).html('');
+                        return false;
+                    }
+                    fn(res, curr, limit);
+                    //显示分页
+                    
+                    laypage.render({
+                        elem: pagebox, //容器。值支持id名、原生dom对象，jquery对象。【如该容器为】：<div id="page1"></div>
+                        // count: res['all'], //通过后台拿到的总条数
+                        count:20,
+                        layout: ['prev', 'page', 'next']
+                        ,first: '首页'
+                        ,last: '尾页'
+                        , curr: curr, //当前页
+                        limits: [5, 6, 7, 8, 9, 10],
+                        limit: limit,
+                        jump: function (obj, first) { //触发分页后的回调
+                            if (!first) { //点击跳页触发函数自身，并传递当前页：obj.curr
+                                _this.tableRequsetDate({url:url,fn:fn,curr:obj.curr,limit:obj.limit,data:data});
+                                arr[0] = obj.curr;
+                                arr[1] = obj.limit;
+                            }
+                        }
+                    });            
+                });
             }
         }
         

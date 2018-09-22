@@ -22,6 +22,18 @@ ul{
 .center{
     margin: 0 auto;
 }
+/* 按钮选择后样式 */
+.li-active::after{
+    display: block;
+    width: 20px;
+    height: 20px;
+    content: '\2713';
+    position: absolute;
+    right: 0px;
+    bottom: 0px;
+    line-height: 20px;
+    text-align: center;
+}
 /* div遮罩样式 */
 .mask-wrapper{
     position: relative;

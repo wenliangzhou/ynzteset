@@ -287,6 +287,53 @@
                 console.log(data);
             });
         });
+        // 表格渲染，日期选择
+        layui.use(['laypage', 'layer','laydate'], function () {
+            var laypage = layui.laypage
+                ,layer = layui.layer
+                ,laydate = layui.laydate;
+            // 财富明细--------------------------------
+            // 日期初始化一个实例
+            laydate.render({
+                elem: '#moneytime' //指定元素
+              });        
+            laydate.render({
+                elem: '#moneytime2' //指定元素
+              });
+            // 渲染财富明细的表格
+            function xr(res,curr,limit) {
+                console.log("页数"+ curr);
+                console.log("条数"+ limit);
+            }
+            // 财富明细表格第一次渲染
+            wlz.tableRequsetDate({url:'https://api.github.com/repos/momodiy/sudoku/commits?per_page=2&sha=master',pagebox:'moneyfan',tablebox:'moneybox',fn:xr,limit:2});
+            // 获取条件请求  （点击查询请求）
+            var fu,time1,time2,time3,data;
+            $('.cha').click(function () {
+                fu = $(this).parent().parent()[0].className,
+                time1 = $('.'+fu+' .condition .time1')[0].value,
+                time2 = $('.'+fu+' .condition .time2')[0].value;
+
+                [...$('.'+fu+' .condition .tiao-btn li')].forEach(el => {
+                    if(el.className ==='li-active'){
+                        time3 = el.getAttribute('num');
+                    }
+                });
+                data = {time1:time1,time2:time2,time3:time3};
+            });
+            $('.cha').click(function () {
+                if(fu==='moneybox'){
+                    console.log(data);
+                    wlz.tableRequsetDate({url:'https://api.github.com/repos/momodiy/sudoku/commits?per_page=2&sha=master',pagebox:'moneyfan',tablebox:'moneybox',fn:xr,limit:2,data:data});
+                }                
+            })
+        });
+        // 表格条件选择添加样式
+        $('.tiao-btn li').click(function () {
+            $('.tiao-btn li').removeClass('li-active');
+            $(this).addClass('li-active');
+        });
         
+
     });
 }());

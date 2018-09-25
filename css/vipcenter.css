@@ -164,6 +164,41 @@ body{
     height: 14px;
     top: 8px;
 }
+.condition .layui-form-select{
+    display: inline-block;
+}
+.condition .layui-input{
+    width: 80px;
+}
+.condition .layui-form-select .layui-edge{
+    border-top-color:#ffe405;
+}
+.condition .layui-form-select dl dd.layui-this{
+    background: #ffe405;
+    color: #333333;
+}
+.condition .layui-form-select dl{
+    padding: 0px;
+    border: #ffe405 1px solid;
+}
+.condition .layui-form-select dl dd, .layui-form-select dl dt{
+    height: 30px;
+    line-height: 30px;
+}
+/* 条件1 */
+.condition.time0 .tiao-btn{
+    vertical-align: middle;
+}
+.condition.time0 .tiao-btn li{
+   width: 86px;
+    text-align: center;
+}
+.condition.time0 .tiao-btn li:nth-child(1){
+    margin-left: 0px;
+}
+.condition.time0 .li-active{
+    background: #ffe405;
+}
 /* 主体部分CSS */
 .main{
     width: 1200px;
@@ -212,7 +247,6 @@ body{
 .mainbox{
     padding: 20px;
     width: 1000px;
-	height: 711px;
     border: solid 1px #e5e5e5;
     margin-left: 20px;
     font-size: 14px;
@@ -227,6 +261,7 @@ body{
     display: inline-block;
     height: 100%;
     position: relative;
+    margin-right: 10px;
 }
 .mainbox .ziliao span::after{
     display: block;
@@ -237,6 +272,9 @@ body{
     height: 2px;
     background: #ffe405;
     z-index: 2;
+}
+.mainbox .ziliao span.tabhide::after{
+    display: none;
 }
 .form-ziliao .form-control{
     height: 30px;
@@ -287,6 +325,7 @@ body{
 	background-color: #ffe405;
     border-radius: 8px;
 }
+
 /* 反转 */
 .qcontainer {
     perspective: 500;

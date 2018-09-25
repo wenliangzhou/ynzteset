@@ -49,6 +49,22 @@
                         },1000)
                 }
             },
+            tabInit:function (target) {
+                var num = $(target+' .tab').length,
+                tab = $(target+' .tab'),
+                item = $(target+' .tabItem');
+                for(var i = 0;i<num;i++){
+                    $(tab[i]).attr('index',i);
+                    $(item[i]).attr('index',i);
+                }
+                $(target+' .tab').click(function () {
+                    var index = $(this).attr('index');
+                    $(target+' .tab').addClass('tabhide');
+                    $(this).removeClass('tabhide');
+                    $(target+' .tabItem').addClass('hide');
+                    $(target+' .tabItem[index = '+index+']').removeClass('hide');
+                });
+            },
             tableRequsetDate:function ({url,fn,curr=1,limit=5,data="",pagebox,tablebox}={}) {
                 var _this = this,
                     arr = [];

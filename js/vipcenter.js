@@ -288,10 +288,11 @@
             });
         });
         // 表格渲染，日期选择
-        layui.use(['laypage', 'layer','laydate'], function () {
+        layui.use(['laypage','form', 'layer','laydate'], function () {
             var laypage = layui.laypage
                 ,layer = layui.layer
-                ,laydate = layui.laydate;
+                ,laydate = layui.laydate
+                ,form = layui.form;
             // 财富明细--------------------------------
             // 日期初始化一个实例
             laydate.render({
@@ -300,37 +301,80 @@
             laydate.render({
                 elem: '#moneytime2' //指定元素
               });
+            laydate.render({
+                elem: '#moneytime3' //指定元素
+            });
+            laydate.render({
+                elem: '#moneytime4' //指定元素
+            });
+            laydate.render({
+                elem: '#shangtitime' //指定元素
+            });
+            laydate.render({
+                elem: '#shangtitime2' //指定元素
+            });
+            laydate.render({
+                elem: '#moneytime7' //指定元素
+            });
+            laydate.render({
+                elem: '#moneytime8' //指定元素
+            });
             // 渲染财富明细的表格
             function xr(res,curr,limit) {
                 console.log("页数"+ curr);
                 console.log("条数"+ limit);
             }
             // 财富明细表格第一次渲染
-            wlz.tableRequsetDate({url:'https://api.github.com/repos/momodiy/sudoku/commits?per_page=2&sha=master',pagebox:'moneyfan',tablebox:'moneybox',fn:xr,limit:2});
+            wlz.tableRequsetDate({url:'https://api.github.com/users',pagebox:'moneyfan',tablebox:'moneybox',fn:xr,limit:2});
+            // 任务详情第一次渲染
+            wlz.tableRequsetDate({url:'https://api.github.com/users',pagebox:'taskfan',tablebox:'taskbox',fn:xr,limit:2});
+            // 兑换第一次渲染
+            wlz.tableRequsetDate({url:'https://api.github.com/users',pagebox:'duihuanfan',tablebox:'duihuanbox',fn:xr,limit:2});
+            // 
             // 获取条件请求  （点击查询请求）
-            var fu,time1,time2,time3,data;
+            var fu,time0,time1,time2,time3,status,data;
             $('.cha').click(function () {
                 fu = $(this).parent().parent()[0].className,
                 time1 = $('.'+fu+' .condition .time1')[0].value,
                 time2 = $('.'+fu+' .condition .time2')[0].value;
-
+                
                 [...$('.'+fu+' .condition .tiao-btn li')].forEach(el => {
                     if(el.className ==='li-active'){
                         time3 = el.getAttribute('num');
                     }
                 });
                 data = {time1:time1,time2:time2,time3:time3};
+                if($('.'+fu+' .time0')[0]){
+                    [...$('.'+fu+' .time0 .tiao-btn li')].forEach(el => {
+                        if(el.className ==='li-active'){
+                            time0 = el.getAttribute('num');
+                            data.time0=time0;
+                        }
+                    });
+                }
+                if($('.'+fu+' .status')[0]){
+                    status = $('.'+fu+' .status').val();
+                    data.status=status;
+                }
             });
             $('.cha').click(function () {
+                // 财富明细
                 if(fu==='moneybox'){
                     console.log(data);
                     wlz.tableRequsetDate({url:'https://api.github.com/repos/momodiy/sudoku/commits?per_page=2&sha=master',pagebox:'moneyfan',tablebox:'moneybox',fn:xr,limit:2,data:data});
-                }                
-            })
+                } 
+                // 兑换记录
+                if(fu==='duihuanbox'){
+                    console.log(data);
+                    wlz.tableRequsetDate({url:'https://api.github.com/repos/momodiy/sudoku/commits?per_page=2&sha=master',pagebox:'moneyfan',tablebox:'moneybox',fn:xr,limit:2,data:data});
+                }
+            });
+            // 初始化提现选项卡
+            wlz.tabInit('.tixian-item');
         });
         // 表格条件选择添加样式
         $('.tiao-btn li').click(function () {
-            $('.tiao-btn li').removeClass('li-active');
+            $(this).parent().children().removeClass('li-active');
             $(this).addClass('li-active');
         });
         

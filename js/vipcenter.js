@@ -287,6 +287,7 @@
                 console.log(data);
             });
         });
+        // ------------------------------表格渲染-----------------------------------
         // 表格渲染，日期选择
         layui.use(['laypage','form', 'layer','laydate'], function () {
             var laypage = layui.laypage
@@ -294,7 +295,7 @@
                 ,laydate = layui.laydate
                 ,form = layui.form;
             // 财富明细--------------------------------
-            // 日期初始化一个实例
+            // 各个日期控件的初始化
             laydate.render({
                 elem: '#moneytime' //指定元素
               });        
@@ -302,10 +303,10 @@
                 elem: '#moneytime2' //指定元素
               });
             laydate.render({
-                elem: '#moneytime3' //指定元素
+                elem: '#tasktime' //指定元素
             });
             laydate.render({
-                elem: '#moneytime4' //指定元素
+                elem: '#tasktime2' //指定元素
             });
             laydate.render({
                 elem: '#shangtitime' //指定元素
@@ -314,11 +315,18 @@
                 elem: '#shangtitime2' //指定元素
             });
             laydate.render({
-                elem: '#moneytime7' //指定元素
+                elem: '#redtitime' //指定元素
             });
             laydate.render({
-                elem: '#moneytime8' //指定元素
+                elem: '#redtitime2' //指定元素
             });
+            laydate.render({
+                elem: '#duihuantime' //指定元素
+            });
+            laydate.render({
+                elem: '#duihuantime2' //指定元素
+            });
+            
             // 渲染财富明细的表格
             function xr(res,curr,limit) {
                 console.log("页数"+ curr);
@@ -330,10 +338,14 @@
             wlz.tableRequsetDate({url:'https://api.github.com/users',pagebox:'taskfan',tablebox:'taskbox',fn:xr,limit:2});
             // 兑换第一次渲染
             wlz.tableRequsetDate({url:'https://api.github.com/users',pagebox:'duihuanfan',tablebox:'duihuanbox',fn:xr,limit:2});
-            // 
+            // 赏金提现第一次渲染
+            wlz.tableRequsetDate({url:'https://api.github.com/users',pagebox:'shangjintifan',tablebox:'shangjintibox',fn:xr,limit:2});
+            // 红包提现第一次渲染
+            wlz.tableRequsetDate({url:'https://api.github.com/users',pagebox:'redtifan',tablebox:'redtibox',fn:xr,limit:2});
             // 获取条件请求  （点击查询请求）
             var fu,time0,time1,time2,time3,status,data;
             $('.cha').click(function () {
+                // fu 定义这个被点击按钮的父级，获取相应的数据
                 fu = $(this).parent().parent()[0].className,
                 time1 = $('.'+fu+' .condition .time1')[0].value,
                 time2 = $('.'+fu+' .condition .time2')[0].value;
@@ -344,6 +356,7 @@
                     }
                 });
                 data = {time1:time1,time2:time2,time3:time3};
+                // 当time0存在条件，就添加一个条件属性
                 if($('.'+fu+' .time0')[0]){
                     [...$('.'+fu+' .time0 .tiao-btn li')].forEach(el => {
                         if(el.className ==='li-active'){
@@ -352,11 +365,14 @@
                         }
                     });
                 }
+                // 当状态存在的时候就添加一个属性
                 if($('.'+fu+' .status')[0]){
                     status = $('.'+fu+' .status').val();
                     data.status=status;
                 }
             });
+            // 点击cha按钮后发送请求，向后台请求数据并渲染。通过if来判断是哪一个BOX的请求
+            // 发送上面生产的data条件
             $('.cha').click(function () {
                 // 财富明细
                 if(fu==='moneybox'){
@@ -365,6 +381,21 @@
                 } 
                 // 兑换记录
                 if(fu==='duihuanbox'){
+                    console.log(data);
+                    wlz.tableRequsetDate({url:'https://api.github.com/repos/momodiy/sudoku/commits?per_page=2&sha=master',pagebox:'moneyfan',tablebox:'moneybox',fn:xr,limit:2,data:data});
+                }
+                // 任务详情
+                if(fu==='taskbox'){
+                    console.log(data);
+                    wlz.tableRequsetDate({url:'https://api.github.com/repos/momodiy/sudoku/commits?per_page=2&sha=master',pagebox:'moneyfan',tablebox:'moneybox',fn:xr,limit:2,data:data});
+                }
+                // 赏金提现
+                if(fu==='shangjintibox'){
+                    console.log(data);
+                    wlz.tableRequsetDate({url:'https://api.github.com/repos/momodiy/sudoku/commits?per_page=2&sha=master',pagebox:'moneyfan',tablebox:'moneybox',fn:xr,limit:2,data:data});
+                }
+                // 红包提现
+                if(fu==='redtibox'){
                     console.log(data);
                     wlz.tableRequsetDate({url:'https://api.github.com/repos/momodiy/sudoku/commits?per_page=2&sha=master',pagebox:'moneyfan',tablebox:'moneybox',fn:xr,limit:2,data:data});
                 }

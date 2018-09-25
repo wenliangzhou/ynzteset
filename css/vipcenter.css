@@ -167,7 +167,7 @@ body{
 .condition .layui-form-select{
     display: inline-block;
 }
-.condition .layui-input{
+.condition .layui-unselect{
     width: 80px;
 }
 .condition .layui-form-select .layui-edge{
@@ -247,6 +247,7 @@ body{
 .mainbox{
     padding: 20px;
     width: 1000px;
+    height: 711px;
     border: solid 1px #e5e5e5;
     margin-left: 20px;
     font-size: 14px;

@@ -4,15 +4,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>会员中心</title>
+    <!-- 公共 -->
     <link rel="stylesheet" href="js/bootstrap-3.3.7-dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="js/layui/css/layui.css">    
     <link rel="stylesheet" href="css/public.css">
+    <!--  私有 -->
     <link rel="stylesheet" href="css/vipcenter.css">
-    <script src="js/jquery-3.3.1.min.js"></script>
-    <script src="js/YMDClass.js"></script>
-    <script src="js/layui/layui.js"></script>
-    <script src="js/public.js"></script>
-    <script src="js/schedule.js"></script>
 </head>
 <body>
     <!-- 头部导航栏 -->
@@ -273,9 +270,9 @@
                             <div class="condition">
                                 <span class="biaoti">参与时间:</span>
                                 
-                                <span class="rili"><input type="text" class="layui-input time1" id="moneytime"></span>
+                                <span class="rili"><input type="text" class="layui-input time1" id="tasktime"></span>
                                 <span class="heng">-</span>
-                                <span class="rili"><input type="text" class="layui-input time2" id="moneytime2"></span>
+                                <span class="rili"><input type="text" class="layui-input time2" id="tasktime2"></span>
                                 <ul class="tiao-btn">
                                     <li num="1" class="li-active">全部</li>
                                     <li num="2">今日</li>
@@ -345,9 +342,9 @@
                         
                                 <div class="condition layui-form">
                                     <span class="biaoti">提现时间:</span>
-                                    <span class="rili"><input type="text" class="layui-input time1" id="#shangtitime"></span>
+                                    <span class="rili"><input type="text" class="layui-input time1" id="shangtitime"></span>
                                     <span class="heng">-</span>
-                                    <span class="rili"><input type="text" class="layui-input time2" id="#shangtitime2"></span>
+                                    <span class="rili"><input type="text" class="layui-input time2" id="shangtitime2"></span>
                                     <ul class="tiao-btn">
                                         <li num="1" class="li-active">全部</li>
                                         <li num="2">今日</li>
@@ -417,17 +414,24 @@
                                         <li num="3">银行卡</li>
                                     </ul>
                                 </div>
-                                <div class="condition">
+                                <div class="condition layui-form">
                                     <span class="biaoti">提现时间:</span>
-                                    <span class="rili"><input type="text" class="layui-input time1" id=""></span>
+                                    <span class="rili"><input type="text" class="layui-input time1" id="redtitime"></span>
                                     <span class="heng">-</span>
-                                    <span class="rili"><input type="text" class="layui-input time2" id=""></span>
+                                    <span class="rili"><input type="text" class="layui-input time2" id="redtitime2"></span>
                                     <ul class="tiao-btn">
                                         <li num="1" class="li-active">全部</li>
                                         <li num="2">今日</li>
                                         <li num="3">近一周</li>
                                         <li num="4">本月</li>
                                     </ul>
+                                    <select class="status">
+                                        <option value="0">状态</option>
+                                        <option value="1">已取消</option>
+                                        <option value="2">已支付</option>
+                                        <option value="3">审核中</option>
+                                        <option value="4">已完成</option>
+                                    </select>
                                     <button class="cha">查询</button>
                                 </div>
                                 <div class="tablebox">
@@ -494,9 +498,9 @@
                             </div>
                             <div class="condition">
                                 <span class="biaoti">兑换时间:</span>
-                                <span class="rili"><input type="text" class="layui-input time1" id="moneytime"></span>
+                                <span class="rili"><input type="text" class="layui-input time1" id="duihuantime"></span>
                                 <span class="heng">-</span>
-                                <span class="rili"><input type="text" class="layui-input time2" id="moneytime2"></span>
+                                <span class="rili"><input type="text" class="layui-input time2" id="duihuantime2"></span>
                                 <ul class="tiao-btn">
                                     <li num="1" class="li-active">全部</li>
                                     <li num="2">今日</li>
@@ -545,6 +549,14 @@
                 </div>
             </div>
     </div>
+    <!-- JQ > 框架  > 签到日历插件 > 手写公共JS  公共 -->
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/layui/layui.js"></script>
+    <script src="js/schedule.js"></script>
+    <script src="js/public.js"></script>
+
+    <!-- 详细资料的三级联动JS                    私人 -->
+    <script src="js/YMDClass.js"></script>
     <script src="js/vipcenter.js"></script>
     <!-- 侧边导航栏 -->
     <div class="nav-wrapper">
@@ -559,7 +571,7 @@
         <div class="nav-item nav-item8"></div>
     </div>
 </body>
-<!-- 侧边导航栏 -->
+<!-- 侧边导航栏 签到日历 -->
 <div id='schedule-box' class="boxshawv signin-box"></div>
 <!-- 手机绑定弹框 -->
 <div class="bangphone gong">

@@ -1,8 +1,5 @@
 (function () {
-    
-    if(typeof $331 !== 'undefined'){
-        $ = $331;
-    }
+    console.log($().jquery);
     $(document).ready(function () {
         var laypage;
         layui.use(['laypage', 'layer'], function () {

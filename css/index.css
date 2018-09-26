@@ -188,7 +188,6 @@
 .mengbanslick{
     background-color: #1e1e1e;
     max-height: 500px;
-    overflow: hidden;
 }
 .slick-2 div img{
     display: block;
@@ -244,7 +243,7 @@
     background: rgba(0, 0, 0, 0.5);
     text-align: center;
     max-height: 500px;
-    min-width: 300px;
+    max-width: 300px;
 }
 .slick-2 .contai-box img{
     width: 33.33%;
@@ -625,6 +624,9 @@
 body {
     min-width: 1790px;
     word-break: break-all;
+}
+.slick-2{
+    overflow: hidden;
 }
 @media (max-width: 1789px){
     body {

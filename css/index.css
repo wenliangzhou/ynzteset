@@ -187,6 +187,8 @@
 }
 .mengbanslick{
     background-color: #1e1e1e;
+    max-height: 500px;
+    overflow: hidden;
 }
 .slick-2 div img{
     display: block;

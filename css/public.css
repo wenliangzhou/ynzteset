@@ -23,7 +23,7 @@ ul{
     margin: 0 auto;
 }
 /* 按钮选择后样式 */
-.li-active::after{
+/* .li-active::after{
     display: block;
     width: 20px;
     height: 20px;
@@ -33,6 +33,9 @@ ul{
     bottom: 0px;
     line-height: 20px;
     text-align: center;
+} */
+.li-active{
+    background: #ffe405;
 }
 /* div遮罩样式 */
 .mask-wrapper{

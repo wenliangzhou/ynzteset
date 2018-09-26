@@ -165,8 +165,15 @@
             // 手机号提交获取数据
             $('.bang-phone-btn').click(function () {
                 var phonereg = /^((13[0-9])|(14[5|7])|(15([0-3]|[5-9]))|(18[0,5-9]))\d{8}$/,
-                    phonenum = $('#phonenum').val();
+                    phonenum = $('#phonenum').val(),
+                    mima = $('#mima').val();
                     console.log(phonenum)
+                if(mima==''){
+                    layer.tips('请输入登录密码 !', '#mima', {
+                        anim: 6
+                    });
+                    return false;
+                }    
                 if(!phonereg.test(phonenum)){
                     layer.tips('请输入正确的手机号 !', '#phonenum', {
                         anim: 6
@@ -287,6 +294,55 @@
                 console.log(data);
             });
         });
+        // 提现信息提交
+        var datashengqi = {};
+        var jinereg = /^[0-9]*$/;
+        $('.shangti').click(function () {
+            [...$('.shang .condition .tiao-btn li')].forEach(el => {
+                if(el.className ==='li-active'){
+                    datashengqi.way = el.getAttribute('num');
+                }
+            });
+            datashengqi.num = $('.shang .jine').val();
+            datashengqi.psw = $('.shang .mima').val();
+            // 正则验证
+            if(!jinereg.test(datashengqi.num)||datashengqi.num==''){
+                layer.tips('请输入数字字符 !', '#jineshang', {
+                    anim: 6
+                });
+                return false;
+            }
+            if(datashengqi.psw==''){
+                layer.tips('请输入提款密码 !', '#pswshang', {
+                    anim: 6
+                });
+                return false;
+            }
+            // 赏金提现 ajax
+        });
+        $('.redti').click(function () {
+            [...$('.red .condition .tiao-btn li')].forEach(el => {
+                if(el.className ==='li-active'){
+                    datashengqi.way = el.getAttribute('num');
+                }
+            });
+            datashengqi.num = $('.red .jine').val();
+            datashengqi.psw = $('.red .mima').val();
+            if(!jinereg.test(datashengqi.num)||datashengqi.num==''){
+                layer.tips('请输入数字字符 !', '#jinered', {
+                    anim: 6
+                });
+                return false;
+            }
+            if(datashengqi.psw==''){
+                layer.tips('请输入提款密码 !', '#pswred', {
+                    anim: 6
+                });
+                return false;
+            }
+            console.log(datashengqi)
+            // 红包提现ajax
+        });
         // ------------------------------表格渲染-----------------------------------
         // 表格渲染，日期选择
         layui.use(['laypage','form', 'layer','laydate'], function () {
@@ -402,6 +458,7 @@
             });
             // 初始化提现选项卡
             wlz.tabInit('.tixian-item');
+            wlz.tabInit('.shenqing-item');
         });
         // 表格条件选择添加样式
         $('.tiao-btn li').click(function () {

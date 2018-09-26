@@ -316,9 +316,154 @@
                         </div>
                     </div>
                     <!-- VIP详情 -->
-                    <div class="layui-tab-item">内容5</div>
+                    <div class="layui-tab-item">
+                        <div class="ziliao">
+                            <span>
+                                VIP详情
+                            </span>
+                        </div>
+                        <div class="vipbox">
+                            <img class="guan" src="img/center/guan.png" alt="">
+                            <div class="tablebox">
+                                <table class="layui-table">
+                                    <thead>
+                                        <tr>
+                                            <th>VIP</th>
+                                            <th>VIP福利</th>
+                                            <th class="color1">VIP1</th>
+                                            <th class="color2">VIP2</th>
+                                            <th class="color3">VIP3</th>
+                                            <th class="color4">VIP4</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="taskbox">
+                                        <tr>
+                                            <td>VIP等级制度</td>
+                                            <td>完成任务数量</td>
+                                            <td>连续签到30天/>25</td>
+                                            <td>>100</td>
+                                            <td>>200</td>
+                                            <td>>300</td>
+                                        </tr>
+                                        <tr>
+                                            <td>VIP等级福利</td>
+                                            <td>每日赠送赏金</td>
+                                            <td><span class="jinbi">20000</span></td>
+                                            <td><span class="jinbi">40000</span></td>
+                                            <td><span class="jinbi">60000</span></td>
+                                            <td><span class="jinbi">100000</span></td>
+                                        </tr>
+                                        <tr>
+                                            <td>VIP任务加成</td>
+                                            <td>额外增加赏金</td>
+                                            <td><span>10000赏金</span></td>
+                                            <td><span>15000赏金</span></td>
+                                            <td><span>20000赏金</span></td>
+                                            <td><span>30000赏金</span></td>
+                                        </tr>
+                                        <tr>
+                                            <td>VIP补签</td>
+                                            <td colspan="5">每周补签一次,补签消耗10000赏金</td>
+                                        </tr>
+                                        <tr>
+                                            <td>VIP审核优先</td>
+                                            <td colspan="5" class="color5">普通会员提交任务后审核72小时，VIP会员提交任务后审核48小时</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <div class="center vipheng">
+                                    <span>VIP特殊任务</span><span>(vip2以上即可参加)</span>
+                                </div>
+                                <div class="vipfooter center">
+                                   
+                                    <p>1.在优胜客内充值100元进行投注，满一倍流水后，全输保险退款80元，完成任务后可在优益领取<span>50000赏金</span></p>
+                                    <p>2.在LOTT88内充值100元进行投注，满一倍流水后，全输保险退款80元，完成任务后可在优益领取<span>50000赏金</span></p>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                     <!-- 申请提现 -->
-                    <div class="layui-tab-item">内容5</div>
+                    <div class="layui-tab-item shenqing-item">
+                        <div class="ziliao">
+                            <span class="tab">
+                                赏金提现
+                            </span>
+                            <span class="tab tabhide">
+                                红包提现
+                            </span>
+                        </div>
+                        <div class="tabItem">
+                            <div class="shenqingtibox shang">
+                                <div class="condition layui-form">
+                                    <span class="biaoti">赏金金额:</span>
+                                    <span class="jinbi">10，004</span>
+                                    <span class="huise">(约1元人名币)</span>
+                                </div>
+                                <div class="condition time0">
+                                    <span class="biaoti">提现方式:</span>
+                                    <ul class="tiao-btn">
+                                        <li num="1" class="li-active">微信零钱</li>
+                                        <li num="2">支付宝</li>
+                                        <li num="3">银行卡</li>
+                                    </ul>
+                                </div>
+                                <div class="condition layui-form">
+                                    <span class="biaoti">收款账户:</span>
+                                    <span class="lanse">去绑定</span>
+                                </div>
+                                <div class="condition layui-form">
+                                    <span class="biaoti">提现金额:</span>
+                                    <span class="input"><input type="text" class="layui-input jine" id="jineshang" name="jinenum" placeholder="可提现1元"></span>
+                                    <span class="huise">10000M币=1元</span>
+                                </div>
+                                <div class="condition layui-form">
+                                    <span class="biaoti">提款密码:</span>
+                                    <span class="input"><input type="password" class="layui-input mima" id="pswshang" name="psw" placeholder="请输入交易密码"></span>
+                                    <span class="lanse tan6">设置提款密码</span>
+                                </div>
+                                <div>
+                                    <button class="shangti">确认提现</button>
+                                </div>
+                                
+                            </div>
+                        </div>
+                        <div class="tabItem hide">
+                            <div class="shenqingtibox red">
+                                <div class="condition layui-form">
+                                    <span class="biaoti">红包金额:</span>
+                                    <span>10，004</span>
+                                    <span class="huise">(约1元人名币)</span>
+                                </div>
+                                <div class="condition time0">
+                                    <span class="biaoti">提现方式:</span>
+                                    <ul class="tiao-btn">
+                                        <li num="1" class="li-active">微信零钱</li>
+                                        <li num="2">支付宝</li>
+                                        <li num="3">银行卡</li>
+                                    </ul>
+                                </div>
+                                <div class="condition layui-form">
+                                    <span class="biaoti">收款账户:</span>
+                                    <span class="lanse">去绑定</span>
+                                </div>
+                                <div class="condition layui-form">
+                                    <span class="biaoti">提现金额:</span>
+                                    <span class="input"><input type="text" class="layui-input jine" id="jinered" name="jinenum" placeholder="可提现1元"></span>
+                                    <span class="huise">元</span>
+                                </div>
+                                <div class="condition layui-form">
+                                    <span class="biaoti">提款密码:</span>
+                                    <span class="input"><input type="password" class="layui-input mima" id="pswred" name="psw" placeholder="请输入交易密码"></span>
+                                    <span class="lanse tan6">设置提款密码</span>
+                                </div>
+                                <div>
+                                    <button class="redti">确认提现</button>
+                                </div>
+                            
+                            </div>
+                        </div>
+                    </div>
                     <!-- 提现记录 -->
                     <div class="layui-tab-item tixian-item">
                         <div class="ziliao">
@@ -478,7 +623,6 @@
                                 </div>
                             </div>
                         </div>
-                        
                     </div>
                     <!-- 兑换记录 -->
                     <div class="layui-tab-item">
@@ -577,6 +721,12 @@
 <div class="bangphone gong">
     <p class="zhusi"><span>注：</span>请填写真实身份信息，若身份信息与提现信息不一致将会导致打款失败</p>
     <form class="form-horizontal phone-form">
+        <div class="form-group">
+            <label for="mima" class="col-xs-3 control-label">输入密码：</label>
+            <div class="col-xs-9">
+                <input type="password" class="form-control" name="mima" id="mima" placeholder="">
+            </div>
+        </div>
         <div class="form-group">
             <label for="phonenum" class="col-xs-3 control-label">绑定手机：</label>
             <div class="col-xs-9">

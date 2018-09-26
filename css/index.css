@@ -244,6 +244,20 @@
     text-align: center;
     max-height: 500px;
     max-width: 300px;
+    overflow: hidden;
+}
+.slick-initialized .slick-slide{
+    max-height: 500px;
+    max-width: 300px;
+    overflow: hidden;
+}
+.slick-initialized .slick-slide img{
+    max-height: 500px;
+    max-width: 300px;
+}
+.slick-2{
+    max-width: 500px;
+    overflow: hidden;
 }
 .slick-2 .contai-box img{
     width: 33.33%;
@@ -625,9 +639,7 @@ body {
     min-width: 1790px;
     word-break: break-all;
 }
-.slick-2{
-    overflow: hidden;
-}
+
 @media (max-width: 1789px){
     body {
         min-width: 1549px;

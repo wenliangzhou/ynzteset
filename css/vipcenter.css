@@ -68,11 +68,25 @@ body{
     display: inline-block;
 }
 /* 表格通用css */
+.fanye{
+    width: 893px !important;
+    height: 40px;
+    background-color: #ffffff;
+    border: solid 1px #e5e5e5;
+    text-align: center;
+    line-height: 40px;
+    position: absolute;
+    left: 0px;
+    margin-top: -10px;
+    font-size: 12px;
+    border-top: none;
+}
 .main table{
     width: 893px;
 }
 .main .tablebox{
     margin-left: 65px;
+    position: relative;
 }
 .tablebox>div{
     display:block;
@@ -631,4 +645,27 @@ body{
     border: none;
     margin-left: 140px;
 }
-
+/* 我的好友css */
+.friendsbox ul{
+    margin-left: 92px;
+    margin-top: 20px;
+}
+.friendsbox ul::after{
+    display: block;
+    content: '';
+    clear: both;
+}
+.friendsbox ul li{
+    width: 197px;
+	height: 126px;
+    border: solid 1px #e5e5e5;
+    float: left;
+    padding: 18px 0px;
+    text-align: center;
+}
+.friendsbox ul li p{
+    margin: 20px 0px;
+    font-size: 14px;
+    height: 14px;
+    line-height: 14px;
+}

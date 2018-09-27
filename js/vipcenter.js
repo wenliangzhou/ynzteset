@@ -294,9 +294,10 @@
                 console.log(data);
             });
         });
-        // 提现信息提交
+        // 申请提现信息提交------------
         var datashengqi = {};
         var jinereg = /^[0-9]*$/;
+        // 赏金提现
         $('.shangti').click(function () {
             [...$('.shang .condition .tiao-btn li')].forEach(el => {
                 if(el.className ==='li-active'){
@@ -319,7 +320,9 @@
                 return false;
             }
             // 赏金提现 ajax
+            console.log(datashengqi)
         });
+        // 红包提现
         $('.redti').click(function () {
             [...$('.red .condition .tiao-btn li')].forEach(el => {
                 if(el.className ==='li-active'){
@@ -465,7 +468,13 @@
             $(this).parent().children().removeClass('li-active');
             $(this).addClass('li-active');
         });
-        
-
+        // 表格无数据
+        function noDataShow(target,style) {
+            $(target).html('<div>暂无记录</div>');
+            $(target+' div').addClass(style);
+            var tbody = target.replace(/fan/,'box');
+            $(tbody).html('');
+        }
+        noDataShow('#friendsfan','fanye');
     });
 }());

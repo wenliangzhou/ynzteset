@@ -8,10 +8,22 @@
         });
         // 定义一个全局变量，把公用方法放在这个对象上
         wlz = {
-            showImage:function(target,orign){
+            showImage:function(target,orign,type){
                 file = jQuery(orign)[0].files[0];
-                //添加图片路径到img src中进行预览
-                jQuery(target).attr('src',getObjectURL(file));
+            //    var file = $('#zhizhao')[0].files
+                console.log(file);
+                // 添加图片路径到img src中进行预览
+                if(type || file){
+                    if(!file){
+                        $(target).html('点击上传');
+                        return false;
+                    }
+                    $(target).html("<div class='min'>"+file[type]+"</div>");
+                    return false;
+                }
+                if(!type){
+                    jQuery(target).attr('src',getObjectURL(file));
+                }
                 //不同浏览器下的路径不同
                  function getObjectURL(file) {
                       var url = null;

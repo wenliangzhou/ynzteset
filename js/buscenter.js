@@ -5,18 +5,37 @@
             var element = layui.element,
                 laydate = layui.laydate,
                 layer = layui.layer;
-            laydate.render({
-                elem: '#shengri' //指定元素
-            });
+                $('.showimg1').click(function () {
+                    layer.open({
+                        type: 1,
+                        shadeClose: true,
+                        resize: false,
+                        move: false,
+                        shade: 0,
+                        skin: 'tan-class',
+                        title: '手机绑定',
+                        content: $('#showimg1')
+                    });
+                });  
         });
 
         
         // 详细资料-----------------------------------------------
-        new YMDselect('year1', 'month1', 'day1', 2010, 3, 20);
+        
 
         $('#touxiang').change(function () {
             wlz.showImage('.pic', '#touxiang');
         });
+        $('#zhizhao').change(function () {
+            wlz.showImage('.zhizhao', '#zhizhao','name');
+        });
+        $('#shenfenzheng').change(function () {
+            wlz.showImage('.shenfenzheng', '#shenfenzheng','name');
+        });
+        $('#shenfenfan').change(function () {
+            wlz.showImage('.shenfenfan', '#shenfenfan','name');
+        });
+        
         // 提交信息
         $('.form-ziliao #submit').click(function () {
             var nichen = $('#nichen').val(),

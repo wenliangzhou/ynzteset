@@ -658,3 +658,23 @@ body{
     content: '';
     clear: both;
 }
+/* 上传 */
+.shangchuan input{
+    display: none;
+}
+.shangchuan{
+    font-size: 12px;
+}
+.min{
+    color: #333 !important;
+}
+.showimg{
+    height: 30px;
+    font-size: 12px;
+    line-height: 30px;
+    padding: 0px 20px;
+    
+}
+#showimg1{
+    display: none;
+}

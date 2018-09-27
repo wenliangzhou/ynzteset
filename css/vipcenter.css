@@ -494,7 +494,10 @@ body{
 .bangphone .form-horizontal .form-group{
     margin: 20px 0px;
 }
-.gong #yanzphone{
+.bangmibao .form-horizontal .form-group{
+    margin: 15px 0px;
+}
+.gong #yanzphone,.gong #yanzmibao{
     width: 100px;
 }
 .gong .getma{
@@ -675,4 +678,9 @@ body{
     display: block;
     content: '';
     clear: both;
+}
+.showimg{
+    height: 30px;
+    font-size: 12px;
+    line-height: 30px;
 }

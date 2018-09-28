@@ -49,18 +49,18 @@
     </div>
     <!-- 主体部分 -->
     <div class="main center">
-            <div class="layui-tab">
+            <div class="layui-tab" lay-filter = "test1">
                 <div class="title">个人中心</div>
                 <ul class="nav-right layui-tab-title">
-                    <li class="layui-this">详细资料</li>
-                    <li>安全中心</li>
-                    <li>财富明细</li>
-                    <li>任务详情</li>
-                    <li>VIP详情</li>
-                    <li>申请提现</li>
-                    <li>提现记录</li>
-                    <li>兑换记录</li>
-                    <li>我的好友</li>
+                    <li class="layui-this"  >详细资料</li>
+                    <li >安全中心</li>
+                    <li send = "0" send2 = "5">财富明细</li>
+                    <li send = "1">任务详情</li>
+                    <li >VIP详情</li>
+                    <li >申请提现</li>
+                    <li send = "3" send2 = "4">提现记录</li>
+                    <li send = "2">兑换记录</li>
+                    <li >我的好友</li>
                 </ul>
                 <div class="layui-tab-content mainbox">
                     <!-- 详细资料 -->
@@ -204,10 +204,112 @@
                         </div>
                     </div>
                     <!-- 财富明细 -->
-                    <div class="layui-tab-item">
+                    <div class="layui-tab-item mingxi-item">
                         <div class="ziliao">
-                            <span>
-                                财富明细
+                            <span class="tab">
+                                赏金明细
+                            </span>
+                            <span class="tab tabhide">
+                                红包明细
+                            </span>
+                        </div>
+                        <div class="tabItem">
+                            <div class="shangxibox">
+                                <div class="condition">
+                                    <span class="biaoti">变化时间:</span>
+                                    
+                                    <span class="rili"><input type="text" class="layui-input time1" id="shangxitime"></span>
+                                    <span class="heng">-</span>
+                                    <span class="rili"><input type="text" class="layui-input time2" id="shangxitime2"></span>
+                                    <ul class="tiao-btn">
+                                        <li num="1" class="li-active">全部</li>
+                                        <li num="2">今日</li>
+                                        <li num="3">近一周</li>
+                                    </ul>
+                                    <button class="cha">查询</button>
+                                </div>
+                                <div class="tablebox">
+                                    <table class="layui-table" lay-skin="line">
+                                        <thead>
+                                            <tr>
+                                                <th>变化时间</th>
+                                                <th>变化原因</th>
+                                                <th>赏金变化</th>
+                                                <th>赏金金额</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody id="shangxibox">
+                                            <tr>
+                                                <td>2018-12-32 16:20:36</td>
+                                                <td>新注册礼包</td>
+                                                <td>0</td>
+                                                <td>0m币</td>
+                                            </tr>
+                                            <tr>
+                                                <td>2018-12-32 16:20:36</td>
+                                                <td>新注册礼包</td>
+                                                <td>0</td>
+                                                <td>0m币</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    <div id="shangxifan" class="center"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tabItem hide">
+                            <div class="redxibox">
+                                <div class="condition">
+                                    <span class="biaoti">变化时间:</span>
+                                    
+                                    <span class="rili"><input type="text" class="layui-input time1" id="redxitime"></span>
+                                    <span class="heng">-</span>
+                                    <span class="rili"><input type="text" class="layui-input time2" id="redxitime2"></span>
+                                    <ul class="tiao-btn">
+                                        <li num="1" class="li-active">全部</li>
+                                        <li num="2">今日</li>
+                                        <li num="3">近一周</li>
+                                    </ul>
+                                    <button class="cha">查询</button>
+                                </div>
+                                <div class="tablebox">
+                                    <table class="layui-table" lay-skin="line">
+                                        <thead>
+                                            <tr>
+                                                <th>变化时间</th>
+                                                <th>变化原因</th>
+                                                <th>红包变化</th>
+                                                <th>红包金额</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody id="redxibox">
+                                            <tr>
+                                                <td>2018-12-32 16:20:36</td>
+                                                <td>新注册礼包</td>
+                                                <td>0</td>
+                                                <td>0元</td>
+                                            </tr>
+                                            <tr>
+                                                <td>2018-12-32 16:20:36</td>
+                                                <td>新注册礼包</td>
+                                                <td>0</td>
+                                                <td>0元</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    <div id="redxifan" class="center"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 财富明细 -->
+                    <!-- <div class="layui-tab-item tixian-item">
+                        <div class="ziliao">
+                            <span class="tab">
+                                赏金提现
+                            </span>
+                            <span class="tab tabhide">
+                                红包提现
                             </span>
                         </div>
                         <div class="moneybox">
@@ -258,7 +360,7 @@
                                 <div id="moneyfan" class="center"></div>
                             </div>
                         </div>
-                    </div>
+                    </div> -->
                     <!-- 任务详情 -->
                     <div class="layui-tab-item">
                         <div class="ziliao">

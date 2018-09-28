@@ -8,8 +8,31 @@
             laydate.render({
                 elem: '#shengri' //指定元素
             });
+            element.on('tab(test1)', function(data){
+                var send = $(this).attr('send'),
+                    send2 = $(this).attr('send2'),
+                    urldata = [{url:'https://api.github.com/users',pagebox:'shangxifan',tablebox:'shangxibox',fn:xr,limit:2}
+                            ,{url:'https://api.github.com/users',pagebox:'taskfan',tablebox:'taskbox',fn:xr,limit:2}
+                            ,{url:'https://api.github.com/users',pagebox:'duihuanfan',tablebox:'duihuanbox',fn:xr,limit:2}
+                            ,{url:'https://api.github.com/users',pagebox:'shangjintifan',tablebox:'shangjintibox',fn:xr,limit:2}
+                            ,{url:'https://api.github.com/users',pagebox:'redtifan',tablebox:'redtibox',fn:xr,limit:2}
+                            ,{url:'https://api.github.com/users',pagebox:'redxifan',tablebox:'redxibox',fn:xr,limit:2}];
+                if(send !== 'yes' && send !== undefined){
+                    // 财富明细表格第一次渲染
+                    if(send2){
+                        wlz.tableRequsetDate(urldata[send2]);
+                    }
+                    wlz.tableRequsetDate(urldata[send]);
+                }
+                $(this).attr('send',"yes");
+                layer.msg('切到到了'+ data.index + '：' + this.innerHTML);
+              });
         });
-
+        // 渲染财富明细的表格
+        function xr(res,curr,limit) {
+            console.log("页数"+ curr);
+            console.log("条数"+ limit);
+        }
         
         // 详细资料-----------------------------------------------
         new YMDselect('year1', 'month1', 'day1', 2010, 3, 20);
@@ -386,21 +409,8 @@
                 elem: '#duihuantime2' //指定元素
             });
             
-            // 渲染财富明细的表格
-            function xr(res,curr,limit) {
-                console.log("页数"+ curr);
-                console.log("条数"+ limit);
-            }
-            // 财富明细表格第一次渲染
-            wlz.tableRequsetDate({url:'https://api.github.com/users',pagebox:'moneyfan',tablebox:'moneybox',fn:xr,limit:2});
-            // 任务详情第一次渲染
-            wlz.tableRequsetDate({url:'https://api.github.com/users',pagebox:'taskfan',tablebox:'taskbox',fn:xr,limit:2});
-            // 兑换第一次渲染
-            wlz.tableRequsetDate({url:'https://api.github.com/users',pagebox:'duihuanfan',tablebox:'duihuanbox',fn:xr,limit:2});
-            // 赏金提现第一次渲染
-            wlz.tableRequsetDate({url:'https://api.github.com/users',pagebox:'shangjintifan',tablebox:'shangjintibox',fn:xr,limit:2});
-            // 红包提现第一次渲染
-            wlz.tableRequsetDate({url:'https://api.github.com/users',pagebox:'redtifan',tablebox:'redtibox',fn:xr,limit:2});
+            
+            
             // 获取条件请求  （点击查询请求）
             var fu,time0,time1,time2,time3,status,data;
             $('.cha').click(function () {
@@ -433,10 +443,15 @@
             // 点击cha按钮后发送请求，向后台请求数据并渲染。通过if来判断是哪一个BOX的请求
             // 发送上面生产的data条件
             $('.cha').click(function () {
-                // 财富明细
-                if(fu==='moneybox'){
+                // 赏金明细
+                if(fu==='shangxibox'){
                     console.log(data);
-                    wlz.tableRequsetDate({url:'https://api.github.com/repos/momodiy/sudoku/commits?per_page=2&sha=master',pagebox:'moneyfan',tablebox:'moneybox',fn:xr,limit:2,data:data});
+                    wlz.tableRequsetDate({url:'https://api.github.com/repos/momodiy/sudoku/commits?per_page=2&sha=master',pagebox:'shangxifan',tablebox:'shangxibox',fn:xr,limit:2,data:data});
+                } 
+                // 红包明细
+                if(fu==='redxibox'){
+                    console.log(data);
+                    wlz.tableRequsetDate({url:'https://api.github.com/repos/momodiy/sudoku/commits?per_page=2&sha=master',pagebox:'redxifan',tablebox:'redxibox',fn:xr,limit:2,data:data});
                 } 
                 // 兑换记录
                 if(fu==='duihuanbox'){
@@ -461,6 +476,7 @@
             });
             // 初始化提现选项卡
             wlz.tabInit('.tixian-item');
+            wlz.tabInit('.mingxi-item');
             wlz.tabInit('.shenqing-item');
         });
         // 表格条件选择添加样式

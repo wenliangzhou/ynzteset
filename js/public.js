@@ -7,10 +7,10 @@
             laypage = layui.laypage;
         });
         // 定义一个全局变量，把公用方法放在这个对象上
+        var arr = [];
         wlz = {
-            showImage:function(target,orign,type){
+            showImage:function(target,orign,type,duo){
                 file = jQuery(orign)[0].files[0];
-            //    var file = $('#zhizhao')[0].files
                 console.log(file);
                 // 添加图片路径到img src中进行预览
                 if(type || file){
@@ -83,7 +83,6 @@
                     , limit: limit //多少条
                     , can: data
                 }, function (res) {
-                    console.log(res);
                     if (res == '') {
                         $("#"+pagebox).html('<div class = "nothing">没有相关内容!!!</div>')
                         $(tablebox).html('');
@@ -112,6 +111,28 @@
                     });            
                 });
             }
+            // upload:function (target,orign) {
+            //     if(!formData){
+            //         var formData = new FormData();
+            //     }
+            //     var arr = [];
+            //     $(orign).change(function () {
+            //         file = jQuery(orign)[0].files[0];
+            //         console.log(file);
+            //         if(arr.length)
+            //         if(file){
+            //             arr.push(file);
+            //         }
+            //         var html = '<ul>'
+            //         arr.forEach(el => {
+            //             html += '<li>'+el.name+'</li>';
+            //         });
+            //             html += '</ul>';
+            //         $(target).html(html);
+            //         console.log(arr);
+            //     });
+                
+            // }
         }
         
         // 弹出私人导航栏

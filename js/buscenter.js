@@ -1,22 +1,23 @@
 (function () {
     $(document).ready(function () {
-        
         layui.use(['element', 'laydate','layer'], function () {
             var element = layui.element,
                 laydate = layui.laydate,
                 layer = layui.layer;
-                $('.showimg1').click(function () {
+                $('.showimg1,.showimg2,.showimg3').click(function () {
+                    var id = $(this).attr('tanImg')
                     layer.open({
                         type: 1,
                         shadeClose: true,
                         resize: false,
+                        closeBtn: 0,
                         move: false,
-                        shade: 0,
+                        shade: 0.4,
                         skin: 'tan-class',
-                        title: '手机绑定',
-                        content: $('#showimg1')
+                        title: false,
+                        content: $(id)
                     });
-                });  
+                });     
         });
 
         
@@ -35,14 +36,23 @@
         $('#shenfenfan').change(function () {
             wlz.showImage('.shenfenfan', '#shenfenfan','name');
         });
-        
+        $('#wenan').change(function () {
+            wlz.showImage('.wenan', '#wenan','name');
+        });
         // 提交信息
         $('.form-ziliao #submit').click(function () {
             var nichen = $('#nichen').val(),
-                user = $('#xingming').val()
-            phone = $('#phone').val(),
-                email = $('#email').val(),
-                place = $('#place').val();
+                user = $('#xingming').val(),
+                shenfennum = $('#shenfennum').val(),
+                phone = $('#phone').val(),
+                yinyehao = $('#yinyehao').val(),
+                place = $('#place').val(),
+                zhizhao = $('#zhizhao')[0].files[0],
+                zhizhaovalue = $('#zhizhao')[0].defaultValue,
+                shenfenzheng = $('#shenfenzheng')[0].files[0],
+                shenfenzhengvalue = $('#shenfenzheng')[0].defaultValue,
+                shenfenfan = $('#shenfenfan')[0].files[0],
+                shenfenfanvalue = $('#shenfenfan')[0].defaultValue;
             if (nichen == '') {
                 layer.tips('昵称不能为空 !', '#nichen', {
                     anim: 6
@@ -55,14 +65,20 @@
                 });
                 return false;
             }
-            if (phone == '') {
-                layer.tips('手机号不能为空 !', '#phone', {
+            if (shenfennum == '') {
+                layer.tips('身份证号不能为空 !', '#shenfennum', {
                     anim: 6
                 });
                 return false;
             }
-            if (email == '') {
-                layer.tips('邮箱不能为空 !', '#email', {
+            if (phone == '') {
+                layer.tips('联系方式不能为空 !', '#phone', {
+                    anim: 6
+                });
+                return false;
+            }
+            if (yinyehao == '') {
+                layer.tips('营业号不能为空 !', '#yinyehao', {
                     anim: 6
                 });
                 return false;
@@ -73,17 +89,113 @@
                 });
                 return false;
             }
-
+            if (zhizhao == undefined && zhizhaovalue =='') {
+                layer.tips('地址不能为空 !', '.zhizhao', {
+                    anim: 6
+                });
+                return false;
+            }
+            if (shenfenzheng == undefined && shenfenzhengvalue =='') {
+                layer.tips('地址不能为空 !', '.shenfenzheng', {
+                    anim: 6
+                });
+                return false;
+            }
+            if (shenfenfan == undefined && shenfenfanvalue =='') {
+                layer.tips('地址不能为空 !', '.shenfenfan', {
+                    anim: 6
+                });
+                return false;
+            }
+            
+            var files = $('#form-ziliao input[type=file]');
             var formData = new FormData();
-            var file = document.querySelector('[type=file]');
-            formData.append('touxiang', file.files[0]);
-
+            for(var i = 0;i<files.length;i++){
+                formData.append('file'+i, files[i].files[0]);
+            }
+            var form = $('#form-ziliao').serializeArray();
+            var data = wlz.zhuan(form);
+            formData.append('data',data);
             //ajax发送数据
-            console.log(formData)
-            console.log(formData.get('touxiang'))
-
             $.ajax({
-                url: "{:url('Prizeadd/prize_add')}",
+                url: "https://api.github.com/users",
+                method: 'POST',
+                data: formData,
+                contentType: false, // 注意这里应设为false
+                processData: false,
+                cache: false,
+                success: function (data) {
+
+                }
+            });
+
+            
+            return false;
+        });
+        
+        // 上传任务
+        $('#shangchuan #submit').click(function () {
+            var biaoti = $('#biaoti').val(),
+                shangjin = $('#shangjin').val(),
+                tasktime = $('#tasktime').val(),
+                renshu = $('#renshu').val(),
+                tasktext = $('#tasktext').val(),
+                attention = $('#attention').val(),
+                wenan = $('#wenan')[0].files[0],
+                wenanvalue = $('#wenan')[0].defaultValue;
+            if (biaoti == '') {
+                layer.tips('标题不能为空 !', '#biaoti', {
+                    anim: 6
+                });
+                return false;
+            }
+            if (shangjin == '') {
+                layer.tips('预付赏金不能空 !', '#shangjin', {
+                    anim: 6
+                });
+                return false;
+            }
+            if (tasktime == '') {
+                layer.tips('任务时间不能为空 !', '#tasktime', {
+                    anim: 6
+                });
+                return false;
+            }
+            if (renshu == '') {
+                layer.tips('人数不能空 !', '#renshu', {
+                    anim: 6
+                });
+                return false;
+            }
+            if (tasktext == '') {
+                layer.tips('任务详情不能空 !', '#tasktext', {
+                    anim: 6
+                });
+                return false;
+            }
+            if (wenan == undefined && wenanvalue =='') {
+                layer.tips('地址不能为空 !', '.tishi', {
+                    anim: 6
+                });
+                return false;
+            }
+            if (attention == '') {
+                layer.tips('任务详情不能空 !', '#attention', {
+                    anim: 6
+                });
+                return false;
+            }
+            alert('发送ajax')
+            var files = $('#shangchuan input[type=file]');
+            var formData = new FormData();
+            for(var i = 0;i<files.length;i++){
+                formData.append('file'+i, files[i].files[0]);
+            }
+            var form = $('#shangchuan').serializeArray();
+            var data = wlz.zhuan(form);
+            formData.append('data',data);
+            $.ajax({
+                url: "https://api.github.com/users",
                 method: 'POST',
                 data: formData,
                 contentType: false, // 注意这里应设为false
@@ -95,7 +207,8 @@
             });
             return false;
         });
-        
+
+        // 安全中心
         layui.use(['layer'], function () {
             var  layer = layui.layer;
             // 安全中心
@@ -177,10 +290,6 @@
                 // 调用按钮禁用
                 wlz.btnTime(this,10);
             });
-            // $('.bangpsw .getma').click(function () {
-            //     // 调用按钮禁用
-            //     wlz.btnTime(this,10);
-            // });
             // 手机号提交获取数据
             $('.bang-phone-btn').click(function () {
                 var phonereg = /^((13[0-9])|(14[5|7])|(15([0-3]|[5-9]))|(18[0,5-9]))\d{8}$/,
@@ -313,58 +422,7 @@
                 console.log(data);
             });
         });
-        // 申请提现信息提交------------
-        var datashengqi = {};
-        var jinereg = /^[0-9]*$/;
-        // 赏金提现
-        $('.shangti').click(function () {
-            [...$('.shang .condition .tiao-btn li')].forEach(el => {
-                if(el.className ==='li-active'){
-                    datashengqi.way = el.getAttribute('num');
-                }
-            });
-            datashengqi.num = $('.shang .jine').val();
-            datashengqi.psw = $('.shang .mima').val();
-            // 正则验证
-            if(!jinereg.test(datashengqi.num)||datashengqi.num==''){
-                layer.tips('请输入数字字符 !', '#jineshang', {
-                    anim: 6
-                });
-                return false;
-            }
-            if(datashengqi.psw==''){
-                layer.tips('请输入提款密码 !', '#pswshang', {
-                    anim: 6
-                });
-                return false;
-            }
-            // 赏金提现 ajax
-            console.log(datashengqi)
-        });
-        // 红包提现
-        $('.redti').click(function () {
-            [...$('.red .condition .tiao-btn li')].forEach(el => {
-                if(el.className ==='li-active'){
-                    datashengqi.way = el.getAttribute('num');
-                }
-            });
-            datashengqi.num = $('.red .jine').val();
-            datashengqi.psw = $('.red .mima').val();
-            if(!jinereg.test(datashengqi.num)||datashengqi.num==''){
-                layer.tips('请输入数字字符 !', '#jinered', {
-                    anim: 6
-                });
-                return false;
-            }
-            if(datashengqi.psw==''){
-                layer.tips('请输入提款密码 !', '#pswred', {
-                    anim: 6
-                });
-                return false;
-            }
-            console.log(datashengqi)
-            // 红包提现ajax
-        });
+      
         // ------------------------------表格渲染-----------------------------------
         // 表格渲染，日期选择
         layui.use(['laypage','form', 'layer','laydate'], function () {
@@ -372,54 +430,27 @@
                 ,layer = layui.layer
                 ,laydate = layui.laydate
                 ,form = layui.form;
-            // 财富明细--------------------------------
-            // 各个日期控件的初始化
+            // 财富明细-------------------------------  
+            // 渲染财富明细的表格
             laydate.render({
-                elem: '#moneytime' //指定元素
-              });        
-            laydate.render({
-                elem: '#moneytime2' //指定元素
-              });
-            laydate.render({
-                elem: '#tasktime' //指定元素
+                elem: '#tasktime3' //指定元素
             });
             laydate.render({
                 elem: '#tasktime2' //指定元素
             });
             laydate.render({
-                elem: '#shangtitime' //指定元素
+                elem: '#moneytime' //指定元素
             });
             laydate.render({
-                elem: '#shangtitime2' //指定元素
+                elem: '#moneytime2' //指定元素
             });
-            laydate.render({
-                elem: '#redtitime' //指定元素
-            });
-            laydate.render({
-                elem: '#redtitime2' //指定元素
-            });
-            laydate.render({
-                elem: '#duihuantime' //指定元素
-            });
-            laydate.render({
-                elem: '#duihuantime2' //指定元素
-            });
-            
-            // 渲染财富明细的表格
             function xr(res,curr,limit) {
-                console.log("页数"+ curr);
-                console.log("条数"+ limit);
+                
             }
-            // 财富明细表格第一次渲染
-            wlz.tableRequsetDate({url:'https://api.github.com/users',pagebox:'moneyfan',tablebox:'moneybox',fn:xr,limit:2});
             // 任务详情第一次渲染
             wlz.tableRequsetDate({url:'https://api.github.com/users',pagebox:'taskfan',tablebox:'taskbox',fn:xr,limit:2});
-            // 兑换第一次渲染
-            wlz.tableRequsetDate({url:'https://api.github.com/users',pagebox:'duihuanfan',tablebox:'duihuanbox',fn:xr,limit:2});
-            // 赏金提现第一次渲染
-            wlz.tableRequsetDate({url:'https://api.github.com/users',pagebox:'shangjintifan',tablebox:'shangjintibox',fn:xr,limit:2});
-            // 红包提现第一次渲染
-            wlz.tableRequsetDate({url:'https://api.github.com/users',pagebox:'redtifan',tablebox:'redtibox',fn:xr,limit:2});
+            // 财富明细第一次渲染
+            wlz.tableRequsetDate({url:'https://api.github.com/users',pagebox:'moneyfan',tablebox:'moneybox',fn:xr,limit:2});
             // 获取条件请求  （点击查询请求）
             var fu,time0,time1,time2,time3,status,data;
             $('.cha').click(function () {
@@ -452,35 +483,17 @@
             // 点击cha按钮后发送请求，向后台请求数据并渲染。通过if来判断是哪一个BOX的请求
             // 发送上面生产的data条件
             $('.cha').click(function () {
-                // 财富明细
-                if(fu==='moneybox'){
-                    console.log(data);
-                    wlz.tableRequsetDate({url:'https://api.github.com/repos/momodiy/sudoku/commits?per_page=2&sha=master',pagebox:'moneyfan',tablebox:'moneybox',fn:xr,limit:2,data:data});
-                } 
-                // 兑换记录
-                if(fu==='duihuanbox'){
-                    console.log(data);
-                    wlz.tableRequsetDate({url:'https://api.github.com/repos/momodiy/sudoku/commits?per_page=2&sha=master',pagebox:'moneyfan',tablebox:'moneybox',fn:xr,limit:2,data:data});
-                }
                 // 任务详情
                 if(fu==='taskbox'){
                     console.log(data);
                     wlz.tableRequsetDate({url:'https://api.github.com/repos/momodiy/sudoku/commits?per_page=2&sha=master',pagebox:'moneyfan',tablebox:'moneybox',fn:xr,limit:2,data:data});
                 }
-                // 赏金提现
-                if(fu==='shangjintibox'){
+                if(fu==='moneybox'){
                     console.log(data);
                     wlz.tableRequsetDate({url:'https://api.github.com/repos/momodiy/sudoku/commits?per_page=2&sha=master',pagebox:'moneyfan',tablebox:'moneybox',fn:xr,limit:2,data:data});
-                }
-                // 红包提现
-                if(fu==='redtibox'){
-                    console.log(data);
-                    wlz.tableRequsetDate({url:'https://api.github.com/repos/momodiy/sudoku/commits?per_page=2&sha=master',pagebox:'moneyfan',tablebox:'moneybox',fn:xr,limit:2,data:data});
-                }
+                }  
+                
             });
-            // 初始化提现选项卡
-            wlz.tabInit('.tixian-item');
-            wlz.tabInit('.shenqing-item');
         });
         // 表格条件选择添加样式
         $('.tiao-btn li').click(function () {

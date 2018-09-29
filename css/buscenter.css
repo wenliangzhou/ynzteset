@@ -281,6 +281,9 @@ body{
     padding-bottom: 0px;
     padding-right: 0px;
 }
+.form-ziliao textarea.form-control{
+    height: auto;
+}
 .form-ziliao .year{
     width: 80px;
 }
@@ -438,12 +441,10 @@ body{
     display: none;
 }
 .tan-class{
-    width: 300px;
-    height: 368px;
     border-radius: 12px !important;
 }
 .tan-class .layui-layer-content{
-    padding: 30px 20px;
+    padding: 20px 20px;
 }
 .tan-class .layui-layer-title{
     border-top-left-radius: 12px;
@@ -662,19 +663,41 @@ body{
 .shangchuan input{
     display: none;
 }
+#shangchuan .zhizhao,#shangchuan .shangchuan{
+    display: inline-block;
+    padding: 0px 10px;
+}
 .shangchuan{
-    font-size: 12px;
+    margin-top: 1px;
+    margin-bottom: 0px;
+    height: 31px !important;
+}
+.shangchuan div{
+    height: 32px;
 }
 .min{
     color: #333 !important;
 }
 .showimg{
     height: 30px;
-    font-size: 12px;
     line-height: 30px;
     padding: 0px 20px;
     
 }
-#showimg1{
+#showimg1,#showimg2,#showimg3{
     display: none;
+}
+.tan-class img{
+    width: 100%;
+    border-radius: 4px;
+}
+.form-ziliao input{
+    color: #333333;
+}
+#shangchuan .wenan ul{
+    white-space:nowrap;
+    height: 100%;
+}
+#shangchuan .wenan ul li{
+    display: inline-block;
 }

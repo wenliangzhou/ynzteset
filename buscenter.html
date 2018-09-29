@@ -61,10 +61,10 @@
                             </span>
                         </div>
                         <!-- form表单 -->
-                        <form id=form-ziliao" class="form-horizontal form-ziliao">
+                        <form id="form-ziliao" class="form-horizontal form-ziliao">
                             <div class="form-group">
-                                <label  class="col-sm-2 control-label">头像 ：</label>
-                                <div class="col-sm-10">
+                                <label  class="col-sm-3 control-label">头像 ：</label>
+                                <div class="col-sm-9">
                                         <div class="qcontainer">
                                             <div class="film">
                                                 <div class="face front">           
@@ -76,7 +76,7 @@
                                                         <label for="touxiang">
                                                             点击上传头像
                                                         </label>    
-                                                        <input type="file" accept="image/png,image/gif" id="touxiang" name="touxiang">
+                                                        <input type="file" accept="image/png,image/gif" id="touxiang" name="">
                                                     </div>
                                                 </div>
                                             </div>
@@ -86,37 +86,37 @@
                             <div class="form-group">
                                 <label for="nichen" class="col-sm-3 control-label">公司名称 ：</label>
                                 <div class="col-sm-9">
-                                    <input type="text" disabled class="form-control" id="nichen" placeholder="">
+                                    <input type="text"  class="form-control" id="nichen" placeholder="" value="" name="mingchen">
                                 </div>
                             </div>
                             <div class="form-group">
                                 <label for="" class="col-sm-3 control-label">法人姓名 ：</label>
                                 <div class="col-sm-9">
-                                    <input type="text" disabled class="form-control" id="" placeholder="">
+                                    <input type="text" class="form-control" id="xingming" placeholder="" name="faren">
                                 </div>
                             </div>
                             <div class="form-group">
                                 <label for="" class="col-sm-3 control-label">法人身份证号码 ：</label>
                                 <div class="col-sm-9">
-                                    <input type="text" disabled class="form-control" id="" placeholder="">
+                                    <input type="text" class="form-control" id="shenfennum" placeholder="" name="shenfenzheng">
                                 </div>
                             </div>
                             <div class="form-group">
                                 <label for="" class="col-sm-3 control-label">联系方式 ：</label>
                                 <div class="col-sm-9">
-                                    <input type="text" disabled class="form-control" id="" placeholder="">
+                                    <input type="text" class="form-control" id="phone" placeholder="" name="lianxifangshi">
                                 </div>
                             </div>
                             <div class="form-group">
                                 <label for="" class="col-sm-3 control-label">营业号 ：</label>
                                 <div class="col-sm-9">
-                                    <input type="text" class="form-control" id="" placeholder="">
+                                    <input type="text" class="form-control" id="yinyehao" placeholder="" name="yingyehao">
                                 </div>
                             </div>
                             <div class="form-group">
                                 <label for="" class="col-sm-3 control-label">公司地址 ：</label>
                                 <div class="col-sm-9">
-                                    <input type="text" class="form-control" id="" placeholder="">
+                                    <input type="text" class="form-control" id="place" placeholder="" name="place">
                                 </div>
                             </div>
                             <div class="form-group">
@@ -124,17 +124,19 @@
                                 <div class="col-sm-9">
                                     <label for="zhizhao" class="shangchuan form-control">
                                         <div class="zhizhao">点击上传营业执照</div>
-                                        <input type="file" accept="image/png,image/gif" id="zhizhao" name="zhizhao">
+                                        <input type="file" accept="image/png,image/gif" id="zhizhao" name="">
                                     </label>
                                 </div>
+                                <button type="button" id="" class="btn btn-default showimg showimg3 hide" tanImg = "#showimg3">查看</button>
                             </div>
                             <div class="form-group">
                                 <label for="" class="col-sm-3 control-label">身份证图片正面 ：</label>
                                 <div class="col-sm-9">
                                     <label for="shenfenzheng" class="shangchuan form-control">
                                         <div class="shenfenzheng">点击上传身份证正面</div>
-                                        <input type="file" accept="image/png,image/gif" id="shenfenzheng" name="zhizhao">
+                                        <input type="file" accept="image/png,image/gif" id="shenfenzheng" name="">
                                     </label>
+                                    <button type="button" id="" class="btn btn-default showimg showimg2 hide" tanImg = "#showimg2">查看</button>
                                 </div>
                             </div>
                             <div class="form-group">
@@ -142,11 +144,9 @@
                                 <div class="col-sm-9">
                                     <label for="shenfenfan" class="shangchuan form-control hide">
                                         <div class="shenfenfan">点击上传身份证反面</div>
-                                        <input type="file" accept="image/png,image/gif" id="shenfenfan" name="zhizhao">
+                                        <input type="file" accept="image/png,image/gif" id="shenfenfan" name="" value="33">
                                     </label>
-                                    
-                                    
-                                    <button type="button" id="" class="btn btn-default showimg showimg1">查看</button>
+                                    <button type="button" id="" class="btn btn-default showimg showimg1" tanImg = "#showimg1">查看</button>
                                 </div>
                             </div>
                             <div class="form-group">
@@ -156,62 +156,147 @@
                             </div>
                         </form>
                     </div>
-                    <!-- 安全中心 -->
+                    <!-- 上传任务 -->
                     <div class="layui-tab-item">
                         <div class="ziliao">
                             <span>
-                                安全中心
+                                上传任务
                             </span>
                         </div>
-                        <div class="safebox">
-                            <ul class="safecenter">
-                                <li>
-                                    <span>手机号码：</span>
-                                    <span>未绑定</span>
-                                    <span class="tan1">绑定手机号</span>
-                                </li>
-                                <li>
-                                    <span>银行信息：</span>
-                                    <span>未绑定</span>
-                                    <span class="tan2">绑定银行卡</span>
-                                </li>
-                                <li>
-                                    <span>真实信息：</span>
-                                    <span>未设置</span>
-                                    <span class="tan3">去设置</span>
-                                </li>
-                                <li>
-                                    <span>登录密码：</span>
-                                    <span>已设置</span>
-                                    <span class="tan4">修改</span>
-                                </li>
-                                <li>
-                                    <span>密保问题：</span>
-                                    <span>未设置</span>
-                                    <span class="tan5">去设置</span>
-                                </li>
-                                <li>
-                                    <span>提款密码：</span>
-                                    <span>未设置</span>
-                                    <span class="tan6">去设置</span>
-                                </li>
-                                <li>
-                                    <span>qq绑定：</span>
-                                    <span>未设置</span>
-                                    <span class="tan7">去设置</span>
-                                </li>
-                                <li>
-                                    <span>微信绑定：</span>
-                                    <span>未设置</span>
-                                    <span class="tan8">去设置</span>
-                                </li>
-                            </ul>
+                        <!-- form表单 -->
+                        <form id="shangchuan" class="form-horizontal form-ziliao">
+                            
+                            <div class="form-group">
+                                <label for="biaoti" class="col-sm-3 control-label">任务标题 ：</label>
+                                <div class="col-sm-9">
+                                    <input type="text"  class="form-control" id="biaoti" placeholder="" name="biaoti">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="shangjin" class="col-sm-3 control-label">预付赏金 ：</label>
+                                <div class="col-sm-9">
+                                    <input type="text" class="form-control" id="shangjin" placeholder="">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="tasktime" class="col-sm-3 control-label">任务时间 ：</label>
+                                <div class="col-sm-9">
+                                    <input type="text" class="form-control" id="tasktime" placeholder="">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="renshu" class="col-sm-3 control-label">人数 ：</label>
+                                <div class="col-sm-9">
+                                    <input type="text" class="form-control" id="renshu" placeholder="">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="tasktext" class="col-sm-3 control-label">任务详细 ：</label>
+                                <div class="col-sm-9">
+                                    <textarea name="" id="tasktext" class="form-control" rows="3" ></textarea>
+                                </div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="" class="col-sm-3 control-label">任务素材/文案 ：</label>
+                                <div class="col-sm-9 form-inline">
+                                    <label for="wenan" class="shangchuan form-control tishi">
+                                        <div class="wenan">点击上传文件(可多个文件)</div>
+                                        <input type="file"  id="wenan" name="wenan">
+                                    </label>
+                                </div>
+                                <button type="button" id="" class="btn btn-default showimg showimg3 hide" tanImg = "#showimg3">查看</button>
+                            </div>
+                            <div class="form-group">
+                                <label for="" class="col-sm-3 control-label">备注/注意事项 ：</label>
+                                <div class="col-sm-9">
+                                    <input type="text" class="form-control" id="attention" placeholder="">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="col-sm-offset-2 col-sm-10">
+                                    <button type="button" id="submit" class="btn btn-default">保存</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <!-- 任务详情 -->
+                    <div class="layui-tab-item">
+                        <div class="ziliao">
+                            <span>
+                                任务详情
+                            </span>
+                        </div>
+                        <div class="taskbox">
+                            <div class="condition layui-form">
+                                <span class="biaoti">变化时间:</span>
+                                
+                                <span class="rili"><input type="text" class="layui-input time1" id="tasktime3"></span>
+                                <span class="heng">-</span>
+                                <span class="rili"><input type="text" class="layui-input time2" id="tasktime2"></span>
+                                <ul class="tiao-btn">
+                                    <li num="1" class="li-active">全部</li>
+                                    <li num="2">今日</li>
+                                    <li num="3">近一周</li>
+                                    <li num="4">本月</li>
+                                </ul>
+                                <select class="status">
+                                    <option value="0">状态</option>
+                                    <option value="1">已取消</option>
+                                    <option value="2">已支付</option>
+                                    <option value="3">审核中</option>
+                                    <option value="4">已完成</option>
+                                </select>
+                                <button class="cha">查询</button>
+                            </div>
+                            <div class="tablebox">
+                                <table class="layui-table" lay-skin="line">
+                                    <thead>
+                                        <tr>
+                                            <th>发布时间</th>
+                                            <th>结束时间</th>
+                                            <th>任务名称</th>
+                                            <th>任务发放</br>赏金总额</th>
+                                            <th>任务已发放</br>赏金金额</th>
+                                            <th>任务</br>冻结赏金</th>
+                                            <th>任务</br>接取人数</th>
+                                            <th>任务</br>完成人数</th>
+                                            <th>任务状态</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="taskbox">
+                                        <tr>
+                                            <td>2018-08-22</td>
+                                            <td>2018-08-22</td>
+                                            <td>新注册礼包</td>
+                                            <td>4000mb</td>
+                                            <td>3000mb</td>
+                                            <td>1000mb</td>
+                                            <td>10人</td>
+                                            <td>5人</td>
+                                            <td>进行中</td>
+                                        </tr>
+                                        <tr>
+                                            <td>2018-08-22</td>
+                                            <td>2018-08-22</td>
+                                            <td>新注册礼包</td>
+                                            <td>4000mb</td>
+                                            <td>3000mb</td>
+                                            <td>1000mb</td>
+                                            <td>10人</td>
+                                            <td>5人</td>
+                                            <td>进行中</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <div id="taskfan" class="center"></div>
+                            </div>
                         </div>
                     </div>
                     <!-- 财富明细 -->
                     <div class="layui-tab-item">
                         <div class="ziliao">
-                            <span>
+                            <span class="tab">
                                 财富明细
                             </span>
                         </div>
@@ -236,9 +321,7 @@
                                             <th>变化时间</th>
                                             <th>变化原因</th>
                                             <th>赏金变化</th>
-                                            <th>赏金金额</th>
-                                            <th>红包变化</th>
-                                            <th>红包金额</th>
+                                            <th>赏金余额</th>
                                         </tr>
                                     </thead>
                                     <tbody id="moneybox">
@@ -247,510 +330,19 @@
                                             <td>新注册礼包</td>
                                             <td>0</td>
                                             <td>0m币</td>
-                                            <td>0</td>
-                                            <td>0元</td>
                                         </tr>
                                         <tr>
                                             <td>2018-12-32 16:20:36</td>
                                             <td>新注册礼包</td>
                                             <td>0</td>
                                             <td>0m币</td>
-                                            <td>0</td>
-                                            <td>0元</td>
                                         </tr>
                                     </tbody>
                                 </table>
                                 <div id="moneyfan" class="center"></div>
                             </div>
                         </div>
-                    </div>
-                    <!-- 任务详情 -->
-                    <div class="layui-tab-item">
-                        <div class="ziliao">
-                            <span>
-                                任务详情
-                            </span>
-                        </div>
-                        <div class="taskbox">
-                            <div class="condition">
-                                <span class="biaoti">参与时间:</span>
-                                
-                                <span class="rili"><input type="text" class="layui-input time1" id="tasktime"></span>
-                                <span class="heng">-</span>
-                                <span class="rili"><input type="text" class="layui-input time2" id="tasktime2"></span>
-                                <ul class="tiao-btn">
-                                    <li num="1" class="li-active">全部</li>
-                                    <li num="2">今日</li>
-                                    <li num="3">近一周</li>
-                                </ul>
-                                <button class="cha">查询</button>
-                            </div>
-                            <div class="tablebox">
-                                <table class="layui-table" lay-skin="line">
-                                    <thead>
-                                        <tr>
-                                            <th>任务接取时间</th>
-                                            <th>任务完成时间</th>
-                                            <th>任务名称</th>
-                                            <th>任务状态</th>
-                                            <th>任务所得赏金</th>
-                                            <th>任务所得红包</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody id="taskbox">
-                                        <tr>
-                                            <td>2018-12-32 16:20:36</td>
-                                            <td>--：--：--</td>
-                                            <td>新注册礼包</td>
-                                            <td>未完成</td>
-                                            <td>1000mb</td>
-                                            <td>0元</td>
-                                        </tr>
-                                        <tr>
-                                            <td>2018-12-32 16:20:36</td>
-                                            <td>--：--：--</td>
-                                            <td>新注册礼包</td>
-                                            <td>未完成</td>
-                                            <td>1000mb</td>
-                                            <td>0元</td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                                <div id="taskfan" class="center"></div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- VIP详情 -->
-                    <div class="layui-tab-item">
-                        <div class="ziliao">
-                            <span>
-                                VIP详情
-                            </span>
-                        </div>
-                        <div class="vipbox">
-                            <img class="guan" src="img/center/guan.png" alt="">
-                            <div class="tablebox">
-                                <table class="layui-table">
-                                    <thead>
-                                        <tr>
-                                            <th>VIP</th>
-                                            <th>VIP福利</th>
-                                            <th class="color1">VIP1</th>
-                                            <th class="color2">VIP2</th>
-                                            <th class="color3">VIP3</th>
-                                            <th class="color4">VIP4</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody id="taskbox">
-                                        <tr>
-                                            <td>VIP等级制度</td>
-                                            <td>完成任务数量</td>
-                                            <td>连续签到30天/>25</td>
-                                            <td>>100</td>
-                                            <td>>200</td>
-                                            <td>>300</td>
-                                        </tr>
-                                        <tr>
-                                            <td>VIP等级福利</td>
-                                            <td>每日赠送赏金</td>
-                                            <td><span class="jinbi">20000</span></td>
-                                            <td><span class="jinbi">40000</span></td>
-                                            <td><span class="jinbi">60000</span></td>
-                                            <td><span class="jinbi">100000</span></td>
-                                        </tr>
-                                        <tr>
-                                            <td>VIP任务加成</td>
-                                            <td>额外增加赏金</td>
-                                            <td><span>10000赏金</span></td>
-                                            <td><span>15000赏金</span></td>
-                                            <td><span>20000赏金</span></td>
-                                            <td><span>30000赏金</span></td>
-                                        </tr>
-                                        <tr>
-                                            <td>VIP补签</td>
-                                            <td colspan="5">每周补签一次,补签消耗10000赏金</td>
-                                        </tr>
-                                        <tr>
-                                            <td>VIP审核优先</td>
-                                            <td colspan="5" class="color5">普通会员提交任务后审核72小时，VIP会员提交任务后审核48小时</td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                                <div class="center vipheng">
-                                    <span>VIP特殊任务</span><span>(vip2以上即可参加)</span>
-                                </div>
-                                <div class="vipfooter center">
-                                   
-                                    <p>1.在优胜客内充值100元进行投注，满一倍流水后，全输保险退款80元，完成任务后可在优益领取<span>50000赏金</span></p>
-                                    <p>2.在LOTT88内充值100元进行投注，满一倍流水后，全输保险退款80元，完成任务后可在优益领取<span>50000赏金</span></p>
-                                    
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- 申请提现 -->
-                    <div class="layui-tab-item shenqing-item">
-                        <div class="ziliao">
-                            <span class="tab">
-                                赏金提现
-                            </span>
-                            <span class="tab tabhide">
-                                红包提现
-                            </span>
-                        </div>
-                        <div class="tabItem">
-                            <div class="shenqingtibox shang">
-                                <div class="condition layui-form">
-                                    <span class="biaoti">赏金金额:</span>
-                                    <span class="jinbi">10，004</span>
-                                    <span class="huise">(约1元人名币)</span>
-                                </div>
-                                <div class="condition time0">
-                                    <span class="biaoti">提现方式:</span>
-                                    <ul class="tiao-btn">
-                                        <li num="1" class="li-active">微信零钱</li>
-                                        <li num="2">支付宝</li>
-                                        <li num="3">银行卡</li>
-                                    </ul>
-                                </div>
-                                <div class="condition layui-form">
-                                    <span class="biaoti">收款账户:</span>
-                                    <span class="lanse">去绑定</span>
-                                </div>
-                                <div class="condition layui-form">
-                                    <span class="biaoti">提现金额:</span>
-                                    <span class="input"><input type="text" class="layui-input jine" id="jineshang" name="jinenum" placeholder="可提现1元"></span>
-                                    <span class="huise">10000M币=1元</span>
-                                </div>
-                                <div class="condition layui-form">
-                                    <span class="biaoti">提款密码:</span>
-                                    <span class="input"><input type="password" class="layui-input mima" id="pswshang" name="psw" placeholder="请输入交易密码"></span>
-                                    <span class="lanse tan6">设置提款密码</span>
-                                </div>
-                                <div>
-                                    <button class="shangti">确认提现</button>
-                                </div>
-                                
-                            </div>
-                        </div>
-                        <div class="tabItem hide">
-                            <div class="shenqingtibox red">
-                                <div class="condition layui-form">
-                                    <span class="biaoti">红包金额:</span>
-                                    <span>10，004</span>
-                                    <span class="huise">(约1元人名币)</span>
-                                </div>
-                                <div class="condition time0">
-                                    <span class="biaoti">提现方式:</span>
-                                    <ul class="tiao-btn">
-                                        <li num="1" class="li-active">微信零钱</li>
-                                        <li num="2">支付宝</li>
-                                        <li num="3">银行卡</li>
-                                    </ul>
-                                </div>
-                                <div class="condition layui-form">
-                                    <span class="biaoti">收款账户:</span>
-                                    <span class="lanse">去绑定</span>
-                                </div>
-                                <div class="condition layui-form">
-                                    <span class="biaoti">提现金额:</span>
-                                    <span class="input"><input type="text" class="layui-input jine" id="jinered" name="jinenum" placeholder="可提现1元"></span>
-                                    <span class="huise">元</span>
-                                </div>
-                                <div class="condition layui-form">
-                                    <span class="biaoti">提款密码:</span>
-                                    <span class="input"><input type="password" class="layui-input mima" id="pswred" name="psw" placeholder="请输入交易密码"></span>
-                                    <span class="lanse tan6">设置提款密码</span>
-                                </div>
-                                <div>
-                                    <button class="redti">确认提现</button>
-                                </div>
-                            
-                            </div>
-                        </div>
-                    </div>
-                    <!-- 提现记录 -->
-                    <div class="layui-tab-item tixian-item">
-                        <div class="ziliao">
-                            <span class="tab">
-                                赏金提现
-                            </span>
-                            <span class="tab tabhide">
-                                红包提现
-                            </span>
-                        </div>
-                        <div class="tabItem">
-                            <div class="shangjintibox">
-                                <div class="condition time0">
-                                    <span class="biaoti">提现方式:</span>
-                                    <ul class="tiao-btn">
-                                        <li num="1" class="li-active">微信零钱</li>
-                                        <li num="2">支付宝</li>
-                                        <li num="3">银行卡</li>
-                                    </ul>
-                                </div>
-                        
-                                <div class="condition layui-form">
-                                    <span class="biaoti">提现时间:</span>
-                                    <span class="rili"><input type="text" class="layui-input time1" id="shangtitime"></span>
-                                    <span class="heng">-</span>
-                                    <span class="rili"><input type="text" class="layui-input time2" id="shangtitime2"></span>
-                                    <ul class="tiao-btn">
-                                        <li num="1" class="li-active">全部</li>
-                                        <li num="2">今日</li>
-                                        <li num="3">近一周</li>
-                                        <li num="4">本月</li>
-                                    </ul>
-                                    <select class="status">
-                                        <option value="0">状态</option>
-                                        <option value="1">已取消</option>
-                                        <option value="2">已支付</option>
-                                        <option value="3">审核中</option>
-                                        <option value="4">已完成</option>
-                                    </select>
-                                    <button class="cha">查询</button>
-                                </div>
-                                <div class="tablebox">
-                                    <table class="layui-table" lay-skin="line">
-                                        <thead>
-                                            <tr>
-                                                <th>收款账号</th>
-                                                <th>提现方式</th>
-                                                <th>申请人</th>
-                                                <th>提现金额</th>
-                                                <th>手续费</th>
-                                                <th>实付金额</th>
-                                                <th>申请时间</th>
-                                                <th>处理时间</th>
-                                                <th>状态</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody id="shangjintibox">
-                                            <tr>
-                                                <td>1520554511</td>
-                                                <td>支付宝</td>
-                                                <td>小李</td>
-                                                <td>1000</td>
-                                                <td>50</td>
-                                                <td>100000</td>
-                                                <td>2018-12-32 16:20:36</td>
-                                                <td>2018-12-32 16:20:36</td>
-                                                <td>完成</td>
-                                            </tr>
-                                            <tr>
-                                                <td>1520554511</td>
-                                                <td>支付宝</td>
-                                                <td>小李</td>
-                                                <td>1000</td>
-                                                <td>50</td>
-                                                <td>100000</td>
-                                                <td>2018-12-32 16:20:36</td>
-                                                <td>2018-12-32 16:20:36</td>
-                                                <td>完成</td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
-                                    <div id="shangjintifan" class="center"></div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="tabItem hide">
-                            <div class="redtibox">
-                                <div class="condition time0">
-                                    <span class="biaoti">提现方式:</span>
-                                    <ul class="tiao-btn">
-                                        <li num="1" class="li-active">微信零钱</li>
-                                        <li num="2">支付宝</li>
-                                        <li num="3">银行卡</li>
-                                    </ul>
-                                </div>
-                                <div class="condition layui-form">
-                                    <span class="biaoti">提现时间:</span>
-                                    <span class="rili"><input type="text" class="layui-input time1" id="redtitime"></span>
-                                    <span class="heng">-</span>
-                                    <span class="rili"><input type="text" class="layui-input time2" id="redtitime2"></span>
-                                    <ul class="tiao-btn">
-                                        <li num="1" class="li-active">全部</li>
-                                        <li num="2">今日</li>
-                                        <li num="3">近一周</li>
-                                        <li num="4">本月</li>
-                                    </ul>
-                                    <select class="status">
-                                        <option value="0">状态</option>
-                                        <option value="1">已取消</option>
-                                        <option value="2">已支付</option>
-                                        <option value="3">审核中</option>
-                                        <option value="4">已完成</option>
-                                    </select>
-                                    <button class="cha">查询</button>
-                                </div>
-                                <div class="tablebox">
-                                    <table class="layui-table" lay-skin="line">
-                                        <thead>
-                                            <tr>
-                                                <th>收款账号</th>
-                                                <th>提现方式</th>
-                                                <th>申请人</th>
-                                                <th>提现金额</th>
-                                                <th>手续费</th>
-                                                <th>实付金额</th>
-                                                <th>申请时间</th>
-                                                <th>处理时间</th>
-                                                <th>状态</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody id="redtibox">
-                                            <tr>
-                                                <td>1520554511</td>
-                                                <td>支付宝</td>
-                                                <td>小李</td>
-                                                <td>1000</td>
-                                                <td>50</td>
-                                                <td>100000</td>
-                                                <td>2018-12-32 16:20:36</td>
-                                                <td>2018-12-32 16:20:36</td>
-                                                <td>完成</td>
-                                            </tr>
-                                            <tr>
-                                                <td>1520554511</td>
-                                                <td>支付宝</td>
-                                                <td>小李</td>
-                                                <td>1000</td>
-                                                <td>50</td>
-                                                <td>100000</td>
-                                                <td>2018-12-32 16:20:36</td>
-                                                <td>2018-12-32 16:20:36</td>
-                                                <td>完成</td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
-                                    <div id="redtifan" class="center"></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- 兑换记录 -->
-                    <div class="layui-tab-item">
-                        <div class="ziliao">
-                            <span>
-                                兑换记录
-                            </span>
-                        </div>
-                        <div class="duihuanbox">
-                            <div class="condition time0">
-                                <span class="biaoti">提现方式:</span>
-                                <ul class="tiao-btn">
-                                    <li num="1" class="li-active">全部</li>
-                                    <li num="2">虚拟奖品</li>
-                                    <li num="3">实物奖品</li>
-                                </ul>
-                            </div>
-                            <div class="condition">
-                                <span class="biaoti">兑换时间:</span>
-                                <span class="rili"><input type="text" class="layui-input time1" id="duihuantime"></span>
-                                <span class="heng">-</span>
-                                <span class="rili"><input type="text" class="layui-input time2" id="duihuantime2"></span>
-                                <ul class="tiao-btn">
-                                    <li num="1" class="li-active">全部</li>
-                                    <li num="2">今日</li>
-                                    <li num="3">近一周</li>
-                                    <li num="4">本月</li>
-                                </ul>
-                                <button class="cha">查询</button>
-                            </div>
-                            <div class="tablebox">
-                                <table class="layui-table" lay-skin="line">
-                                    <thead>
-                                        <tr>
-                                            <th>奖品名称</th>
-                                            <th>所用奖金</th>
-                                            <th>兑换时间</th>
-                                            <th>收货人</th>
-                                            <th>状态</th>
-                                            <th>操作</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody id="duihuanbox">
-                                        <tr>
-                                            <td>iphone</td>
-                                            <td>1000000</td>
-                                            <td>2018-12-32 16:20:36</td>
-                                            <td>小李</td>
-                                            <td>完成</td>
-                                            <td>xx</td>
-                                        </tr>
-                                        <tr>
-                                            <td>iphone</td>
-                                            <td>1000000</td>
-                                            <td>2018-12-32 16:20:36</td>
-                                            <td>小李</td>
-                                            <td>完成</td>
-                                            <td>xx</td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                                <div id="duihuanfan" class="center"></div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- 我的好友 -->
-                    <div class="layui-tab-item">
-                        <div class="ziliao">
-                            <span>
-                                我的好友
-                            </span>
-                        </div>
-                        <div class="friendsbox">
-                            <ul>
-                                <li>
-                                    <p>邀请总人数</p>
-                                    <p>0</p>
-                                </li>
-                                <li>
-                                    <p>邀请获得总赏金</p>
-                                    <p>0m币</p>
-                                </li>
-                                <li>
-                                    <p>邀请获得总红包</p>
-                                    <p>0元</p>
-                                </li>
-                                <li>
-                                    <p>有效好友人数</p>
-                                    <p>0人</p>
-                                </li>
-                            </ul>
-                            <div class="tablebox">
-                                <table class="layui-table" lay-skin="line">
-                                    <thead>
-                                        <tr>
-                                            <th>好友ID</th>
-                                            <th>邀请时间</th>
-                                            <th>邀请所得赏金</th>
-                                            <th>邀请所得红包</th>
-                                            <th>已完成任务数量</th>                           
-                                        </tr>
-                                    </thead>
-                                    <tbody id="friendsbox">
-                                        <tr>
-                                            <td>55</td>
-                                            <td>2018-12-32 16:20:36</td>
-                                            <td>1555</td>
-                                            <td>555</td>
-                                            <td>22</td>
-                                        </tr>
-                                        <tr>
-                                            <td>55</td>
-                                            <td>2018-12-32 16:20:36</td>
-                                            <td>1555</td>
-                                            <td>555</td>
-                                            <td>22</td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                                <div id="friendsfan" class="center"></div>
-                            </div>
-                        </div>
-                    </div>                    
+                    </div>                   
                 </div>
             </div>
     </div>
@@ -789,9 +381,11 @@
 </body>
 <!-- 侧边导航栏 签到日历 -->
 <div id='schedule-box' class="boxshawv signin-box"></div>
-<!-- 手机绑定弹框 -->
 
 
 
-<div  id="showimg1" ><img src="img/center/touxiang.png" alt=""></div>
+<!-- 图片上传后 -->
+<div  id="showimg1"><img src="img/center/touxiang.png" alt=""></div>
+<div  id="showimg2"><img src="img/center/touxiang.png" alt=""></div>
+<div  id="showimg3"><img src="img/center/touxiang.png" alt=""></div>
 </html>

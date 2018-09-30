@@ -232,7 +232,7 @@
                     move: false,
                     shade: 0,
                     skin: 'tan-class',
-                    title: '绑定银行卡',
+                    title: '绑定支付信息',
                     content: $('.bangbank')
                 });
             });
@@ -284,8 +284,20 @@
                     content: $('.bangtipsw')
                 });
             });
+            $('.tan7').click(function () {
+                layer.open({
+                    type: 1,
+                    shadeClose: true,
+                    resize: false,
+                    move: false,
+                    shade: 0,
+                    skin: 'tan-class',
+                    title: '绑定邮箱',
+                    content: $('.bangmail')
+                });
+            });
             // 获取验证码禁用按钮
-            $('.bangphone .getma,.bangpsw .getma,.bangtipsw .getma')
+            $('.bangphone .getma,.wx-form .getma,.zfb-form .getma,.bank-form .getma,.psw-form .getma,.mail-form .getma,.bangmibao .getma,.bangtipsw .getma')
             .click(function () {
                 // 调用按钮禁用
                 wlz.btnTime(this,10);
@@ -309,6 +321,73 @@
                     return false;
                 }
                 var data = $('.phone-form').serializeArray();
+                console.log(data);
+            });
+            // 邮箱提交获取数据
+            $('.bang-mail-btn').click(function () {
+                var mailreg = /^[A-Za-z0-9\u4e00-\u9fa5]+@[a-zA-Z0-9_-]+(\.[a-zA-Z0-9_-]+)+$/,
+                    mailnum = $('#mailnum').val(),
+                    yanzmail = $('#yanzmail').val(),
+                    mailmima = $('#mailmima').val();
+                if(mailmima==''){
+                    layer.tips('请输入登录密码 !', '#mailmima', {
+                        anim: 6
+                    });
+                    return false;
+                }   
+                if(!mailreg.test(mailnum)){
+                    layer.tips('请输入正确的邮箱 !', '#mailnum', {
+                        anim: 6
+                    });
+                    return false;
+                }
+                if(yanzmail==''){
+                    layer.tips('请输入验证码 !', '#yanzmail', {
+                        anim: 6
+                    });
+                    return false;
+                } 
+                var data = $('.mail-form').serializeArray();
+                console.log(data);
+            });
+            // 微信信息提交
+            $('.bang-wx-btn').click(function () {
+                var weixinnum = $('#weixinnum').val(),
+                    yanzwei = $('#yanzwei').val();
+                if(weixinnum == ''){
+                    layer.tips('请输入微信账号 !', '#weixinnum', {
+                        anim: 6
+                    });
+                    return false;
+                }
+                if(yanzwei == ''){
+                    layer.tips('请输入验证码 !', '#yanzwei', {
+                        anim: 6
+                    });
+                    return false;
+                }
+                
+                var data = $('.wx-form').serializeArray();
+                console.log(data);
+            });
+            // 支付宝信息提交
+            $('.bang-zfb-btn').click(function () {
+                var zfbnum = $('#zfbnum').val(),
+                    yanzzfb = $('#yanzzfb').val();
+                if(zfbnum == ''){
+                    layer.tips('请输入支付宝账号 !', '#zfbnum', {
+                        anim: 6
+                    });
+                    return false;
+                }
+                if(yanzzfb == ''){
+                    layer.tips('请输入验证码 !', '#yanzzfb', {
+                        anim: 6
+                    });
+                    return false;
+                }
+                
+                var data = $('.zfb-form').serializeArray();
                 console.log(data);
             });
             // 银行信息提交获取数据
@@ -383,14 +462,34 @@
             $('.bang-mi-btn').click(function () {
                 
                 var mibao = $('#mibao').val(),
-                    mida = $('#mida').val();
+                    mida = $('#mida').val(),
+                    yzfsmb = $('#yzfsmb').val(),
+                    yanzmibao = $('#yanzmibao').val(),
+                    fsreg = /(^((13[0-9])|(14[5|7])|(15([0-3]|[5-9]))|(18[0,5-9]))\d{8}$|^[A-Za-z0-9\u4e00-\u9fa5]+@[a-zA-Z0-9_-]+(\.[a-zA-Z0-9_-]+)+$)/;
                 if(mida == ''){
                     layer.tips('请输入密保答案 !', '#mida',{
                         anim: 6
                     });
                     return false;
                 }
-        
+                if(yzfsmb == ''){
+                    layer.tips('请输入验证方式 !', '#yzfsmb',{
+                        anim: 6
+                    });
+                    return false;
+                }
+                if(!fsreg.test(yzfsmb)){
+                    layer.tips('邮箱或者手机号码格式错误 !', '#yzfsmb',{
+                        anim: 6
+                    });
+                    return false;
+                }
+                if(yanzmibao == ''){
+                    layer.tips('请输入验证方式 !', '#yanzmibao',{
+                        anim: 6
+                    });
+                    return false;
+                }
                 var data = $('.mi-form').serializeArray();
                 console.log(data);
             });
@@ -399,7 +498,9 @@
                 var pswtireg = /^[0-9]{6}$/,
                     pswti = $('#pswti').val(),
                     pswati = $('#pswati').val(),
-                    pswtima = $('#pswtima').val();
+                    yzfsti = $('#yzfsti').val(),
+                    pswtima = $('#pswtima').val(),
+                    fsreg = /(^((13[0-9])|(14[5|7])|(15([0-3]|[5-9]))|(18[0,5-9]))\d{8}$|^[A-Za-z0-9\u4e00-\u9fa5]+@[a-zA-Z0-9_-]+(\.[a-zA-Z0-9_-]+)+$)/;
                 if(!pswtireg.test(pswti)){
                     layer.tips('请输入正确的密码格式 !', '#pswti', {
                         anim: 6
@@ -408,6 +509,12 @@
                 }
                 if(pswti !== pswati){
                     layer.tips('密码不一致 !', '#pswati', {
+                        anim: 6
+                    });
+                    return false;
+                }
+                if(!fsreg.test(yzfsti)){
+                    layer.tips('手机或者邮箱格式错误 !', '#yzfsti', {
                         anim: 6
                     });
                     return false;

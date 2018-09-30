@@ -437,11 +437,12 @@ body{
     margin-left: 50px;
 }
 .bangphone,.bangbank,.banginformation,.bangpsw,
-.bangmibao,.bangtipsw{
+.bangmibao,.bangtipsw,.bangmail{
     display: none;
 }
 .tan-class{
     border-radius: 12px !important;
+    width: 300px;
 }
 .tan-class .layui-layer-content{
     padding: 20px 20px;
@@ -477,7 +478,7 @@ body{
 .bangphone .form-horizontal .form-group{
     margin: 20px 0px;
 }
-.gong #yanzphone{
+.gong #yanzphone,.gong #yanzwei,.gong #yanzzfb,.gong #yanzbank,.gong #yanzmail,.gong #yanzmibao{
     width: 100px;
 }
 .gong .getma{
@@ -508,150 +509,9 @@ body{
     width: 79px;
 }
 
-/* VIPCSS */
-.vipbox{
-    position: relative;
-    margin-top: 50px;
-}
-.vipbox .guan{
-    position: absolute;
-    right: -20px;
-    top: -20px;
-    z-index: 5;
-}
-.main .vipbox table th{
-    font-size: 14px;
-}
-.main .vipbox table .color1{
-    color: #fdc400;
-}
-.main .vipbox table .color2{
-    color: #ff9000;
-}
-.main .vipbox table .color3{
-    color: #fe4200;
-}
-.main .vipbox table .color4{
-    color: #ff0000;
-}
-.main .vipbox table .color5{
-    color: #ee0909;
-}
- .jinbi{
-    position: relative;
-    margin-right: 20px !important;
-}
-.jinbi::after{
-    display: inline-block;
-    content: url(../img/center/jinbi.png);
-    position: absolute;
-    margin-left: 2px;
-    top: 1px;
-}
-.main table td[colspan]{
-    text-align: left !important;
-}
-.vipbox .vipheng{
-    display: flex;
-    justify-content:center;
-}
-.vipbox .vipheng span:nth-child(1){
-    width: 120px;
-	height: 30px;
-	background-color: #ffe405;
-    border-radius: 8px;
-    line-height: 30px;
-    text-align: center;
-    font-size: 13px;
-    color: #000000;
-}
-.vipbox .vipheng span:nth-child(2){
-    color: #fe0000;
-    line-height: 30px;
-    margin-left: 8px;
-    font-size: 12px;
-}
-.vipbox .vipfooter{
-    width: auto;
-    font-size: 14px;
-    position: relative;
-    margin-top: 15px;
-    padding-top: 20px;
-    padding-left: 39px;
-    width: 786px;
-	height: 124px;
-	border-radius: 8px;
-    background: url(../img/center/viptu.png) center center no-repeat;
-}
-.vipbox .vipfooter img{
-    position: absolute;
-    top: 0px;
-    z-index: -1;
-}
-.vipbox .vipfooter p{
-    width: 522px;
-    margin-bottom: 12px;
-}
 
-/* 申请提现CSS */
-.shenqingtibox .condition span{
-    display: inline-block;
-    line-height: 30px;
-    height: 30px;
-    vertical-align: top;
-    font-size: 14px;
-    margin-right: 10px;
-}
-.shenqingtibox .condition .huise{
-    margin-left: 10px;
-    font-size: 12px;
-    color: #a8a8a8;
-}
-.shenqingtibox .condition .lanse{
-    color: #169bd5;
-    font-size: 12px;
-    padding-left: 10px;
-}
-.shenqingtibox .condition .input input{
-    width: 140px;
-    font-size: 12px;
-}
-.shenqing-item .condition{
-    margin-bottom: 20px;
-    margin-top: 20px;
-}
-.shenqing-item .shangti,.shenqing-item .redti{
-    width: 120px;
-    height: 30px;
-    background-color: #ffe405;
-    border-radius: 4px;
-    border: none;
-    margin-left: 140px;
-}
-/* 我的好友css */
-.friendsbox ul{
-    margin-left: 92px;
-    margin-top: 20px;
-}
-.friendsbox ul::after{
-    display: block;
-    content: '';
-    clear: both;
-}
-.friendsbox ul li{
-    width: 197px;
-	height: 126px;
-    border: solid 1px #e5e5e5;
-    float: left;
-    padding: 18px 0px;
-    text-align: center;
-}
-.friendsbox ul li p{
-    margin: 20px 0px;
-    font-size: 14px;
-    height: 14px;
-    line-height: 14px;
-}
+
+
 
 /* 页脚 */
 .main .layui-tab::after{
@@ -700,4 +560,22 @@ body{
 }
 #shangchuan .wenan ul li{
     display: inline-block;
+}
+/* 弹框CSS */
+.bangbank .layui-tab-content{
+    padding: 10px 0px;
+}
+.bangbank .layui-tab{
+    margin: 0px !important;
+}
+.layui-layer-content input{
+    font-size: 13px;
+    color: #333333;
+}
+
+.shezhi{
+    font-size: 12px;
+    color: #169bd5 !important;
+    cursor: pointer;
+    margin-left: 10px;
 }

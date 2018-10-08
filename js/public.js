@@ -111,28 +111,6 @@
                     });            
                 });
             }
-            // upload:function (target,orign) {
-            //     if(!formData){
-            //         var formData = new FormData();
-            //     }
-            //     var arr = [];
-            //     $(orign).change(function () {
-            //         file = jQuery(orign)[0].files[0];
-            //         console.log(file);
-            //         if(arr.length)
-            //         if(file){
-            //             arr.push(file);
-            //         }
-            //         var html = '<ul>'
-            //         arr.forEach(el => {
-            //             html += '<li>'+el.name+'</li>';
-            //         });
-            //             html += '</ul>';
-            //         $(target).html(html);
-            //         console.log(arr);
-            //     });
-                
-            // }
         }
         
         // 弹出私人导航栏

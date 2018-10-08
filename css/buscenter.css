@@ -428,6 +428,17 @@ body{
     position: absolute;
     left: 65px;
 }
+.light::before{
+    content: '';
+    background: url(../img/center/key2.png) center center no-repeat !important;
+    background-size: 13px 15px;
+    height: 46px;
+    width: 13px;
+    display: inline-block;
+    line-height: 46px;
+    position: absolute;
+    left: 65px;
+}
 .safebox .safecenter li span:nth-child(1){
     margin-left: 178px;
     display: inline-block;

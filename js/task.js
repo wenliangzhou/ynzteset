@@ -9,6 +9,7 @@
         laydate.render({
             elem: '#shengri' //指定元素
         });
+        // 切换请求数据
         element.on('tab(test1)', function(data){
             var send = $(this).attr('send'),
                 send2 = $(this).attr('send2'),

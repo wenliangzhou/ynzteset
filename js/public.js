@@ -110,6 +110,22 @@
                         }
                     });            
                 });
+            },
+            tabInit2:function (target) {
+                var tab = $('.tab-'+target),
+                    item = $('.item-'+target),
+                    num = tab.length;
+                for(var i = 0;i<num;i++){
+                    $(tab[i]).attr('index',i);
+                    $(item[i]).attr('index',i);
+                }
+                item.addClass('hide');
+                $(item[0]).removeClass('hide');
+                tab.click(function () {
+                    var index = parseInt($(this).attr('index'));
+                    item.addClass('hide');
+                    $(item[index]).removeClass('hide');
+                });
             }
         }
         

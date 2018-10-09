@@ -477,7 +477,9 @@
             // 初始化提现选项卡
             wlz.tabInit('.tixian-item');
             wlz.tabInit('.mingxi-item');
-            wlz.tabInit('.shenqing-item');
+            wlz.tabInit('.shenqing-item');  
+            wlz.tabInit2('shang');
+            wlz.tabInit2('red');
         });
         // 表格条件选择添加样式
         $('.tiao-btn li').click(function () {

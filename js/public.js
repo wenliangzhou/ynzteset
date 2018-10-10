@@ -78,6 +78,7 @@
                 var _this = this,
                     arr = [];
                 // $.ajaxSettings.async = false;
+                alert(1)
                 $.getJSON(url, {
                     page: curr //向服务端传的参数，此处只是演示
                     , limit: limit //多少条

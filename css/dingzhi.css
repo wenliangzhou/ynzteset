@@ -50,6 +50,7 @@
 }
 .ding-nav{
     display: inline-block;
+    padding-bottom: 40px;
 }
 .ding-nav::after{
     display: block;
@@ -96,3 +97,229 @@
 .ding-nav .bg4:hover{
     background: url(../img/dingzhi/ms2.png) center center no-repeat;
 }
+
+/* 轮播部分css */
+.lunbobox{
+    height: 610px;
+    background-color: #f7f7f7;
+    color: #000000;
+    border-top: 1px solid transparent;
+}
+.lunbobox .tuijian{
+    color: #000000;
+    font-size: 22px;
+    text-align: center;
+    margin: 20px 0px;
+}
+.lunbobox .textbox{
+    text-align: center;
+}
+.lunbobox .commend{
+    display: inline-block;
+    font-size: 14px;
+    padding: 5px 15px;
+    border: solid 2px #000000;
+    position: relative;
+}
+.lunbobox .commend::before{
+    display: block;
+    content: '';
+    width: 98px;
+	height: 2px;
+    background-color: #000000;
+    position: absolute;
+    top: 15px;
+    left: -92px;
+}
+.lunbobox .commend::after{
+    display: block;
+    content: '';
+    width: 98px;
+	height: 2px;
+    background-color: #000000;
+    position: absolute;
+    top: 15px;
+    right: -92px;
+}
+.lunbobox .text2{
+    margin: 20px;
+    margin-bottom: 40px;
+}
+
+.lunbo{
+    width: 1220px;
+    position: relative;
+}
+.lunbo img{
+    display: inline-block;
+}
+.lunbo .item{
+    text-align: center;
+    position: relative;
+}
+.lunbo .item::after{
+    display: block;
+    content: '';
+    position: absolute;
+    width: 285px;
+	height: 400px;
+	background-color: #000000;
+    opacity: 0.64;
+    top: 0px;
+    left: 10px;
+}
+.lunbo .prev{
+    top:180px;
+    position: absolute;
+    width: 45px;
+	height: 45px;
+    background-color: #000000;
+    border-radius: 50%;
+    left: -57px;
+    color: #fff100;
+    line-height: 45px;
+    text-align: center;
+    font-size: 18px;
+}
+.lunbo .next{
+    position: absolute;
+    top:180px;
+    color: #fff100;
+    width: 45px;
+	height: 45px;
+    background-color: #000000;
+    border-radius: 50%;
+    right: -57px;
+    line-height: 45px;
+    text-align: center;
+    font-size: 18px;
+}
+.lunbo .xingxiang{
+    width: 100%;
+    color: #fff100;
+    font-size: 16px;
+    position: absolute;
+    top: 0px;
+    z-index: 5;
+    margin-top: 160px;
+}
+.lunbo .xingxiang::before{
+    display: block;
+    content: '';
+    position: absolute;
+    width: 245px;
+	height: 360px;
+    border: solid 2px #e5e5e5;
+    top: -140px;
+    left: 30px;
+}
+.lunbo .xingxiang::after{
+    display: block;
+    content: '';
+    position: absolute;
+    width: 44px;
+	height: 2px;
+	background: #e5e5e5;
+    top: 60px;
+    left: 130px;
+}
+.lunbo .yemian{
+    width: 285px;
+	height: 100px;
+	background-color: #000000;
+	opacity: 0.64;
+    color: #fff100;
+    font-size: 16px;
+    position: absolute;
+    z-index: 5;
+    top: 0px;
+    left: 10px;
+    line-height: 100px;
+}
+.lunbo .yemian::before{
+    display: block;
+    content: '';
+    position: absolute;
+    width: 245px;
+	height: 65px;
+    border: solid 2px #e5e5e5;
+    top: 20px;
+    left: 20px;
+}
+.lunbo .yemian::after{
+    display: block;
+    content: '';
+    position: absolute;
+    width: 44px;
+	height: 2px;
+	background: #e5e5e5;
+    top: 75px;
+    left: 120px;
+}
+.lunbo .donghua{
+    width: 285px;
+	height: 100px;
+	background-color: #000000;
+	opacity: 0.64;
+    color: #fff100;
+    font-size: 16px;
+    position: absolute;
+    z-index: 5;
+    bottom: 0px;
+    left: 10px;
+    line-height: 100px;
+}
+.lunbo .donghua::before{
+    display: block;
+    content: '';
+    position: absolute;
+    width: 245px;
+	height: 65px;
+    border: solid 2px #e5e5e5;
+    top: 20px;
+    left: 20px;
+}
+.lunbo .donghua::after{
+    display: block;
+    content: '';
+    position: absolute;
+    width: 44px;
+	height: 2px;
+	background: #e5e5e5;
+    top: 75px;
+    left: 120px;
+}
+.lunbo .manhua{
+    width: 285px;
+	height: 100px;
+	background-color: #000000;
+	opacity: 0.64;
+    color: #fff100;
+    font-size: 16px;
+    position: absolute;
+    z-index: 5;
+    top: 0px;
+    left: 10px;
+    line-height: 100px;
+}
+.lunbo .manhua::before{
+    display: block;
+    content: '';
+    position: absolute;
+    width: 245px;
+	height: 65px;
+    border: solid 2px #e5e5e5;
+    top: 20px;
+    left: 20px;
+}
+.lunbo .manhua::after{
+    display: block;
+    content: '';
+    position: absolute;
+    width: 44px;
+	height: 2px;
+	background: #e5e5e5;
+    top: 75px;
+    left: 120px;
+}
+

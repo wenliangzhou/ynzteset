@@ -1,3 +1,6 @@
+body{
+    min-width: 1333px;
+}
 .banner{
     overflow: hidden;
     width: 100%;
@@ -105,23 +108,23 @@
     color: #000000;
     border-top: 1px solid transparent;
 }
-.lunbobox .tuijian{
+.tuijian{
     color: #000000;
     font-size: 22px;
     text-align: center;
     margin: 20px 0px;
 }
-.lunbobox .textbox{
+.textbox{
     text-align: center;
 }
-.lunbobox .commend{
+.commend{
     display: inline-block;
     font-size: 14px;
     padding: 5px 15px;
     border: solid 2px #000000;
     position: relative;
 }
-.lunbobox .commend::before{
+.commend::before{
     display: block;
     content: '';
     width: 98px;
@@ -131,7 +134,7 @@
     top: 15px;
     left: -92px;
 }
-.lunbobox .commend::after{
+.commend::after{
     display: block;
     content: '';
     width: 98px;
@@ -141,7 +144,7 @@
     top: 15px;
     right: -92px;
 }
-.lunbobox .text2{
+.text2{
     margin: 20px;
     margin-bottom: 40px;
 }
@@ -322,4 +325,214 @@
     top: 75px;
     left: 120px;
 }
+/* 瀑布盒子 */
+.pubu{
+    width: 1200px;
+}
+.pubu .float-left{
+    float: left;
+}
+.clearfloat::after{
+    display: block;
+    content: '';
+    clear: both;
+}
+.pubu .item1,.pubu .item2,.pubu .item_c1,.item_d1,.item_g1{
+    margin-right: 19px;
+}
+.item_a2,.item_d1,.item_d2,.item_f2,.item_e2,.item4{
+    margin-top: 19px;
+}
+.biaozhu{
+    text-align: right;
+    color: #000;
+    margin-top: 20px;
+    margin-bottom: 60px;
+}
+.pubu .zhezhao{
+    position: relative;
+}
+.pubu .zhezhao::after{
+    display: block;
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    left: 0px;
+    background: #000;
+    opacity: 0.74;
+}
+/* 瀑布特效 */
+.hovereffect {
+    overflow:hidden;
+    position:relative;
+    text-align:center;
+    cursor:default;
+}
+    
+.hovereffect .overlay {
+    width:100%;
+    height:100%;
+    position:absolute;
+    overflow:hidden;
+    top:0;
+    left:0;
+    opacity:0;
+    background-color:rgba(0,0,0,0.5);
+    -webkit-transition:all .4s ease-in-out;
+    transition:all .4s ease-in-out
+}
+    
+.hovereffect img {
+    display:block;
+    position:relative;
+    -webkit-transition:all .4s linear;
+    transition:all .4s linear;
+}
+.hovereffect:hover img {
+    -ms-transform:scale(1.2);
+    -webkit-transform:scale(1.2);
+    transform:scale(1.2);
+}
 
+.putextbox{
+    width: 100%;
+    position: absolute;
+    z-index: 10;
+    top: 0px;
+}
+.putextbox .biaoti{
+    font-size: 24px;
+    color: #ffffff;
+}
+.putextbox .itemtext{
+    color: #ffffff;
+    font-size: 14px;
+}
+.putextbox .biaoti_1{
+    color: #fff100;
+    text-align: center;
+    margin-top: 124px;
+    margin-bottom: 39px;
+}
+.putextbox .itemtext_1{
+    margin: 20px 0px;
+}
+.putextbox .itemtext_2{
+    margin-top: 13px;
+    line-height: 35px;
+}
+.putextbox .biaoti_3{
+    color: #fff100;
+    text-align: center;
+    margin-top: 16px;
+    margin-bottom: 12px;
+    text-align: left;
+    padding-left: 23px;
+}
+.putextbox .itemtext_3{
+    margin-top: 12px;
+    line-height: 25px;
+    text-align: left;
+    padding-left: 23px;
+}
+.putextbox .biaoti_4{
+    text-align: center;
+    margin-top: 16px;
+    margin-bottom: 12px;
+    text-align: left;
+    padding-left: 23px;
+    line-height: 42px;
+}
+.putextbox .biaoti_5{
+    margin-top: 32px;
+}
+.putextbox .itemtext_5{
+    margin-top: 10px;
+    line-height: 35px;
+}
+.putextbox .biaoti_5_2{
+    margin-top: 210px;
+}
+.putextbox .itemtext_5_2{
+    margin-top: 10px;
+    line-height: 35px;
+}
+.putextbox .biaoti_6{
+    color: #fff100;
+}
+.putextbox .biaoti_7{
+    margin-top: 72px;
+}
+.putextbox .itemtext_7{
+    margin-top: 8px;
+}
+.putextbox .itemtext_7 span:nth-child(1){
+    margin-top: 10px;
+    line-height: 35px;
+    margin-right: 80px;
+}
+.putextbox .biaoti_8{
+    color: #fff100;
+    text-align: center;
+    margin-top: 110px;
+}
+.putextbox .itemtext_8{
+    margin-top: 4px;
+    line-height: 32px;
+}
+.putextbox .itemtext_8 span{
+    display: inline-block;
+    width: 96px;
+    text-align: right;
+}
+.putextbox .biaoti_9{
+    color: #fff100;
+    text-align: center;
+    margin-top: 40px;
+    color: #000;
+}
+.putextbox .itemtext_9{
+    margin-top: 4px;
+    line-height: 32px;
+    color: #333333;
+    line-height: 35px;
+}
+.zhezhao_9::after{
+    background-color: #ffffff !important;
+    opacity: 0.29 !important;
+}
+.putextbox .biaoti_10{
+    margin-top: 30px;
+    margin-bottom: 30px;
+    color: #fff100;
+}
+.putextbox .itemtext_10{
+    height: 20px;
+}
+.putextbox .itemtext_10 .span1{
+    margin-left: 200px;
+}
+.putextbox .itemtext_10 .span2{
+    margin-left: 320px;
+}
+.putextbox .itemtext_10 .span3{
+    margin-left: 0px;
+}
+.putextbox .itemtext_10 .span4{
+    margin-left: 330px;
+    margin-right: 190px;
+}
+.putextbox .biaoti_11{
+    color: #fff100;
+    margin-top: 42px;
+    margin-bottom: 10px;
+}
+.putextbox .itemtext_11{
+    line-height: 35px;
+}
+.zhezhao_5::after{
+    background-color: #595959 !important;
+	opacity: 0.46 !important;
+}

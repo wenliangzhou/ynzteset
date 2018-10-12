@@ -536,3 +536,46 @@ body{
     background-color: #595959 !important;
 	opacity: 0.46 !important;
 }
+
+.texiao::after{
+    transform-style: preserve-3d;
+	-webkit-transform-style: preserve-3d;
+    -moz-transform-style: preserve-3d;
+    transition: 1s;
+    -moz-transition: 1s; /* Firefox 4 */
+    -webkit-transition: 1s; /* Safari 和 Chrome */
+    -o-transition: 1s; /* Opera */	
+}
+.item:hover .texiao::after{
+    width: 100px;
+    left: 100px;
+    background: #ffe405;
+    transform: rotateY(180deg);
+	transform-style: preserve-3d;
+	-webkit-transform: rotateY(180deg); /* Safari and Chrome */
+	-webkit-transform-style: preserve-3d; /* Safari and Chrome */
+}
+.texiao::before{
+    transform-style: preserve-3d;
+	-webkit-transform-style: preserve-3d;
+    -moz-transform-style: preserve-3d;
+    transition: 1s;
+    -moz-transition: 1s; /* Firefox 4 */
+    -webkit-transition: 1s; /* Safari 和 Chrome */
+    -o-transition: 1s; /* Opera */	
+}
+.item:hover .texiao::before{
+    transform: rotateY(180deg);
+	transform-style: preserve-3d;
+	-webkit-transform: rotateY(180deg); /* Safari and Chrome */
+	-webkit-transform-style: preserve-3d; /* Safari and Chrome */
+}
+.texiao{
+    transition: 3s;
+    -moz-transition: 1s; /* Firefox 4 */
+    -webkit-transition: 1s; /* Safari 和 Chrome */
+    -o-transition: 1s; /* Opera */	
+}
+.item:hover .texiao{
+    letter-spacing: 5px;
+}

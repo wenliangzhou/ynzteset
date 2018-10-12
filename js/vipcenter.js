@@ -1,6 +1,5 @@
 (function () {
     $(document).ready(function () {
-        
         layui.use(['element', 'laydate','layer'], function () {
             var element = layui.element,
                 laydate = layui.laydate,
@@ -8,26 +7,33 @@
             laydate.render({
                 elem: '#shengri' //指定元素
             });
-            element.on('tab(test1)', function(data){
+            element.on('tab(test1)', function (data) {
                 var send = $(this).attr('send'),
                     send2 = $(this).attr('send2'),
-                    urldata = [{url:'https://api.github.com/users',pagebox:'shangxifan',tablebox:'shangxibox',fn:xr,limit:2}
-                            ,{url:'https://api.github.com/users',pagebox:'taskfan',tablebox:'taskbox',fn:xr,limit:2}
-                            ,{url:'https://api.github.com/users',pagebox:'duihuanfan',tablebox:'duihuanbox',fn:xr,limit:2}
-                            ,{url:'https://api.github.com/users',pagebox:'shangjintifan',tablebox:'shangjintibox',fn:xr,limit:2}
-                            ,{url:'https://api.github.com/users',pagebox:'redtifan',tablebox:'redtibox',fn:xr,limit:2}
-                            ,{url:'https://api.github.com/users',pagebox:'redxifan',tablebox:'redxibox',fn:xr,limit:2}];
-                if(send !== 'yes' && send !== undefined){
+                    urldata = [{ url: 'https://api.github.com/users', pagebox: 'shangxifan', tablebox: 'shangxibox', fn: xr, limit: 2 }
+                        , { url: 'https://api.github.com/users', pagebox: 'taskfan', tablebox: 'taskbox', fn: xr, limit: 2 }
+                        , { url: 'https://api.github.com/users', pagebox: 'duihuanfan', tablebox: 'duihuanbox', fn: xr, limit: 2 }
+                        , { url: 'https://api.github.com/users', pagebox: 'shangjintifan', tablebox: 'shangjintibox', fn: xr, limit: 2 }
+                        , { url: 'https://api.github.com/users', pagebox: 'redtifan', tablebox: 'redtibox', fn: xr, limit: 2 }
+                        , { url: 'https://api.github.com/users', pagebox: 'redxifan', tablebox: 'redxibox', fn: xr, limit: 2 }];
+                if (send !== 'yes' && send !== undefined) {
                     // 财富明细表格第一次渲染
-                    if(send2){
+                    if (send2) {
                         wlz.tableRequsetDate(urldata[send2]);
                     }
                     wlz.tableRequsetDate(urldata[send]);
                 }
-                $(this).attr('send',"yes");
-                layer.msg('切到到了'+ data.index + '：' + this.innerHTML);
-              });
+                $(this).attr('send', "yes");
+                layer.msg('切到到了' + data.index + '：' + this.innerHTML);
+            });
+            // 任务详情页打开指定item和位子
+            var str = sessionStorage.getItem('from');
+            if(str == 'pageA'){
+                element.tabChange('test1', 'detail');
+                sessionStorage.setItem("from","");
+            }
         });
+        
         // 渲染财富明细的表格
         function xr(res,curr,limit) {
             console.log("页数"+ curr);

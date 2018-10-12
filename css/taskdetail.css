@@ -1,0 +1,121 @@
+.banner{
+    height: 89px;
+}
+.nav-top{
+    background: #000000;
+}
+.main{
+    width: 1200px;
+}
+.main>div{
+    float: left;
+}
+.main::after{
+    display: block;
+    content: '';
+    clear: both;
+}
+.main>.left{
+    width: 900px;
+    margin-right: 20px;
+}
+.main>.right{
+    width: 280px;
+}
+.main>.left>.top{
+    width: 100%;
+    border: solid 1px #e5e5e5;
+    padding: 20px;
+    position: relative;
+}
+.left .top .lujin{
+    padding-bottom: 10px;
+    border-bottom: dashed 1px #ededed;
+}
+.lujin .dangqian{
+    color: #666666;
+}
+.lujin .more{
+    float: right;
+    font-size: 12px;
+    color: #666666;
+    position: relative;
+    margin-right: 15px;
+}
+.lujin .more::after{
+    display: block;
+    content: '';
+    position: absolute;
+    border: 6px solid;
+    border-color: transparent transparent transparent #666666;
+    top:3px;
+    right: -20px;
+}
+.top .yulan{
+    width: 294px;
+	height: 221px;
+	background-color: #333333;
+}
+.top .yulanbox{
+    margin-top: 20px;
+}
+.yulanbox-right{
+    float: right;
+    width: 564px;
+    padding-left: 20px;
+}
+.yulanbox-right p{
+    font-size: 12px;
+    margin-bottom: 10px;
+}
+.yulanbox-right p span:nth-child(1){
+    color: #666666;
+}
+.yulanbox-right p:nth-child(1){
+    font-size: 16px;
+    color: #000000;
+    margin-bottom: 40px;
+}
+.yulanbox-right .tishi{
+    position: absolute;
+    font-size: 12px;
+    color: red;
+    text-align: right;
+    right: 20px;
+    bottom: 0px;
+}
+.yulanbox-right .tishi a{
+    color: red;
+}
+.jinbi{
+    position: relative;
+    margin-right: 20px !important;
+}
+.jinbi::after{
+    display: inline-block;
+    content: url(../img/center/jinbi.png);
+    position: absolute;
+    margin-left: 4px;
+    top: 1px;
+}
+.yulanbox .submit{
+    width: 150px;
+	height: 40px;
+	background-color: #ffe405;
+    border-radius: 6px;
+    border: none;
+    position: absolute;
+    right: 0px;
+    bottom: 35px;
+    right: 20px;
+    font-size: 16px;
+}
+.state-1{
+    background-color: rgb(190, 190, 190) !important;
+}
+button:disabled{
+    cursor: not-allowed;
+}
+.state-2{
+    background-color: rgb(190, 190, 190) !important;
+}

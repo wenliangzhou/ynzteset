@@ -128,6 +128,8 @@
                     var index = parseInt($(this).attr('index'));
                     item.addClass('hide');
                     $(item[index]).removeClass('hide');
+                    tab.removeClass('active');
+                    $(this).addClass('active');
                 });
             }
         }

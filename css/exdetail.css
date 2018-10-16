@@ -1,0 +1,175 @@
+.banner{
+    height: 80px;
+    background: #000000;
+    margin-bottom: 20px;
+}
+.midbox{
+    width: 1200px;
+}
+.midbox::after{
+    display: block;
+    content: '';
+    clear: both;
+}
+.leftbox{
+    float: left;
+
+}
+.leftbox .left_topbox>img{
+    width: 256px;
+    height: 256px;
+    float: left;
+}
+.left_topbox{
+    border: solid 1px #e5e5e5;
+    padding: 20px;
+    width: 900px;
+	height: 296px;
+}
+.left_topbox::after{
+    display: block;
+    content: '';
+    clear: both;
+}
+.left_name{
+    width: 584px;
+	height: 100%;
+    float: right;
+    position: relative;
+}
+.yinyinbox{
+    background-color: #f7f7f7;
+    width: 584px;
+    height: 157px;
+    padding-left: 20px;
+}
+.left_name>div>.title{
+    font-size: 21px;
+    color: #000;
+    margin-bottom: 24px;
+    padding-top: 38px;
+}
+.biaoqian{
+    border-radius: 15px;
+    border: solid 1px #333333;
+    font-size: 14px;
+    padding: 2px 10px;
+    margin-left: 20px;
+}
+.biaoqian:nth-child(2){
+    margin-left: 0px;
+}
+.liulan{
+    color: #666666;
+    font-size: 13px;
+    margin-top: 24px;
+}
+.rightbox{
+    width: 280px;
+	height: 962px;
+    border: solid 1px #e5e5e5;
+    float: right;
+    
+}
+
+.jinbi{
+    position: relative;
+    color: #e02423;
+    font-size: 18px;
+}
+.jinbi::after{
+    display: inline-block;
+    content: url(../img/center/jinbi.png);
+    position: absolute;
+    margin-left: 2px;
+    top: 2px;
+}
+.jiage{
+    position: absolute;
+    bottom: 16px;
+    left: 20px;
+    font-size: 14px;
+}
+.duihuan{
+    position: absolute;
+    bottom: 16px;
+    right: 0px;
+    width: 150px;
+	height: 40px;
+	background-color: #ffe405;
+    border-radius: 6px;
+    font-size: 16px;
+    border: none;
+}
+.left_botbox{
+    border: solid 1px #e5e5e5;
+    padding: 20px;
+    padding-top: 60px;
+    margin-top: 20px;
+    position: relative;
+    color: #666666;
+    font-size: 12px;
+}
+.left_botbox .xiangqing,.left_botbox .liucheng{
+    width: 116px;
+	height: 40px;
+    border: solid 1px #e5e5e5;
+    padding: 10px 20px;
+    position: absolute;
+    color: #000;
+    text-align: center;
+}
+.left_botbox .xiangqing{
+    top: -1px;
+    left: -1px;
+}
+.left_botbox .liucheng{
+    top: -1px;
+    left: 115px;
+}
+.tab-duihuan.active{
+    background: #000000;
+    color: #ffe405;
+}
+.tab-duihuan.active::before{
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0px;
+    width: 100%;
+    height: 2px;
+    background: #ffe405;
+    left: 0px;
+}
+.tab-duihuan.active::after{
+    content: '';
+    display: block;
+    position: absolute;
+    border: 10px solid;
+    border-color: #ffe405 transparent transparent transparent;
+    top:0px;
+    left: 48px;
+}
+.item-duihuan .name{
+    color: #000;
+}
+.item-duihuan p{
+    margin: 15px 0px;
+}
+.spanbox span{
+    width: 25%;
+    display: inline-block;
+    margin-right: 5%;
+}
+.spanbox span{
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.guize{
+    line-height: 30px;
+    margin-top:5px !important;
+}
+.footer{
+    margin-top: 60px;
+}

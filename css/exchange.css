@@ -10,7 +10,7 @@
 .hot{
     height: 237px;
 }
-.hot li{
+.hot>a{
     float: left;
     margin-right: 20px;
     border: solid 1px #e5e5e5;
@@ -18,7 +18,7 @@
     text-align: center;
     position: relative;
 }
-.hot li:nth-child(5){
+.hot>a:nth-child(5){
     margin-right: 0px;
 }
 
@@ -88,9 +88,230 @@
 }
 .hover-menban{
     position: relative;
+    overflow: hidden;
 }
 .hover-menban::before{
     content: '前往兑换';
     display: block;
     position: absolute;
+    border: 1px solid #fff;
+    padding: 8px 15px;
+    z-index: 10;
+    color: #fff;
+    top: 100%;
+    left: 60px;
+    transition:top 0.8s;
+    -moz-transition:top 0.8s; /* Firefox 4 */
+    -webkit-transition:top 0.8s; /* Safari and Chrome */
+    -o-transition:top 0.8s; /* Opera */
+}
+.hover-menban::after{
+    content: '';
+    display: block;
+    position: absolute;
+    background: rgba(0, 0, 0, 0.6);
+    width: 100%;
+    top: 100%;
+    height: 0;
+    transition:height 0.5s,top 0.5s;
+    -moz-transition:height 0.5s,top 0.5s; /* Firefox 4 */
+    -webkit-transition:height 0.5s,top 0.5s; /* Safari and Chrome */
+    -o-transition:height 0.5s,top 0.5s; /* Opera */
+}
+.hover-menban:hover::before{
+    top:80px;
+}
+.hover-menban:hover::after{
+    top: 0px;
+    height: 100%;
+}
+.notice{
+    width: 1120px;
+	height: 42px;
+	background-color: #1f1f1f;
+    border-radius: 12px;
+    position: relative;
+    font-size: 14px;
+    color: #fff;
+    line-height: 42px;
+    padding-left: 30px;
+}
+.notice::before{
+    content: '';
+    display: block;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    z-index: 2;
+    width: 60px;
+    height: 42px;
+    background: url(../img/exchange/laba.png) center center no-repeat;
+    background-size: 100% 100%;
+}   
+.ye{
+    color: #ffe405;
+}
+.yebox{
+    margin-left: 20px;
+}
+.item{
+    margin-left: 30px;
+}
+.marquee:hover {
+    animation-play-state: paused
+}
+.marquee{
+    margin: 0 auto;position: absolute;white-space: nowrap;box-sizing: border-box;
+    height: 20px;
+}
+.marqueebox{
+    overflow: hidden;
+    position: relative;
+}
+.mean-nav{
+    width: 1200px;
+    margin-top: 40px;
+}
+.head-nav{
+    width: 220px;
+	height: 40px;
+	background-color: #ffe405;
+    border-radius: 8px 8px 0px 0px;
+    display: inline-block;
+    color: #000;
+    font-size: 14px;
+    line-height: 40px;
+    position: relative;
+    padding-left: 50px;
+    font-weight: bold;
+}
+.head-nav::before{
+    content: '';
+    display: block;
+    position: absolute;
+    width: 16px;
+    height: 12px;
+    background: url(../img/exchange/kang.png) center center no-repeat;
+    background-size: 100% 100%;
+    top: 14px;
+    left: 20px;
+}
+.lei,.lei2{
+    font-size: 14px;
+    padding: 0px 30px;
+    line-height: 40px;
+    position: relative;
+    cursor: pointer;
+}
+.lei::after{
+    content: '';
+    display: block;
+    position: absolute;
+    width: 1px;
+    height: 18px;
+    top: 1px;
+    background: #000;
+    right: 0px;
+}
+.search input{
+    height: 30px;
+    border: solid 1px #e5e5e5;
+    width: 225px;
+}
+.search{
+    float: right;
+    position: relative;
+    height: 30px;
+}
+.search::after{
+    content: '';
+    display: block;
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    background: url(../img/exchange/search.png) center center no-repeat;
+    background-size: 100% 100%;
+    right: 0px;
+    top: 0px;
+}
+.headbox{
+    border-bottom: 2px solid #ffe405;
+}
+.nav-left{
+    width: 220px;
+	height: 554px;
+    background-color: #1f1f1f;
+    color: #fff;
+    font-size: 13px;
+    overflow: hidden;
+    display: block;
+    float: left;
+}
+.mean-nav::after{
+    display: block;
+    content: '';
+    clear: both;
+}
+.nav-left .title{
+    font-size: 14px;
+    color: #ffe405;
+    margin-left: 20px;
+    margin-top: 35px;
+    margin-bottom: 18px;
+}
+.nav-left>ul::after{
+    content: '';
+    display: block;
+    clear: both;
+}
+.nav-left>ul>li{
+    margin-left: 20px;
+    float: left;
+    margin-bottom: 18px;
+    height: 13px;
+    line-height: 13px;
+    cursor: pointer;
+}
+.nav-right{
+    display:block;
+    float: left;
+    width: 979px;
+    height: 554px;
+    padding-left: 20px;
+    position: relative;
+}
+.nav-right>ul>li{
+    float: left;
+    margin: 20px 10px;
+    margin-bottom: 0px;
+}
+.nav-right>ul>li>img{
+    border: 1px solid #e5e5e5;
+    margin-bottom: 10px;
+}
+.nav-right>ul::after{
+    display: block;
+    content: '';
+    clear: both;
+}
+.item_right>p{
+    font-size: 14px;
+    line-height: 30px;
+}
+.footer{
+    margin-top: 60px;
+}
+.nav-right .fanye{
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    width: 56px;
+	height: 57px;
+    background: url(../img/exchange/fanye.png) center center no-repeat;
+    background-size: 100% 100%;
+    margin-top: -25px;
+}
+.nav-right .fanye img{
+    margin-top: 20px;
+    margin-left:7px;
 }

@@ -1,6 +1,7 @@
 (function () {
-    console.log($().jquery);
+    
     $(document).ready(function () {
+        
         var laypage;
         layui.use(['laypage', 'layer'], function () {
             var  layer = layui.layer;
@@ -8,6 +9,7 @@
         });
         // 定义一个全局变量，把公用方法放在这个对象上
         var arr = [];
+        
         wlz = {
             showImage:function(target,orign,type,duo){
                 file = jQuery(orign)[0].files[0];
@@ -83,6 +85,7 @@
                     , limit: limit //多少条
                     , can: data
                 }, function (res) {
+                    
                     if (res == '') {
                         $("#"+pagebox).html('<div class = "nothing">没有相关内容!!!</div>')
                         $(tablebox).html('');
@@ -263,4 +266,5 @@
         });
         
     });
+    
 })();

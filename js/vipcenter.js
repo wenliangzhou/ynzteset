@@ -23,6 +23,7 @@
                     }
                     wlz.tableRequsetDate(urldata[send]);
                 }
+                
                 $(this).attr('send', "yes");
                 layer.msg('切到到了' + data.index + '：' + this.innerHTML);
             });
@@ -501,4 +502,5 @@
         }
         noDataShow('#friendsfan','fanye');
     });
+    
 }());

@@ -242,15 +242,22 @@
                 if(num <= numtoday){
                     $('.schedule-bd li span').removeClass('active');
                     $(this).addClass('active');
+                }else{
+                    num = $('.schedule-bd .active').html();
                 }
             }
+            console.log(num);
+            console.log(numtoday);
         });
         // 取值 且等服务器 返回值添加样式
         $(document).on('click','.qiandao-class .qiandao-btn,.qiandao-class .buqian-btn',function () {
             var btn = $(this)[0].className,
                 date = $('.schedule-bd .active').attr('title');
-                console.log(num);
-                if(btn =="qiandao-btn" && num !== numtoday){
+                if(!date){
+                    layer.msg('请选择签到日期');
+                    return false;
+                }
+                if(btn =="qiandao-btn" && num != numtoday){
                     layer.msg('只能签到当天');
                     return false;
                 }else if(btn =="buqian-btn" && num == numtoday && num !== 'undefined'){
@@ -259,9 +266,7 @@
                 }
             // 获取数据
             console.log(date);
-            if(!date){
-                layer.msg('请选择签到日期');
-            }
+            
             // 添加签到样式，标记
             $('.schedule-bd .active').addClass('qiandao');
             $('.schedule-bd li span').removeClass('active');

@@ -83,6 +83,7 @@
 			render();
 		}
 		var render = function () {
+			var arr = ['2018-10-21','2018-10-23'];
 			var fullDay = new Date(year,month+1,0).getDate(), //当月总天数
 				startWeek = new Date(year,month,1).getDay(), //当月第一天是周几
 				total = (fullDay+startWeek)%7 == 0 ? (fullDay+startWeek) : fullDay+startWeek+(7-(fullDay+startWeek)%7),//元素总个数
@@ -94,9 +95,22 @@
 				}else if(i<(startWeek+fullDay)){
 					var nowDate = formartDate(year,month+1,(i+1-startWeek),'-');
 					var addClass = '';
+					var addClass2 = '';
+					arr.forEach(el =>{
+						if(el==nowDate){
+							addClass2=' qiandao';
+						}
+					});
+					
 					selectedDate == nowDate && (addClass = 'selected-style');
-					formartDate(currentYear,currentMonth+1,currentDay,'-') == nowDate && (addClass = 'today-flag active');
-					eleTemp.push('<li class="current-month" ><span title='+nowDate+' class="currentDate dayStyle '+addClass+'">'+(i+1-startWeek)+'</span></li>')
+					if(addClass2 ==' qiandao'&& formartDate(currentYear,currentMonth+1,currentDay,'-') == nowDate){
+						addClass = 'today-flag';
+					}else{
+						formartDate(currentYear,currentMonth+1,currentDay,'-') == nowDate && (addClass = 'today-flag active');
+					}
+					
+					
+					eleTemp.push('<li class="current-month" ><span title='+nowDate+' class="currentDate dayStyle '+addClass+addClass2+'">'+(i+1-startWeek)+'</span></li>')
 				}else{
 					eleTemp.push('<li class="other-month"><span class="dayStyle">'+(i+1-(startWeek+fullDay))+'</span></li>')
 				}

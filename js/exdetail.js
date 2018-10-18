@@ -5,7 +5,6 @@
     $('.lunbo').slick({
         lazyLoad: 'ondemand',
         vertical: true,
-        infinite:true,
         slidesToShow: 4,
         slidesToScroll: 4,
         prevArrow:'<span class="prev"><img src="img/dingzhi/top.png" alt=""></span>',

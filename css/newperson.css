@@ -1,0 +1,88 @@
+.banner{
+    overflow: hidden;
+    width: 100%;
+    height: 450px;
+    background: url(../img/newperson/banner.png) center center no-repeat;
+}
+.midbox{
+    width: 1200px;
+}
+.notice{
+    width: 1120px;
+	height: 42px;
+	background-color: #000000;
+    border-radius: 12px;
+    position: relative;
+    font-size: 14px;
+    color: #fff;
+    line-height: 42px;
+    padding-left: 30px;
+}
+.notice::before{
+    content: '';
+    display: block;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    z-index: 2;
+    width: 60px;
+    height: 42px;
+    background: url(../img/exchange/laba.png) center center no-repeat;
+    background-size: 100% 100%;
+}   
+.ye{
+    color: #ffe405;
+}
+.yebox{
+    margin-left: 20px;
+}
+.item{
+    margin-left: 30px;
+}
+.marquee:hover {
+    animation-play-state: paused
+}
+.marquee{
+    margin: 0 auto;position: absolute;white-space: nowrap;box-sizing: border-box;
+    height: 20px;
+}
+.marqueebox{
+    overflow: hidden;
+    position: relative;
+}
+.h_title{
+    font-family: MicrosoftYaHei-Bold;
+    color: #000000;
+    font-size: 22px;
+    text-align: center;
+    width: 157px;
+    display: block;
+    position: relative;
+    line-height: 22px;
+    height: 22px;
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
+.h_title::before,.h_title::after{
+    display: block;
+    content: '';
+    position: absolute;
+    width: 46px;
+	height: 6px;
+	background-color: #ffe405;
+    border-radius: 3px;
+    top: 8px;
+}
+.h_title::before{
+    left: -70px;
+}
+.h_title::after{
+    right: -70px;
+}
+.context{
+    font-size: 17px;
+    text-align: center;
+    line-height: 17px;
+    height: 17px;
+    margin-bottom: 38px;
+}

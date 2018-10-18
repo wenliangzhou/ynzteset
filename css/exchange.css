@@ -15,6 +15,7 @@
     margin-right: 20px;
     border: solid 1px #e5e5e5;
     width: 224px;
+    height: 220px;
     text-align: center;
     position: relative;
 }
@@ -25,7 +26,8 @@
 
 .hot li img{
     display: inline-block;
-    width: 100%;
+    width: 220px;
+    height: 220px;
 }
 .hot::after{
     display: block;
@@ -320,4 +322,8 @@ a{
 }
 a:hover{
     color: #000;
+}
+.item_right img{
+    width: 200px;
+    height: 200px;
 }

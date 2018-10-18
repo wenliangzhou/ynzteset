@@ -12,4 +12,8 @@
         document.head.append(style);
     }
     marquee(100);
+    
+    $('.xuanfubox').click(function () {
+        $(this).hide(2000);        
+    })
 }());

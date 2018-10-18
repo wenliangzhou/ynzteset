@@ -36,7 +36,7 @@
 .yebox{
     margin-left: 20px;
 }
-.item{
+.notice .item{
     margin-left: 30px;
 }
 .marquee:hover {
@@ -86,3 +86,170 @@
     height: 17px;
     margin-bottom: 38px;
 }
+.huodongbox ul{
+    width: 1112px;
+}
+.huodongbox>ul>li{
+    width: 20%;
+    height: 372px;
+    float: left;
+    text-align: center;
+    position: relative;
+}
+.huodongbox ul::after{
+    display: block;
+    content: '';
+    clear: both;
+}
+.huodongbox>ul>li:nth-child(1) img{
+    width: 100%;
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+.lingqu{
+    width: 164px;
+    height: 45px;
+    background: url(../img/newperson/wanchengbtn.png) center center no-repeat;
+    background-size: 100% 100%;
+    font-size: 16px;
+    line-height: 45px;
+    text-align: center;
+}
+.tiao{
+    width: 115px;
+	height: 36px;
+	background-color: #ffe405;
+    border-radius: 18px;
+    color: #000000;
+    text-align: center;
+    line-height: 36px;
+}
+.huodongbox>ul>li img{
+    display: inline-block;
+    margin-top: 70px;
+}
+.huodongbox>ul>li p{
+    margin: 20px 0px;
+}
+.footer{
+    margin-top: 20px;
+}
+.lingqu_ok{
+    background: url(../img/newperson/lingqubtn.png) center center no-repeat;
+}
+
+.hover-menban{
+    position: relative;
+    overflow: hidden;
+}
+.hover-menban::before{
+    content: '去完成';
+    display: block;
+    position: absolute;
+    font-size: 20px;
+    padding: 8px 15px;
+    z-index: 10;
+    color: #fff;
+    top: 100%;
+    left: 30px;
+    transition:top 0.8s;
+    -moz-transition:top 0.8s; /* Firefox 4 */
+    -webkit-transition:top 0.8s; /* Safari and Chrome */
+    -o-transition:top 0.8s; /* Opera */
+}
+.hover-menban::after{
+    content: '';
+    display: block;
+    position: absolute;
+    background: rgba(0, 0, 0, 0.6);
+    width: 100%;
+    top: 100%;
+    height: 0;
+    transition:height 0.5s,top 0.5s;
+    -moz-transition:height 0.5s,top 0.5s; /* Firefox 4 */
+    -webkit-transition:height 0.5s,top 0.5s; /* Safari and Chrome */
+    -o-transition:height 0.5s,top 0.5s; /* Opera */
+}
+.hover-menban:hover::before{
+    top:50px;
+}
+.hover-menban:hover::after{
+    top: 0px;
+    height: 100%;
+}
+
+.kk{
+    display: inline-block;
+    position: absolute;
+    width: 145px;
+    height: 145px;
+    left: 50%;
+    margin-left: -72.5px;
+    margin-top: 70px;
+    border-radius: 50%;
+}
+.wancheng{
+    background: rgb(125, 125, 125);
+}
+.lingqu:hover{
+    opacity: 1;
+    cursor: not-allowed;
+}
+.lingqu_ok:hover,.tiao:hover{
+    opacity: 0.6;
+    cursor: pointer;
+}
+.wancheng:hover{
+    opacity: 1;
+    cursor: not-allowed;
+}
+/* 完成添加样式 */
+.menqiandao::before{
+    content: '去签到';    
+}
+.mendone::before{
+    content: '已签到';
+}
+.done::before{
+    content: '已完成';
+}
+.huodongbox.bj{
+    background-color: #f5f5f5;
+}
+.xuanfubox{
+    position: fixed;
+    right: -414px;
+    top: 20%;
+    width: 414px;
+    height: 327px;
+    animation:xuanfu 2s 1;
+    -webkit-animation:xuanfu 2s 1; /*Safari and Chrome*/
+    animation-fill-mode: forwards;
+    animation-delay:2s;
+    -webkit-animation-delay:2s;
+}
+.xuanfubox .item1{
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+}
+.xuanfubox .item2{
+    top: 0px;
+    left: 0px;
+}
+/* 动画 */
+@keyframes xuanfu{
+    0% {right: -414px;}
+    100%{
+        right: 0px;
+    }
+}
+
+@-webkit-keyframes xuanfu 
+{
+    0% {right: -414px;}
+    100%{
+        right: 0px;
+    }
+}
+

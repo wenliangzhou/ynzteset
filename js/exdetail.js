@@ -13,7 +13,7 @@
         layui.use(['layer'], function () {
             var layer = layui.layer;
             // 兑换按钮添加事件
-            var status = 1;//处理的地址状态 0 没有地址/ 1 有地址
+            var status = 0;//处理的地址状态 0 没有地址/ 1 有地址
             $('.duihuan,.xiugai').click(function (e) {
                 // 填写/修改地址
                 if(status ==0 || (status ==1 && $(e.target).hasClass('xiugai'))){

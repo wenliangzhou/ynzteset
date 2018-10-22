@@ -684,3 +684,46 @@ body{
     font-size: 12px;
     line-height: 30px;
 }
+.btn2{
+    background: red;
+    border: none;
+    padding: 2px 5px;
+    border-radius: 2px;
+    color: white;
+}
+.btn2{
+    background: #ead109;
+    color: #000;
+}
+.btn1:hover,.btn2:hover{
+    opacity: 0.6;
+}
+.btn2[disabled]{
+    background: #d1d1d1;
+    cursor:not-allowed;
+    opacity: 1;
+}
+.upload .layui-layer-title{
+    background: #ffe405;
+}
+.upload .layui-layer-content{
+    padding: 30px;
+}
+.upload label{
+    font-weight: normal;
+}
+.uploadbox{
+    display: none;
+}
+.uploadbox .control-label{
+    text-align: left;
+}
+.uploadbox .preview{
+    display: inline-block;
+    width: 65%;
+    margin-left: 30px;
+}
+.upload-btn{
+    margin-left: 120px;
+    margin-top: 5px;
+}

@@ -615,5 +615,33 @@
             $(tbody).html('');
         }
         noDataShow('#friendsfan','fanye');
+        // 任务详情删除按钮    事件添加
+        $(document).on('click','.delete',function () {
+            layer.open({
+                skin:'reasonbox',
+                resize:false,
+                shadeClose:true,
+                move: false,
+                area:['400px','auto'],
+                title:'取消任务',
+                type: 1,
+                content: $('.reason') //这里content是一个DOM，注意：最好该元素要存放在body最外层，否则可能被其它的相对元素所影响
+            });
+            $('.sure').click(function () {
+                layer.closeAll();
+            });
+            $('.cancel').click(function () {
+                layer.closeAll();
+            });
+            $.get("http://test.php",{kk:'hh'},function (data) {
+                console.log(data);
+            })
+        });
+        $('.btn2').click(function () {
+            alert(2)
+            $.get("http://test.php",{},function (data) {
+                console.log(data);
+            })
+        })
     });
 }());

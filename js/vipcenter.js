@@ -94,7 +94,7 @@
             console.log(formData.get('touxiang'))
 
             $.ajax({
-                url: "{:url('Prizeadd/prize_add')}",
+                url: "http://test.php",
                 method: 'POST',
                 data: formData,
                 contentType: false, // 注意这里应设为false
@@ -501,6 +501,8 @@
             $(tbody).html('');
         }
         noDataShow('#friendsfan','fanye');
+         
+        // ---------------
     });
     
 }());

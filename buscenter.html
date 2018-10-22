@@ -262,6 +262,7 @@
                                             <th>任务</br>接取人数</th>
                                             <th>任务</br>完成人数</th>
                                             <th>任务状态</th>
+                                            <th>操作</th>
                                         </tr>
                                     </thead>
                                     <!-- 回调函数渲染的部分 -->
@@ -276,6 +277,10 @@
                                             <td>10人</td>
                                             <td>5人</td>
                                             <td>进行中</td>
+                                            <td>
+                                                <button class="delete btn1">删除</button>
+                                                <button class="btn2">四个字啊</button>
+                                            </td>
                                         </tr>
                                         <tr>
                                             <td>2018-08-22</td>
@@ -673,35 +678,45 @@
 </div>
 <!-- 邮箱绑定弹框 -->
 <div class="bangmail gong">
-        <p class="zhusi"><span>注：</span>请填写真实身份信息，若身份信息与提现信息不一致将会导致打款失败</p>
-        <form class="form-horizontal mail-form">
-            <div class="form-group">
-                <label for="mima" class="col-xs-3 control-label">输入密码：</label>
-                <div class="col-xs-9">
-                    <input type="password" class="form-control" name="mailmima" id="mailmima" placeholder="">
-                </div>
+    <p class="zhusi"><span>注：</span>请填写真实身份信息，若身份信息与提现信息不一致将会导致打款失败</p>
+    <form class="form-horizontal mail-form">
+        <div class="form-group">
+            <label for="mima" class="col-xs-3 control-label">输入密码：</label>
+            <div class="col-xs-9">
+                <input type="password" class="form-control" name="mailmima" id="mailmima" placeholder="">
             </div>
-            <div class="form-group">
-                <label for="mailnum" class="col-xs-3 control-label">绑定邮箱：</label>
-                <div class="col-xs-9">
-                    <input type="text" class="form-control" name="mailnum" id="mailnum" placeholder="">
-                </div>
+        </div>
+        <div class="form-group">
+            <label for="mailnum" class="col-xs-3 control-label">绑定邮箱：</label>
+            <div class="col-xs-9">
+                <input type="text" class="form-control" name="mailnum" id="mailnum" placeholder="">
             </div>
-            <div class="form-group">
-                <label for="yanzmail" class="col-xs-3 control-label">验证码：</label>
-                <div class="col-xs-9 form-inline">
-                    <input type="password" class="form-control" id="yanzmail" name="yanz" placeholder="">
-                    <button type="button" class="btn getma">获取验证码</button>
-                </div>
+        </div>
+        <div class="form-group">
+            <label for="yanzmail" class="col-xs-3 control-label">验证码：</label>
+            <div class="col-xs-9 form-inline">
+                <input type="password" class="form-control" id="yanzmail" name="yanz" placeholder="">
+                <button type="button" class="btn getma">获取验证码</button>
             </div>
-            <div class="form-group">
-                <div class="col-xs-offset-3 col-xs-9">
-                    <button type="button"  class="btn btn-default bang-btn bang-mail-btn">立即绑定</button>
-                </div>
+        </div>
+        <div class="form-group">
+            <div class="col-xs-offset-3 col-xs-9">
+                <button type="button" class="btn btn-default bang-btn bang-mail-btn">立即绑定</button>
             </div>
-        </form>
+        </div>
+    </form>
+</div>
+<!-- 任务取消原因 -->
+<div class="reason">
+    <p>注意 : 取消人扣除预付赏金的20%</p>
+    <textarea name="" class="form-control" cols="30" rows="5" 
+    onfocus="document.getElementById('note').style.display='none'" onblur="if(value=='')document.getElementById('note').style.display='block'"></textarea>
+    <div id="note" class="note">
+        请填写原因...
     </div>
-
+    <button type="button" class="btn btn-default cancel">取消</button>
+    <button type="button" class="btn btn-default sure">确认</button>
+</div>
 <!-- 图片上传后 -->
 <div  id="showimg1"><img src="img/center/touxiang.png" alt=""></div>
 <div  id="showimg2"><img src="img/center/touxiang.png" alt=""></div>

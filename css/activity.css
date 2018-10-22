@@ -1,0 +1,65 @@
+.banner{
+    height: 79px;
+    background: black;
+    margin-bottom: 20px;
+}
+body{
+    background: #f4f4f4;
+}
+.midbox{
+    width: 1200px;
+    padding: 20px;
+    background: #fff;
+}
+.title{
+    border-bottom: solid 1px #e6e6e6;
+    padding-bottom: 20px;
+}
+.title span{
+    font-size: 16px;
+    position: relative;
+}
+.title span::after{
+    display: block;
+    position: absolute;
+    width: 100%;
+    content: '';
+    height: 2px;
+    background: #ffe405;
+    bottom: -20px;
+    z-index: 2;
+}
+.item{
+    padding: 20px 20px 25px 20px;
+    border: 1px solid #e6e6e6;
+    margin: 20px 0px;
+    color: #333333;
+}
+.item img{
+    width: 640px;
+    height: 230px;
+    display: inline-block;
+}
+.item .textbox{
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 30px;
+}
+.item .canjia{
+    width: 220px;
+	height: 40px;
+	background-color: #ffe405;
+    border-radius: 8px;
+    border: none;
+    margin-top: 40px;
+    margin-left: 50px;
+}
+.item p{
+    line-height: 30px;
+}
+.p1{
+    font-size: 14px;
+}
+.p2,.p3,.p4{
+    font-size: 12px;
+}

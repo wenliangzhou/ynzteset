@@ -237,6 +237,9 @@ a{
 a:hover{
     color: #000;
 }
+.kucun{
+    margin-left: 20px;
+}
 /* 兑换CSS */
 .placebox,.surebox{
     display: none;
@@ -264,4 +267,14 @@ a:hover{
 }
 .xiugai {
     margin-left: 30px;
+}
+.paybox{
+    display: none;
+}
+.paybox label{
+    font-weight: normal;
+    margin-left: -10px;
+}
+.pay-btn{
+    margin-top: 20px;
 }

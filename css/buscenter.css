@@ -590,3 +590,47 @@ body{
     cursor: pointer;
     margin-left: 10px;
 }
+.btn1,.btn2{
+    background: red;
+    border: none;
+    padding: 2px 5px;
+    border-radius: 2px;
+    color: white;
+}
+.btn2{
+    background: #ead109;
+    color: #000;
+}
+.btn1:hover,.btn2:hover{
+    opacity: 0.6;
+}
+
+.reason{
+    display: none;
+}
+.reasonbox .layui-layer-content{
+    padding: 20px;
+    position: relative;
+}
+.reasonbox p{
+    margin-bottom: 10px;
+    color: red;
+}
+.reasonbox button{
+    margin-top: 10px;
+    float: right;
+    margin-left: 20px;
+}
+.reasonbox textarea{
+    color: #000;
+}
+.reasonbox .layui-layer-title{
+    background: #ffe405;
+}
+.note{
+    color: #666666;
+    font-size: 14px;
+    position: absolute;
+    top: 57px;
+    left: 30px;
+}

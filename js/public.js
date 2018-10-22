@@ -11,21 +11,22 @@
         var arr = [];
         
         wlz = {
-            showImage:function(target,orign,type,duo){
+            showImage:function(target,orign,type,duo='点击上传'){
                 file = jQuery(orign)[0].files[0];
                 console.log(file);
                 // 添加图片路径到img src中进行预览
+                if(!type){
+                    jQuery(target).attr('src',getObjectURL(file));
+                    return false;
+                }
                 if(type || file){
                     if(!file){
-                        $(target).html('点击上传');
+                        $(target).html(duo);
                         return false;
                     }
                     $(target).html("<div class='min'>"+file[type]+"</div>");
-                    return false;
                 }
-                if(!type){
-                    jQuery(target).attr('src',getObjectURL(file));
-                }
+                
                 //不同浏览器下的路径不同
                  function getObjectURL(file) {
                       var url = null;
@@ -272,6 +273,11 @@
             $('.schedule-bd li span').removeClass('active');
         });
         
+        // 侧边导航栏跳转
+        $('.nav-item7').click(function () {
+            window.location.href="activity.html";
+        });
+
     });
     
 })();

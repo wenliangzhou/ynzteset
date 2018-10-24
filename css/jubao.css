@@ -1,5 +1,147 @@
 .banner{
-    height: 2947px;
+    height: 2071px;
     width: 100%;
-    background: url(../img/activity/背景.png) center center no-repeat;
+    background: url(../img/activity/beijing.png) center center no-repeat;
+}
+body{
+    position: relative;
+}
+
+.midbox{
+    width: 1200px;
+    position: absolute;
+    top: 0px;
+    left: 50%;
+    margin-left: -600px;
+}
+.midbox img{
+    display: block;
+    margin-top: 146px;
+}
+.shangjin{
+    position: absolute;
+    left: 620px;
+    top: 605px;
+    font-family: MicrosoftYaHei;
+	font-size: 92px;
+	font-weight: normal;
+	font-stretch: normal;
+	letter-spacing: 0px;
+    color: #ffd800;
+    letter-spacing: 17px;
+}
+.lingqu{
+    width: 332px;
+    height: 85px;
+    background: url(../img/activity/btn.png) center center no-repeat;
+    background-size: 100% 100%;
+    left: 50%;
+    margin-left: -166px;
+    position: absolute;
+    margin-top: 40px;
+    cursor: pointer;
+    z-index: 5;
+}
+.lingqu:hover{
+    opacity: 0.8;
+}
+.jilu{
+    width: 1036px;
+    height: 575px;
+    background: url(../img/activity/jilu.png) center center no-repeat;
+    background-size: 100% 100%;
+    margin-top: 80px;
+    position: relative;
+}
+/* lunbo */
+.dowebok { 
+    width: 640px;
+    height: 290px;
+    font-size: 20px;
+    letter-spacing: 1px;
+    color: #ffffff;
+    background: transparent;
+    line-height: 35px;
+    position: absolute;
+    left: 50%;
+    margin-left: -250px;
+    top: 180px;
+}
+/*Plugin CSS*/
+.str_wrap {
+	overflow:hidden;
+	zoom:1;
+	-moz-user-select: none;
+	-khtml-user-select: none;
+	user-select: none;  
+	white-space:nowrap;
+}
+
+.str_wrap.str_active {
+	
+}
+.str_move { 
+	white-space:nowrap;
+	position:absolute; 
+	top:0; 
+	left:0;
+	cursor:move;
+}
+.str_move_clone {
+	display:inline-block;
+	display:inline;
+	zoom:1;
+	vertical-align:top;
+	position:absolute; 
+	left:100%;
+	top:0;
+}
+.str_vertical .str_move_clone {
+	left:0;
+	top:100%;
+}
+.str_down .str_move_clone {
+	left:0;
+	bottom:100%;
+}
+.str_vertical .str_move,
+.str_down .str_move {
+	white-space:normal;
+	width:100%;
+}
+.str_static .str_move,
+.no_drag .str_move,
+.noStop .str_move{
+	cursor:inherit;
+}
+.str_wrap img {
+	max-width:none !important;	
+}
+
+.username,.money{
+    color: #ffd800;
+}
+
+.rule{
+    width: 1000px;
+    height: 350px;
+    margin-top: -140px;
+}
+.rule p{
+    font-size: 19px;
+	font-weight: normal;
+	font-stretch: normal;
+	line-height: 60px;
+	letter-spacing: 1px;
+    color: #ffffff;
+    padding-left: 50px;
+    margin-top: 5px;
+}
+.yejiao{
+    position: absolute;
+    bottom: 62px;
+    color: #ffffff;
+    font-size: 20px;
+    left: 50%;
+    margin-left: -258px;
 }

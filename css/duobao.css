@@ -1,0 +1,55 @@
+.banner{
+    background: url(../img/activity/duobaobj.png) top center no-repeat;
+    height: 2018px;
+    position: relative;
+}
+.title-img{
+    position: absolute;
+    left: 50%;
+    margin-left: -343px;
+    top: 121px;
+    z-index: 9999;
+}
+.rule{
+    bottom: 395px;
+    width: 700px;
+    position: absolute;
+    left: 50%;
+    margin-left: -350px;
+}
+.rule p{
+    font-size: 19px;
+	font-weight: normal;
+	font-stretch: normal;
+	line-height: 55px;
+	letter-spacing: 0px;
+    color: #ffffff;
+    
+}
+.enter{
+    position: absolute;
+    top: 370px;
+    left: 50%;
+    margin-left: 300px;
+}
+.yejiao{
+    width: 709px;
+    height: 52px;
+    position: absolute;
+    bottom: 32px;
+    color: #fff;
+    text-align: center;
+    left: 50%;
+    margin-left: -354px;
+    font-size: 12px;
+    letter-spacing: 3px;
+}
+.yejiao p{
+    letter-spacing: 4px;
+    color: #ffffff;
+    margin-bottom: 20px;
+}
+.yejiao a{
+    color: #fff;
+    text-decoration: none;
+}

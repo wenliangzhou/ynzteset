@@ -643,5 +643,16 @@
                 console.log(data);
             })
         })
+
+        // 充值中心
+        $('ul.jine li').click(function () {
+            $('ul.jine li').removeClass('active');
+            $(this).addClass('active');
+        });
+        $('ul.payway li').click(function () {
+            $('ul.payway li').removeClass('active');
+            $(this).addClass('active');
+            $('ul.payway li').index(this);
+        });
     });
 }());

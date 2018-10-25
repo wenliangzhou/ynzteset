@@ -92,7 +92,7 @@
                         $(tablebox).html('');
                         return false;
                     }
-                    fn(res, curr, limit);
+                    fn(res, curr, limit,pagebox,tablebox);
                     //显示分页
                     
                     laypage.render({

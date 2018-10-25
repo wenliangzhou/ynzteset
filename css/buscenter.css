@@ -215,7 +215,7 @@ body{
 }
 .main .nav-right{
     width: 180px;
-	height: 300px;
+	height: 320px;
     background-color: #1f1f1f;
     margin-top: 48px;
     padding-top: 5px;
@@ -633,4 +633,73 @@ body{
     position: absolute;
     top: 57px;
     left: 30px;
+}
+
+/* 充值中心样式 */
+.rechargebox{
+    padding-top: 20px;
+    color: #333333;
+}
+.rechargebox label{
+    font-weight: normal;
+}
+.rechargebox ul::after{
+    content: '';
+    display: block;
+    clear: both;
+}
+.rechargebox ul li{
+    float: left;
+    width: 90px;
+	height: 40px;
+	background-color: #fffdf8;
+    border: solid 1px #ffd563;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    text-align: center;
+    line-height: 40px;
+    color: #666666;
+}
+.rechargebox ul>input{
+    background-color: #fffdf8;
+    border: solid 1px #ffd563;
+    width: 390px;
+}
+.rechargebox .active{
+    border: solid 1px #1999e3;
+    position: relative;
+}
+.rechargebox .active::after{
+    content: '';
+    display: block;
+    position: absolute;
+    width: 10px;
+    height: 14px;
+    background: url(../img/center/gou.png) center center no-repeat;
+    right: 0px;
+    bottom: -1px;
+}
+.rechargebox .payway .active{
+    color: #1999e3;
+}
+.rechargebox ul.bankpay table{
+    width: 520px;
+}
+.rechargebox ul.bankpay table td{
+    border: solid 1px #e5e5e5;
+    width: 130px;
+    vertical-align: middle;
+    line-height: 40px;
+}
+.rechargebox ul.bankpay table td img{
+    margin-bottom: 3px;
+    margin-left: 8px;
+    margin-right: 8px;
+}
+.rechargebox ul.bankpay table td input[type=radio]{
+    margin: 0px;
+    vertical-align: middle;
+}
+.rechargebox ul.bankpay table td label{
+    margin-bottom: 0px;
 }

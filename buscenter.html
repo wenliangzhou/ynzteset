@@ -423,42 +423,42 @@
                                     <div class="form-group">
                                         <label  class="col-sm-3 control-label">充值ID ：</label>
                                         <div class="col-sm-3">
-                                            <input type="text" class="form-control">
+                                            <input type="text" class="form-control id-frist">
                                         </div>
                                     </div>
                                     <div class="form-group">
                                         <label  class="col-sm-3 control-label">确认ID ：</label>
                                         <div class="col-sm-3">
-                                            <input type="text" class="form-control">
+                                            <input type="text" class="form-control id-second">
                                         </div>
                                     </div>
-                                    <div class="form-group">
+                                    <div class="form-group sum-of-money" data-sum="">
                                         <label  class="col-sm-3 control-label">充值金额 ：</label>
                                         <ul class="col-sm-7 jine">
-                                            <li>10元</li>
-                                            <li>20元</li>
-                                            <li>30元</li>
-                                            <li>50元</li>
-                                            <li>100元</li>
-                                            <li>200元</li>
-                                            <li>300元</li>
-                                            <li>1000元</li>
-                                            <li>2000元</li>
-                                            <input type="text" class="form-control" placeholder="输入自定义金额（元）">
+                                            <li data ="10">10元</li>
+                                            <li data ="20">20元</li>
+                                            <li data ="30">30元</li>
+                                            <li data ="50">50元</li>
+                                            <li data ="100">100元</li>
+                                            <li data ="200">200元</li>
+                                            <li data ="300">300元</li>
+                                            <li data ="1000">1000元</li>
+                                            <li data ="2000">2000元</li>
+                                            <input type="text" class="form-control zidingyi" placeholder="输入自定义金额（元）">
                                         </ul>
                                     </div>
                                     <div class="form-group">
                                         <label class="col-sm-3 control-label">支付方式 ：</label>
                                         <ul class="col-sm-7 payway">
-                                            <li>网上银行</li>
-                                            <li>支付宝</li>
-                                            <li>微信支付</li>
+                                            <li data-payway="0">网上银行</li>
+                                            <li data-payway="1">支付宝</li>
+                                            <li data-payway="2">微信支付</li>
                                         </ul>
                                     </div>
-                                    <div class="form-group hide">
+                                    <div class="form-group hide bankbox" data-way="">
                                         <label class="col-sm-3 control-label">选择银行 ：</label>
                                         <ul class="col-sm-5 bankpay">
-                                            <table>
+                                            <table class="table-bank">
                                                 <tr>
                                                     <td>
                                                         <label for="inlineRadio1">
@@ -511,7 +511,7 @@
                                     </div>
                                     <div class="form-group">
                                         <div class="col-sm-offset-3 col-sm-10">
-                                            <button type="button" class="btn btn-default">充值</button>
+                                            <button type="button" class="btn btn-default pay-btn">充值</button>
                                         </div>
                                     </div>
                                 </form>
@@ -836,6 +836,26 @@
     </div>
     <button type="button" class="btn btn-default cancel">取消</button>
     <button type="button" class="btn btn-default sure">确认</button>
+</div>
+<!-- 确认充值框 -->
+<div class="paybox-tan">
+    <p>
+        <span>充值ID：</span> <span class="text">21033468</span>
+    </p>
+    <p>
+        <span>充值账号：</span> <span class="text">会员-2013</span>
+    </p>
+    <p>
+        <span>充值金额：</span> <span class="text quetext">30元</span>
+    </p>
+    <p>
+        <span>支付方式：</span> <span class="text waytext">网上银行</span>
+    </p>
+    <p>
+        <span>获得赏金数量：</span> <span class="text">30M赏金</span>
+    </p>
+    <button type="button" class="btn btn-default sure_2">确认</button>
+    <button type="button" class="btn btn-default cancel_2">取消</button>
 </div>
 <!-- 图片上传后 -->
 <div  id="showimg1"><img src="img/center/touxiang.png" alt=""></div>

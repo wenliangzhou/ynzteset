@@ -648,11 +648,100 @@
         $('ul.jine li').click(function () {
             $('ul.jine li').removeClass('active');
             $(this).addClass('active');
+            $('.sum-of-money').attr('data-sum',$(this).attr('data'));
+            $('.sum-of-money input').val('');
         });
         $('ul.payway li').click(function () {
             $('ul.payway li').removeClass('active');
             $(this).addClass('active');
-            $('ul.payway li').index(this);
+            var index = $('ul.payway li').index(this);
+            if(index === 0){
+                $('.bankbox').removeClass('hide');
+            }else{
+                $('.bankbox').addClass('hide');
+            }
+            var data_way = $(this).attr('data-payway');
+            $('.bankbox').attr('data-way',data_way);
+        });
+        // 金额选择事件
+        $('.sum-of-money input').change(function () {
+            $('.sum-of-money').attr('data-sum',$(this).val());
+            $('.sum-of-money li').removeClass('active');
+        });
+        // 提交验证
+        var id_frist,id_second,sum_of_money,data_way,bank;
+        $('.pay-btn').click(function () {
+                id_frist = $('.id-frist').val();
+                id_second = $('.id-second').val();
+                sum_of_money = $('.sum-of-money').attr('data-sum');
+                data_way = $('.bankbox').attr('data-way');
+                bank = $('input[type=radio]:checked').val();
+            if(id_frist === ''){
+                layer.tips('请输入ID !', '.id-frist', {
+                    anim: 6
+                });
+                return false;
+            }
+            if(id_second !== id_frist){
+                layer.tips('输入ID不一致 !', '.id-second', {
+                    anim: 6
+                });
+                return false;
+            }
+            if(sum_of_money === ''){
+                
+                layer.tips('请选择金额 !', '.jine', {
+                    anim: 6
+                });
+                return false;
+            }
+            if(!/^[1-9]+\d*$/.test(Number(sum_of_money)) || /^(-?\\d+)(\\.\\d+)?$/.test(Number(sum_of_money)) || Number(sum_of_money) < 10){
+                layer.tips('请输入数字 !', '.zidingyi', {
+                    anim: 6
+                });
+                return false;
+            }
+            if(data_way ===''){
+                layer.tips('请选择充值方式 !', '.payway', {
+                    anim: 6
+                });
+                return false;
+            }
+            if(bank === undefined && data_way === '0'){
+                layer.tips('请选择银行 !', '.table-bank', {
+                    anim: 6
+                });
+                return false;
+            }
+            
+            // 通过验证弹出确定框
+            $('.quetext').html(sum_of_money+'元');
+            console.log(data_way)
+            if(data_way=='0'){
+                $('.waytext').html('网上银行');
+            }else if(data_way == '1'){
+                $('.waytext').html('支付宝');
+            }else if(data_way == '2'){
+                $('.waytext').html('微信');
+            }
+            layer.open({
+                skin:'paybox-class',
+                resize:false,
+                shadeClose:true,
+                move: false,
+                area:['490px','291px'],
+                title:'确认信息',
+                type: 1,
+                content: $('.paybox-tan') //这里content是一个DOM，注意：最好该元素要存放在body最外层，否则可能被其它的相对元素所影响
+            });
+
+            // 弹框按钮点击事件
+            $('.sure_2').click(function () {
+                layer.closeAll();
+            });
+            $('.cancel_2').click(function () {
+                layer.closeAll();
+            });
         });
     });
 }());

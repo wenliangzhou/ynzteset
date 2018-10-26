@@ -503,6 +503,57 @@
         noDataShow('#friendsfan','fanye');
          
         // ---------------
+        // 任务详情上传文件
+        $('.btn2').on('click', function () {
+            layer.open({
+                skin: 'upload',
+                resize: false,
+                shadeClose: true,
+                move: false,
+                area: ['450px', 'auto'],
+                title: '上传任务凭证',
+                type: 1,
+                content: $('.uploadbox') //这里content是一个DOM，注意：最好该元素要存放在body最外层，否则可能被其它的相对元素所影响
+            });
+        });
+        $('.uploadbox #suolue').change(function () {
+            wlz.showImage('.preview1', '#suolue', 'name', '请上传压缩包格式');
+        });
+        $('.uploadbox #original').change(function () {
+            wlz.showImage('.preview2', '#original', 'name', '请上传压缩包格式');
+        });
+        $('.upload-btn').click(function () {
+            var suolue_value = $('#suolue')[0].files[0],
+                original_value = $('#original')[0].files[0];
+            if (suolue_value === undefined) {
+                layer.tips('请上传压缩包格式的文件 !', '.preview1', {
+                    anim: 6
+                });
+                return false;
+            } else if (original_value === undefined) {
+                layer.tips('请上传压缩包格式的文件 !', '.preview2', {
+                    anim: 6
+                });
+                return false;
+            }
+            var files = $('.uploadbox input[type=file]');
+            var formData = new FormData();
+            for (var i = 0; i < files.length; i++) {
+                formData.append('file' + i, files[i].files[0]);
+            }
+            //ajax发送数据
+            $.ajax({
+                url: "https://test.php",
+                method: 'POST',
+                data: formData,
+                contentType: false, // 注意这里应设为false
+                processData: false,
+                cache: false,
+                success: function (data) {
+
+                }
+            });
+        });
     });
     
 }());

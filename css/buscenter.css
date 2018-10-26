@@ -703,3 +703,53 @@ body{
 .rechargebox ul.bankpay table td label{
     margin-bottom: 0px;
 }
+
+.paybox-class .layui-layer-content{
+    padding:0px 20px;
+    position: relative;
+}
+.paybox-class .layui-layer-title{
+    background-color: #e8e8e8;
+}
+.paybox-class .text{
+    color: #fe8f00;
+    margin-left: 25px;
+}
+.paybox-class span:nth-child(1){
+    margin-left: 125px;
+    color: #666666;
+    font-size: 12px;
+}
+.paybox-class p{
+    margin: 14px;
+}
+.paybox-class button{
+    width: 110px;
+    height: 30px;
+    line-height: 30px;
+    padding: 0px;
+}
+.paybox-class .sure_2{
+    background-image: linear-gradient(0deg, 
+    #f1d700 0%, 
+    #feec54 100%), 
+linear-gradient(
+    #ffe405, 
+    #ffe405);
+background-blend-mode: normal, 
+    normal;
+    border: none;
+    margin-left: 105px;
+    margin-right: 30px;
+}
+.paybox-class .cancel_2{
+    background-image: linear-gradient(0deg, 
+		#d7d7d7 0%, 
+		#ffffff 100%), 
+	linear-gradient(
+		#ffe405, 
+		#ffe405);
+	background-blend-mode: normal, 
+		normal;
+	border: solid 1px #d9d9d9;
+}

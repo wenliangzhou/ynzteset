@@ -137,7 +137,7 @@
         });
         
         // 上传任务
-        $('#shangchuan #submit').click(function () {
+        $('#shangchuan .kkk').click(function () {
             var biaoti = $('#biaoti').val(),
                 shangjin = $('#shangjin').val(),
                 tasktime = $('#fabutime').val(),

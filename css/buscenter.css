@@ -869,3 +869,9 @@ background-blend-mode: normal,
 .demo6-class{
     margin-left: 30px !important;
 }
+.kkk{
+    width: 160px;
+    height: 36px;
+    background-color: #ffe405;
+    border-radius: 8px;
+}

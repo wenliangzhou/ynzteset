@@ -838,7 +838,7 @@ background-blend-mode: normal,
 #shangchuan .item-lei li:hover{
     color: #ff6900;
 }
-#shangchuan .lei>li:hover{
+#shangchuan .lei-container:hover{
     color: #ff6900;
 }
 .ziliao .dingwei{

@@ -39,6 +39,9 @@
         $('#wenan').change(function () {
             wlz.showImage('.wenan', '#wenan','name');
         });
+        $('#fengmian').change(function () {
+            wlz.showImage('.fengmian', '#fengmian','name');
+        });
         // 提交信息
         $('.form-ziliao #submit').click(function () {
             var nichen = $('#nichen').val(),
@@ -137,32 +140,63 @@
         $('#shangchuan #submit').click(function () {
             var biaoti = $('#biaoti').val(),
                 shangjin = $('#shangjin').val(),
-                tasktime = $('#tasktime').val(),
+                tasktime = $('#fabutime').val(),
+                tasktime2 = $('#fabutime2').val(),
+                dacheng = $('#tiaojiantask').val(),
                 renshu = $('#renshu').val(),
                 tasktext = $('#tasktext').val(),
                 attention = $('#attention').val(),
                 wenan = $('#wenan')[0].files[0],
-                wenanvalue = $('#wenan')[0].defaultValue;
+                fengmian = $('#fengmian')[0].files[0],
+                wenanvalue = $('#wenan')[0].defaultValue,
+                leixing = $('.dingwei').attr('data-lei-num'),
+                shuxing = $('input[name = renwuleixing]:checked').val(),
+                yuan = $('input[name = yuanwenjian]:checked').val();
+            if(leixing== ''){
+                layer.tips('请选择任务类型 !', '.kkk', {
+                    anim: 6,
+                    skin: 'demo6-class'
+                });
+                return false;
+            }
             if (biaoti == '') {
-                layer.tips('标题不能为空 !', '#biaoti', {
-                    anim: 6
+                layer.tips('标题不能为空 !', '.kkk', {
+                    anim: 6,
+                    skin: 'demo6-class'
                 });
                 return false;
             }
             if (shangjin == '') {
-                layer.tips('预付赏金不能空 !', '#shangjin', {
-                    anim: 6
+                layer.tips('赏金不能空 !', '.kkk', {
+                    anim: 6,
+                    skin: 'demo6-class'
                 });
                 return false;
             }
-            if (tasktime == '') {
-                layer.tips('任务时间不能为空 !', '#tasktime', {
-                    anim: 6
-                });
-                return false;
-            }
+            
             if (renshu == '') {
-                layer.tips('人数不能空 !', '#renshu', {
+                layer.tips('人数不能空 !', '.kkk', {
+                    anim: 6,
+                    skin: 'demo6-class'
+                });
+                return false;
+            }
+            if (shuxing == undefined) {
+                layer.tips('请选择任务属性 !', '.kkk', {
+                    anim: 6,
+                    skin: 'demo6-class'
+                });
+                return false;
+            }
+            if (yuan == undefined) {
+                layer.tips('请选择是否需要原文件 !', '.kkk', {
+                    anim: 6,
+                    skin: 'demo6-class'
+                });
+                return false;
+            }
+            if (tasktime == '' || tasktime2=='') {
+                layer.tips('任务时间不能为空 !', '#fabutime2', {
                     anim: 6
                 });
                 return false;
@@ -173,8 +207,20 @@
                 });
                 return false;
             }
+            if (dacheng == '') {
+                layer.tips('任务详情不能空 !', '#tiaojiantask', {
+                    anim: 6
+                });
+                return false;
+            }
             if (wenan == undefined && wenanvalue =='') {
-                layer.tips('地址不能为空 !', '.tishi', {
+                layer.tips('请上传文案/或者素材 !', '.tishi', {
+                    anim: 6
+                });
+                return false;
+            }
+            if (fengmian == undefined && wenanvalue =='') {
+                layer.tips('请上传封面图片 !', '.fengmian', {
                     anim: 6
                 });
                 return false;
@@ -185,7 +231,7 @@
                 });
                 return false;
             }
-            alert('发送ajax')
+            
             var files = $('#shangchuan input[type=file]');
             var formData = new FormData();
             for(var i = 0;i<files.length;i++){
@@ -195,7 +241,7 @@
             var data = wlz.zhuan(form);
             formData.append('data',data);
             $.ajax({
-                url: "https://api.github.com/users",
+                url: "https://test.php",
                 method: 'POST',
                 data: formData,
                 contentType: false, // 注意这里应设为false
@@ -551,6 +597,16 @@
             laydate.render({
                 elem: '#moneytime2' //指定元素
             });
+            laydate.render({
+                elem: '#fabutime' //指定元素
+                ,format:'yyyy-MM-dd HH:mm:ss'
+                ,type: 'datetime'
+            });
+            laydate.render({
+                elem: '#fabutime2' //指定元素
+                ,format:'yyyy-MM-dd HH:mm:ss'
+                ,type: 'datetime'
+            });
             function xr(res,curr,limit) {
                 
             }
@@ -743,5 +799,24 @@
                 layer.closeAll();
             });
         });
+        // 发布任务
+        wlz.tabInit2('lei',true);
+        // 所在类
+        var leitext,
+            data_lei_num;
+        $('.item-lei li').click(function () {
+            var str = $('.lei li.tab-lei.active').html(),
+                str2 = $(this).parent().prev().html(),
+                num = $('.lei li.tab-lei.active').attr('data-lei-num'),
+                num2 = $(this).parent().prev().attr('data-lei-num');
+            leitext ='所在类 ： '+ str + ' > ' + str2 + ' > ' + $(this).html();
+            data_lei_num = [num,num2,$(this).attr('data-lei-num')];
+            console.log(leitext);
+            console.log(data_lei_num);
+            $('.ziliao .dingwei').attr('data-lei-num',data_lei_num);
+            $('.ziliao .dingwei').html(leitext);
+            $(this).parent().parent().addClass('hide');
+            return false;
+        })
     });
 }());

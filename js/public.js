@@ -115,7 +115,7 @@
                     });            
                 });
             },
-            tabInit2:function (target) {
+            tabInit2:function (target,c) {
                 var tab = $('.tab-'+target),
                     item = $('.item-'+target),
                     num = tab.length;
@@ -124,7 +124,9 @@
                     $(item[i]).attr('index',i);
                 }
                 item.addClass('hide');
-                $(item[0]).removeClass('hide');
+                if(!c){
+                    $(item[0]).removeClass('hide');
+                }
                 tab.click(function () {
                     var index = parseInt($(this).attr('index'));
                     item.addClass('hide');

@@ -243,7 +243,7 @@ body{
 .mainbox{
     padding: 20px;
     width: 1000px;
-    height: 711px;
+    min-height: 711px;
     border: solid 1px #e5e5e5;
     margin-left: 20px;
     font-size: 14px;
@@ -636,6 +636,9 @@ body{
 }
 
 /* 充值中心样式 */
+.paybox-tan{
+    display: none;
+}
 .rechargebox{
     padding-top: 20px;
     color: #333333;
@@ -752,4 +755,117 @@ background-blend-mode: normal,
 	background-blend-mode: normal, 
 		normal;
 	border: solid 1px #d9d9d9;
+}
+.pay-btn{
+    width: 160px;
+    height: 40px;
+    background-image: linear-gradient(0deg, 
+    #f1d700 0%, 
+    #feec54 100%), 
+linear-gradient(
+    #ffe405, 
+    #ffe405);
+background-blend-mode: normal, 
+    normal;
+    border: none;
+}
+
+/* 修改发布任务 */
+#shangchuan ul::after{
+    display: block;
+    content: '';
+    clear: both;
+}
+#shangchuan ul>li{
+    float: left;
+    padding-right: 20px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    font-size: 12px;
+    position: relative;
+    cursor: pointer;
+}
+#shangchuan ul{
+    position: relative;
+}
+#shangchuan ul .active{
+    background-color: #ffe405;
+}
+#shangchuan ul .item-lei{
+    position: absolute;
+    top: 31px;
+    left: 0px;
+    z-index: 10;
+    padding: 20px;
+    padding-right: 0px;
+    background-color: #ffffff;
+	box-shadow: 0px 2px 4px 0px 
+        rgba(45, 40, 1, 0.43);
+    width: 363px;
+    text-align: left;
+}
+#shangchuan .item-lei .title-lei{
+    color: #000000;
+    line-height: 12px;
+    height: 12px;
+    position: relative;
+    display: inline-block;
+    padding-right: 20px;
+}
+#shangchuan .item-lei .title-lei img{
+    width: auto;
+    height: auto;
+    vertical-align: middle;
+}
+#shangchuan .item-lei ul {
+    color: #999999;
+}
+#shangchuan .item-lei .title-lei::after{
+    display: block;
+    position: absolute;
+    content: '';
+    width: 7px;
+    height: 11px;
+    background: url(../img/center/you.png) center center no-repeat;
+    background-size: 100% 100%;
+    right: -7px;
+    top: 0px;
+}
+#shangchuan li.tab-lei{
+    padding: 0px 20px;
+}
+#shangchuan .item-lei li:hover{
+    color: #ff6900;
+}
+#shangchuan .lei>li:hover{
+    color: #ff6900;
+}
+.ziliao .dingwei{
+    display: inline-block;
+    font-size: 12px;
+    color:#000;
+    margin-left: 50px;
+}
+.lei-container{
+    float: left;
+    padding-right: 10px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    font-size: 12px;
+    position: relative;
+    cursor: pointer;
+}
+.tasktime_{
+    margin-top: 0px;
+    margin-bottom: 0px;
+    margin-left: 0px;
+}
+.tasktime_ input{
+    width: 165px !important;
+    border-radius: 5px;
+}
+.demo6-class{
+    margin-left: 30px !important;
 }

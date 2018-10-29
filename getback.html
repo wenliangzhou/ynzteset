@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <!-- <meta http-equiv="X-UA-Compatible" content="ie=edge"> -->
+    <title>找回密码</title>
+    <!-- 公共 -->
+    <link rel="stylesheet" href="js/bootstrap-3.3.7-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="js/layui/css/layui.css">
+    <link rel="stylesheet" href="css/public.css">
+    <!--  私有 -->
+    <link rel="stylesheet" href="css/getback.css">
+</head>
+
+<body>
+
+    <div class="logo center">
+        <img src="img/public/logo2.png" alt="">
+        <a href="index.html">返回首页 > </a>
+    </div>
+    <div class="container_ center">
+        <p class="text">找回密码</p>
+        <div class="item center userbox">
+            <form class="form-horizontal">
+                <div class="form-group">
+                    <label class="sr-only">用户名</label>
+                    <div class="col-sm-12">
+                        <input type="text" class="form-control" id="user" placeholder="手机号码/邮箱">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="sr-only">验证</label>
+                    <div class="col-sm-12">
+                        <div class="code-box" id="code-box">
+                            <div class="tishi">请按住滑块，拖到最右边</div>
+                            <input type="text" name="code" class="code-input" />
+                            <p></p>
+                            <span>>>></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group yanzbox hide">
+                    <div class="col-sm-8 hezi">
+                        <input type="text" class="form-control" id="yanz" placeholder="验证码">
+                    </div>
+                    <div class="col-sm-3"><button class="btnz">发送验证码</button></div>
+                    <div class="col-sm-12">
+                        <input class="col-sm-12 next btnt" type="button" value="下一步">
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div class="item center setbox hide">
+            <form class="form-horizontal form-set">
+                <div class="form-group">
+                    <label class="sr-only">设置密码</label>
+                    <div class="col-sm-12">
+                        <input type="password" class="form-control" id="psw" placeholder="由字母数组组成、长度6-16个字符">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="sr-only">修改密码</label>
+                    <div class="col-sm-12">
+                        <input type="password" class="form-control" id="pswa" placeholder="确认密码">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-sm-12">
+                        <input class="col-sm-12 btnt set-btn" type="button" value="下一步">
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div class="item center successbox hide">
+            <p class="successtishi">您已经成功设置密码，请使试用新密码登录</p>
+            <div class="form-group">
+                <div class="col-sm-12 sgin">
+                    <input class="col-sm-12 btnt sign" type="button" value="马上登录">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- footer -->
+    <div class="footer">
+        <ul>
+            <li>关于我们</li>
+            <li>联系我们</li>
+            <li>服务条款</li>
+        </ul>
+        <p>备案/许可证号:浙ICP备18012760号-1 Copyright 2018 找财猫 www.doucaishen.com</p>
+        <div>
+            <img src="img/index/yejiao.png" alt="">
+        </div>
+    </div>
+    <!-- JQ > 框架  > 签到日历插件 > 手写公共JS  公共 -->
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/layui/layui.js"></script>
+    <script src="js/schedule.js"></script>
+    <script src="js/public.js"></script>
+
+    <!-- 私人 -->
+    <script src="js/getback.js"></script>
+
+
+</body>
+
+</html>

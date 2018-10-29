@@ -9,8 +9,9 @@
         });
         // 定义一个全局变量，把公用方法放在这个对象上
         var arr = [];
-        
+    
         wlz = {
+            timeloop:'',
             showImage:function(target,orign,type,duo='点击上传'){
                 file = jQuery(orign)[0].files[0];
                 console.log(file);
@@ -59,6 +60,36 @@
                     setTimeout(function() {
                         _this.btnTime(btn,time);
                         },1000)
+                }
+            },
+            btnTime2:function (btn,time) {
+                clearTimeout(wlz.timeloop);
+                var _this = this;
+                if(!arguments[2]){
+                    $(btn).click(function () {
+                        _this.btnTime2(btn,time,'init');
+                    });
+                    if(localStorage.timetext == 0 || localStorage.timetext == undefined){
+                        return false;
+                    }
+                }
+                var d = new Date();
+                var dangqian = d.getTime();
+                if(localStorage.time == '' || localStorage.time == undefined){
+                    localStorage.time = dangqian + (time)*1000;
+                }
+                localStorage.timetext = parseInt((localStorage.time - dangqian)/1000);
+                if(localStorage.time < dangqian+1000) {
+                    localStorage.time = '';
+                    $(btn)[0].removeAttribute("disabled");
+                    $(btn).html("获取验证码");
+                } else {
+                    $(btn)[0].setAttribute("disabled", true);
+                    $(btn).html("重发("+(localStorage.timetext == time?time-1:localStorage.timetext)+")");
+                    
+                    wlz.timeloop = setTimeout(function() {
+                        _this.btnTime2(btn,time,'init');
+                        },1000);
                 }
             },
             tabInit:function (target) {
@@ -175,7 +206,7 @@
                 title:'会员登录',
                 content: '<form id="login-box"><div class="form-group"><input type="text" class="form-control" name="user" id="user" placeholder="用户名/手机号/邮箱">'+
                 '</div><div class="form-group"><input type="password" name="password" class="form-control" id="password" placeholder="密码"></div><div class="checkbox">'+
-                '<input id="remember" name="remember" type="checkbox" value="选择"><label for="remember"> 记住用户密码</label><a>密码找回</a></div><button class = "center-block" type="button" id="login-btn" class="btn btn-default">登录</button>'+
+                '<input id="remember" name="remember" type="checkbox" value="选择"><label for="remember"> 记住用户密码</label><a href="getback.html">密码找回</a></div><button class = "center-block" type="button" id="login-btn" class="btn btn-default">登录</button>'+
                 '<p>还没有账号? <a href="reg.html" target="blank">立即注册</a></p><p>其他账号登录 : <span class="qq"></span><span class="wei"></span></p></form>'
             });
         });  
@@ -184,7 +215,7 @@
             // 验证登陆表单
             if($('#user').val()===''){
                 layer.tips('用户名不能为空 !', '#user',{
-                    anim: 6
+                    anim: 6,
                 });
                 return false;
             }

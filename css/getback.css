@@ -1,0 +1,175 @@
+.footer{
+    background: #f4f4f4;
+    color: #000;
+}
+body{
+    background: #f4f4f4;
+}
+form{
+    color: #333333;
+}
+li::after{
+    background: #000 !important;
+}
+.container_{
+    width: 894px;
+	height: 413px;
+	background-color: #ffffff;
+    border-radius: 8px;
+    position: relative;
+    overflow: hidden;
+}
+.container_::before{
+    width: 100%;
+    content: '账户安全';
+    display: block;
+    position: absolute;
+    height: 50px;
+	background-color: #ffe405;
+    border-radius: 8px 8px 0px 0px;
+    line-height: 50px;
+    text-align: center;
+    font-size: 20px;
+}
+.logo{
+    width: 894px;
+    margin-top: 90px;
+    margin-bottom: 40px;
+    position: relative;
+}
+.logo a{
+    float: right;
+    margin-top: 30px;
+    margin-right: 30px;
+}
+.container_ .text{
+    color: #333333;
+    font-size: 16px;
+    text-align: center;
+    margin-top: 86px;
+}
+.item{
+    width: 336px;
+}
+input{
+    margin: 20px 0px;
+    height: 40px !important;
+    background: #f4f4f4 !important;
+}
+.form-group{
+    margin-bottom: 0px;
+}
+
+/* 验证 */
+.code-box{
+	padding: 0 10px;
+    height: 36px;
+    background: #f4f4f4 !important;
+    background: rgba(0, 0, 0, 0.16);
+    border: 0;
+    border-radius: 5px;
+    outline: none;
+    border: 1px solid #ccc;
+}
+.code-box{
+	position: relative;
+}
+.code-box p,
+.code-box span{
+	display:block;
+	position: absolute;
+	left: 0;
+	height: 35px;
+	text-align: center;
+	line-height: 36px;
+	border-radius: 5px;
+}
+.code-box span{
+	width: 40px;
+	background-color:#fff;
+	font-family: "宋体";
+	font-size: 16px;
+    cursor: pointer;
+    height: 34px;
+}
+.code-box p{
+	width: 0;
+	background-color: #FFFF99;
+	overflow: hidden;
+	text-indent: -20px;
+	transition: background 1s ease-in;
+}
+.code-box .code-input{
+	display: none;
+}
+.tishi{
+    position: absolute;
+    width: 100%;
+    line-height: 36px;
+    text-align: center;
+    color: rgb(125, 125, 125);
+}
+
+.btnz{
+    width: 100px;
+    height: 40px;
+    background: rgba(255, 228, 5, 1);
+    border: none;
+    border-radius: 5px;
+    margin: 20px 0px;
+    margin-left: -8px;
+}
+.btnt{
+    height: 40px;
+    background: rgba(255, 228, 5, 1) !important;
+    border: none;
+    border-radius: 5px;
+}
+.btnz:hover{
+    background: rgba(255, 236, 64, 0.8);
+}
+.btnt:hover{
+    background: rgba(255, 236, 64, 0.8) !important;
+}
+.next{
+    margin: 0px;
+}
+button:disabled{
+    background-color: #eee;
+    cursor: not-allowed;
+}
+button:disabled:hover{
+    background-color: #eee;
+}
+/* 设置密码 */
+.form-set input{
+    margin: 10px 0px;
+}
+.form-set #psw{
+    margin-top: 20px;
+}
+.sgin{
+    padding: 0px;
+}
+.successtishi{
+    text-align: center;
+    margin-top: 60px;
+    margin-bottom: 54px;
+}
+
+.xiugai{
+    top: 242px !important;
+}
+.xiugai2{
+    top: 358px !important;
+}
+.xiugai3{
+    top: 242px !important;
+}
+.xiugai4{
+    top: 300px !important;
+}
+.sign-class {
+    right: 50% !important;
+    margin-right: -140px !important;
+}

@@ -1,0 +1,292 @@
+.yejiao{
+    width: 709px;
+    height: 52px;
+    position: absolute;
+    bottom: 32px;
+    color: #fff;
+    text-align: center;
+    left: 50%;
+    margin-left: -354px;
+    font-size: 12px;
+    letter-spacing: 3px;
+}
+.yejiao p{
+    letter-spacing: 4px;
+    color: #ffffff;
+    margin-bottom: 20px;
+}
+.yejiao a{
+    color: #fff;
+    text-decoration: none;
+}
+
+.banner{
+    background: url(../img/activity/invitebj.png) top center no-repeat;
+    height: 3076px;
+    position: relative;
+    overflow: hidden;
+}
+
+.wrapper{
+    width: 1200px;
+    position: relative;
+    border-radius: 12px;
+    border: solid 3px #e6c792;
+    margin-bottom: 42px;
+}
+.decorate-img{
+    position: absolute;
+    top: -28px;
+    left: 0px;
+}
+.head-title{
+    height: 40px;
+	background-color: #f1d6af;
+	border-radius: 8px 8px 0px 0px;
+}
+.item1{
+    margin-top: 820px;
+}
+.head-title h3{
+    font-family: MicrosoftYaHei-Bold;
+    font-size: 16px;
+    margin-left: 66px;
+    line-height: 40px;
+    display: inline-block;
+}
+.head-title span{
+    display: inline-block;
+    font-family: MicrosoftYaHei;
+	font-size: 12px;
+	font-weight: normal;
+	font-stretch: normal;
+	line-height: 40px;
+	letter-spacing: 1px;
+    color: #5b3018;
+    margin-left: 10px;
+}
+.item1 ul::after{
+    display: block;
+    content: '';
+    clear: both;
+}
+.item1 ul li{
+    float: left;
+    width: 180px;
+    text-align: center;
+    position: relative;
+    margin-left: 120px;
+}
+.item1 ul li:nth-child(1){
+    margin-left: 58px;
+}
+.item1 li p:nth-child(1){
+	height: 24px;
+    font-family: MicrosoftYaHei-Bold;
+	font-size: 24px;
+	font-weight: normal;
+	font-stretch: normal;
+	line-height: 23px;
+	letter-spacing: 2px;
+    color: #be8d37;
+    margin-top: 60px;
+    margin-bottom: 19px;
+}
+.item1 li p:nth-child(2){
+	font-family: MicrosoftYaHei;
+	font-size: 12px;
+	font-weight: normal;
+	font-stretch: normal;
+	line-height: 21px;
+	letter-spacing: 1px;
+    color: #5b3018;
+    margin-bottom: 39px;
+}
+.item1 li img{
+    margin-bottom: 60px;
+}
+.item1 li::after{
+    position: absolute;
+    content: '';
+    width: 19px;
+    height: 34px;
+    background: url(../img/activity/right.png) center center no-repeat;
+    top: 220px;
+    left: 230px;
+}
+.item1 li:nth-last-child(1)::after{
+    display: none;
+}
+
+.item2 ul::after{
+    display: block;
+    content: '';
+    clear: both;
+}
+.item2 ul li{
+    float: left;
+    width: 149px;
+    position: relative;
+    margin-left: 124px;
+}
+.item2 li div{
+    display: inline-block;
+    text-align: center;
+}
+.item2 li p{
+    letter-spacing: 1px;
+    color: #000000;
+    margin-bottom: 15px;
+}
+.item2 li img{
+    margin-top: 60px;
+    margin-bottom: 20px;
+}
+li button{
+    width: 120px;
+	height: 35px;
+	background-color: rgba(255, 68, 1,1);
+    border-radius: 18px;
+    border: none;
+    color: #fff;
+    margin-bottom: 52px;
+}
+li button:hover{
+    background-color: rgba(255, 68, 1,0.7);
+}
+li button:disabled:hover{
+    background-color: #666666;
+}
+li button:disabled{
+    background-color: #666666;
+    cursor: not-allowed;
+}
+.item3 ul{
+    position: relative;
+    padding: 0px 50px;
+}
+.item3 ul::after{
+    display: block;
+    content: '';
+    clear: both;
+}
+.item3 ul li{
+    float: left;
+    position: relative;
+    width: 180px;
+    text-align: center;
+    margin-left: 75px;
+}
+.item3 li p:nth-child(1){
+    font-family: MicrosoftYaHei-Bold;
+    letter-spacing: 1px;
+    color: #5b3018;
+    margin-top: 50px;
+    margin-bottom: 65px;
+}
+.item3 li button{
+    margin-top: 19px;
+}
+.layui-progress-big, .layui-progress-big .layui-progress-bar{
+    height: 26px;
+}
+.layui-progress-big{
+    width: 1020px;
+    position: absolute;
+    top: 85px;
+    left: 90px;
+}
+.layui-progress-bar{
+    background: #ff5742;
+}
+.sharelink{
+    width: 847px;
+	height: 40px;
+}
+.sharelink span:nth-child(1){
+    font-size: 24px;
+	height: 100%;
+	letter-spacing: 2px;
+    color: #000000;
+    vertical-align: middle;
+}
+.sharelink span:nth-child(2){
+    display: inline-block;
+    width: 516px;
+	height: 100%;
+	background-color: #ffffff;
+	border-radius: 10px;
+    opacity: 0.64;
+    vertical-align: middle;
+    letter-spacing: 2px;
+    color: #5b3018;
+    line-height: 40px;
+    text-align: center;
+}
+.sharelink button{
+    width: 120px;
+	height: 100%;
+	background-color: rgba(251, 95, 35,1);
+    border-radius: 2px;
+    border: none;
+    vertical-align: middle;
+    color: #ffffff;
+    float: right;
+}
+.sharelink button:hover{
+    background-color: rgba(251, 95, 35,0.8);
+}
+.sharebox{
+    display: none;
+}
+.sharebox ul::after{
+    display: block;
+    content: '';
+    clear: both;
+}
+.sharebox ul li{
+    float: left;
+    padding: 40px 20px;
+    text-align: center;
+    font-size: 12px;
+}
+.sharebox ul li .tbbox{
+    margin-bottom: 15px;
+    width: 60px;
+    height: 60px;
+    position: relative;
+    background-size: 80% 80%;
+    transition: background-size 0.2s;
+    -moz-transition: background-size 0.2s;	/* Firefox 4 */
+    -webkit-transition: background-size 0.2s;	/* Safari 和 Chrome */
+    -o-transition: background-size 0.2s;
+}
+
+.sharebox ul li a{
+    color: #666666;
+}
+.sharebox ul li .tbbox img:hover{
+    width: 60px;
+    height: 60px;
+}
+.sharebox .tbbox1{
+    background: url(../img/activity/qq.png) center center no-repeat;
+}
+.sharebox .tbbox2{
+    background: url(../img/activity/wx.png) center center no-repeat;
+}
+.sharebox .tbbox3{
+    background: url(../img/activity/qqkj.png) center center no-repeat;
+}
+.sharebox .tbbox4{
+    background: url(../img/activity/wb.png) center center no-repeat;
+}
+.sharebox .tbbox5{
+    background: url(../img/activity/lj.png) center center no-repeat;
+}
+.sharebox li:hover .tbbox{
+    background-size: 100% 100%;
+}
+.sharebox li:hover a{
+    color: #000000;
+}

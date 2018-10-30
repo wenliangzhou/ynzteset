@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>邀请好友</title>
+    <!-- 公共 -->
+    <link rel="stylesheet" href="js/bootstrap-3.3.7-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="js/layui/css/layui.css">    
+    <link rel="stylesheet" href="css/public.css">
+    <!--  私有 -->
+    <link rel="stylesheet" href="css/invite.css">
+</head>
+<body>
+    <!-- 头部导航栏 -->
+    <ul class="login">
+        <li class="sign">登陆</li>
+        <li><a class="reg" href="reg.html">注册</a></li>
+    </ul>
+    <img class="private-btn" key = "false" src="img/public/menu.png" alt="">
+    <nav class="nav-top">
+        <div class="nav-box center">
+            <img src="img/index/logo.png" alt="">
+            <ul class="nav-ul center">
+                <li><a href="index.html">首页</a></li>
+                <li><a href="task.html">任务大厅</a></li>
+                <li><a href="reward.html">悬赏大厅</a></li>
+                <li><a href="dingzhi.html">定制中心</a></li>
+                <li><a href="javascript:void(0);">游戏试玩</a></li>
+                <li><a href="vipcenter.html">会员中心</a></li>
+                <li><a href="exchange.html">兑换专区</a></li>
+                <li><a href="newperson.html">新人专区</a></li>
+            </ul>
+        </div>
+    </nav>
+    <!-- banner部分 -->
+    <div class="banner">
+        <div class="wrapper item1 center">
+            <img class="decorate-img" src="img/activity/invitecat.png" alt="">
+            <div class="head-title">
+                <h3>邀请流程</h3>
+            </div>
+            <ul>
+                <li>
+                    <p>Step1</p>
+                    <p>登录找财猫<br>获得你的专属邀请链接</p>
+                    <img src="img/activity/user.png" alt="">
+                </li>
+                <li>
+                    <p>Step2</p>
+                    <p>复制链接发送给好友<br>或者直接分享到社区</p>
+                    <img src="img/activity/lianjie.png" alt="">
+                </li>
+                <li>
+                    <p>Step3</p>
+                    <p>好友首次完成注册后<br>完成十个任务判定为有效好友</p>
+                    <img src="img/activity/reg.png" alt="">
+                </li>
+                <li>
+                    <p>Step4</p>
+                    <p>确认有效后。可根据好友<br>任务获得相应奖励 </p>
+                    <img src="img/activity/qiandai.png" alt="">
+                </li>
+            </ul>
+        </div>
+        <div class="wrapper item2 center">
+            <img class="decorate-img" src="img/activity/invitecat.png" alt="">
+            <div class="head-title">
+                <h3>惊喜红包</h3> <span>邀请足够数量的有效好友即可领取红包</span>
+            </div>
+            <ul>
+                <li>
+                    <img src="img/activity/three.png" alt="">
+                    <div>
+                        <p>3个好友(0 / 3)</p>
+                        <button disabled>点击领取</button>
+                    </div>
+                </li>
+                <li>
+                    <img src="img/activity/eight.png" alt="">
+                    <div>
+                        <p>5个好友(0 / 3)</p>
+                        <button>点击领取</button>
+                    </div>
+                </li>
+                <li>
+                    <img src="img/activity/shiwu.png" alt="">
+                    <div>
+                        <p>10个好友(0 / 10)</p>
+                        <button>点击领取</button>
+                    </div>
+                </li>
+                <li>
+                    <img src="img/activity/ershi.png" alt="">
+                    <div>
+                        <p>20个好友(0 / 20)</p>
+                        <button>点击领取</button>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div class="wrapper item3 center">
+            <img class="decorate-img" src="img/activity/invitecat.png" alt="">
+            <div class="head-title">
+                <h3>齐心协力</h3> <span>邀请好友完成任务领取积分奖励（完成一个任务=1点积分）</span>
+            </div>
+            <ul>
+                <li>
+                    <p>一积分</p>
+                    <p>1000-10000赏金</p>
+                    <button>点击领取</button>
+                </li>
+                <li>
+                    <p>五积分</p>
+                    <p>1000-10000赏金</p>
+                    <button>点击领取</button>
+                </li>
+                <li>
+                    <p>二十积分</p>
+                    <p>1000-10000赏金</p>
+                    <button>点击领取</button>
+                </li>
+                <li>
+                    <p>五十积分</p>
+                    <p>1000-10000赏金</p>
+                    <button>点击领取</button>
+                </li>
+                <div class="layui-progress layui-progress-big">
+                    <div class="layui-progress-bar" lay-percent="25%"></div>
+                </div>
+            </ul>
+        </div>
+        <div class="sharelink center">
+            <span>你的专属链接 : </span><span class="link">
+                    http://www.juxiangyou.com/floor/recom/ 
+            </span><button>立即邀请</button>
+        </div>
+        <div class="yejiao">
+            <p>
+                <a href="">关于我们</a> | 联系我们 | 服务条款
+            </p>
+            备案/许可证号:浙ICP备18012760号-1 Copyright 2018 找财猫 www.doucaishen.com
+        </div>
+    </div>
+    
+
+
+   
+    <!-- JQ > 框架  > 签到日历插件 > 手写公共JS  公共 -->
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/layui/layui.js"></script>
+    <script src="js/schedule.js"></script>
+    <script src="js/public.js"></script>
+    <!-- 私人 -->
+    <script src="js/clipboard.min.js"></script>
+    <script>
+        layui.use(['element','layer'], function () {
+                var element = layui.element,
+                    layer = layui.layer;
+                callback(layer);
+            });
+            function callback(layer) {
+                $('.sharelink button').click(function () {
+                layer.open({
+                    type: 1,
+                    shadeClose: true,
+                    resize: false,
+                    move: false,
+                    shade: 0.7,
+                    area:['auto','auto'],
+                    skin: 'share-class',
+                    title: '分享到 : ',
+                    content: $('.sharebox')
+                });
+            });
+            }
+        var clipboard = new ClipboardJS('.copy-btn');
+
+            clipboard.on('success', function (e) {
+                
+            
+                layer.msg('复制成功');
+                setTimeout(function () {
+                    layer.closeAll();
+                },1000); 
+                e.clearSelection();
+            });
+
+            clipboard.on('error', function (e) {
+                console.error('Action:', e.action);
+                console.error('Trigger:', e.trigger);
+            });
+    </script>
+    <div class="sharebox">
+        <ul>
+            <li>
+                <div class="tbbox tbbox1"></div>
+                <a href="">QQ</a>
+            </li>
+            <li>
+                <div class="tbbox tbbox2"></div>
+                <a href="">微信</a>
+            </li>
+            <li>
+                <div class="tbbox tbbox3"></div>
+                <a href="">空间</a>
+            </li>
+            <li>
+                <div class="tbbox tbbox4"></div>
+                <a href="">微博</a>
+            </li>
+            <li class="copy-btn" data-clipboard-text="http://www.juxiangyou.com/floor/recom/ ">
+                <div class="tbbox tbbox5"></div>
+                <a href="">复制链接</a>
+            </li>
+        </ul>
+    </div>
+</body>
+
+</html>

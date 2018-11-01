@@ -968,3 +968,12 @@ body .sign-class{
     }
 } 
 
+.private-class .close-btn{
+    position: absolute;
+    right: 13px;
+    top: 13px;
+    cursor: pointer;
+}
+.private-class .close-btn:hover{
+    opacity: 0.7;
+}

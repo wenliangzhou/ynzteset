@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>私信页面</title>
+    <!-- 公共 -->
+    <link rel="stylesheet" href="js/bootstrap-3.3.7-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="js/layui/css/layui.css">
+    <link rel="stylesheet" href="css/public.css">
+    <!--  私有 -->
+    <link rel="stylesheet" href="css/private.css">
+</head>
+
+<body>
+    <!-- 头部导航栏 -->
+    <ul class="login">
+        <li class="sign">登陆</li>
+        <li><a class="reg" href="reg.html">注册</a></li>
+    </ul>
+    <img class="private-btn" key="false" src="img/public/menu.png" alt="">
+    <nav class="nav-top">
+        <div class="nav-box center">
+            <img src="img/index/logo.png" alt="">
+            <ul class="nav-ul center">
+                <li><a href="index.html">首页</a></li>
+                <li><a href="task.html">任务大厅</a></li>
+                <li><a href="reward.html">悬赏大厅</a></li>
+                <li><a href="dingzhi.html">定制中心</a></li>
+                <li><a href="javascript:void(0);">游戏试玩</a></li>
+                <li><a href="vipcenter.html">会员中心</a></li>
+                <li class="active"><a href="javascript:void(0);">兑换专区</a></li>
+                <li><a href="newperson.html">新人专区</a></li>
+            </ul>
+        </div>
+    </nav>
+    <!-- banner部分 -->
+    <div class="banner">
+
+    </div>
+    <!-- 主体部分 -->
+    <div class="midbox center layui-tab" lay-filter = "test2">
+        <div class="left">
+            <div class="information">
+                <img src="img/center/touxiang.png" alt="">
+                <p class="name">爱笑的兔子</p>
+                <p class="id-num">ID：21033468</p>
+                <p class="hover-p center"><span class="jinbi">赏金余额：10M</span></p>
+                <p class="hover-p center"><span class="red-num">红包余额：200.5元</span></p>
+            </div>
+        </div>
+        <ul class="layui-tab-title nav-tab">
+            <li class="layui-this" send = 'yes'>私信</li>
+            <li send = '1'>系统公告</li>
+        </ul>
+        <div class="layui-tab-content right">
+            <div class="layui-tab-item layui-show">
+                <div class="head-title clearfloat" data-chooseid="0">
+                    <span>全部私信</span> <span class="box"><span class="choose checkbox_ all" data-chooseid="0" data-type="2">全选</span> <button data-type="0">标记已读</button><button data-type="1">删除</button></span>
+                    <ul id="sixinbox" class="layui-collapse" data-chooseid="0">
+                        <li class="layui-colla-item" data-item-id="0">
+                            <span class="choose checkbox_"></span><span class="layui-colla-title"><span class="shenglue" title="点击查看更多">【新游戏】三国论剑上线！奖励20.1万U币+62积分！【新游戏】三国论剑上线！奖励20.1万U币+62积分</span> </span> <span class="time">2013-06-06 15:54:24</span>
+                            <div class="layui-colla-content">
+                                【新游戏】三国论剑上线！奖励20.1万U币+62积分！【新游戏】三国论剑上线！奖励20.1万U币+62积分
+                                【新游戏】三国论剑上线！奖励20.1万U币+62积分！【新游戏】三国论剑上线！奖励20.1万U币+62积分
+                            </div>
+                        </li>
+                        <li class="layui-colla-item" data-item-id="1">
+                            <span class="choose checkbox_"> </span><span class="layui-colla-title"><span class="shenglue read">【新游戏】三国论剑上线！奖励20.1万U币+62积分！</span> </span><span class="time">2013-06-06 15:54:24</span>
+                            <div class="layui-colla-content">内容区域</div>
+                        </li>
+                        <li class="layui-colla-item" data-item-id="2">
+                            <span class="choose checkbox_"> </span><span class="layui-colla-title"><span class="shenglue read">【新游戏】三国论剑上线！奖励20.1万U币+62积分！</span> </span><span class="time">2013-06-06 15:54:24</span>
+                            <div class="layui-colla-content">内容区域</div>
+                        </li>
+                    </ul>
+                    <div id="sixinfan"></div>
+                </div>
+            </div>
+            <div class="layui-tab-item">
+                <div class="head-title clearfloat" data-chooseid="1">
+                    <span>系统私信</span> <span class="box"><span class="choose checkbox_ all" data-type="2" data-chooseid="1">全选</span> <button class="read-btn" data-type="0">标记已读</button><button class="delete-btn" data-type="1">删除</button></span>
+                    <ul id="sixinbox" class="layui-collapse" data-chooseid="1">
+                        <li class="layui-colla-item">
+                            <span class="choose checkbox_"></span><span class="layui-colla-title"><span class="shenglue" title="点击查看更多">【新游戏】三国论剑上线！奖励20.1万U币+62积分！【新游戏】三国论剑上线！奖励20.1万U币+62积分</span> </span> <span class="time">2013-06-06 15:54:24</span>
+                            <div class="layui-colla-content">
+                                【新游戏】三国论剑上线！奖励20.1万U币+62积分！【新游戏】三国论剑上线！奖励20.1万U币+62积分
+                                【新游戏】三国论剑上线！奖励20.1万U币+62积分！【新游戏】三国论剑上线！奖励20.1万U币+62积分
+                            </div>
+                        </li>
+                        <li class="layui-colla-item">
+                            <span class="choose checkbox_"> </span><span class="layui-colla-title"><span class="shenglue read">【新游戏】三国论剑上线！奖励20.1万U币+62积分！</span> </span><span class="time">2013-06-06 15:54:24</span>
+                            <div class="layui-colla-content">内容区域</div>
+                        </li>
+                        <li class="layui-colla-item">
+                            <span class="choose checkbox_"> </span><span class="layui-colla-title"><span class="shenglue">【新游戏】三国论剑上线！奖励20.1万U币+62积分！</span> </span><span class="time">2013-06-06 15:54:24</span>
+                            <div class="layui-colla-content">内容区域</div>
+                        </li>
+                    </ul>
+                    <div id="sixinfan"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- footer -->
+    <div class="footer">
+        <ul>
+            <li>关于我们</li>
+            <li>联系我们</li>
+            <li>服务条款</li>
+        </ul>
+        <p>备案/许可证号:浙ICP备18012760号-1 Copyright 2018 找财猫 www.doucaishen.com</p>
+        <div>
+            <img src="img/index/yejiao.png" alt="">
+        </div>
+    </div>
+    <!-- JQ > 框架  > 签到日历插件 > 手写公共JS  公共 -->
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/layui/layui.js"></script>
+    <script src="js/schedule.js"></script>
+    <script src="js/public.js"></script>
+
+    <!-- 私人 -->
+    <script src="js/private.js"></script>
+    <!-- 侧边导航栏 -->
+    <div class="nav-wrapper">
+        <div class="nav-item nav-item1">
+        </div>
+        <div class="nav-item nav-item2"></div>
+        <div class="nav-item nav-item3"></div>
+        <div class="nav-item nav-item4"></div>
+        <div class="nav-item nav-item5"></div>
+        <div class="nav-item nav-item6"></div>
+        <div class="nav-item nav-item7"></div>
+        <div class="nav-item nav-item8"></div>
+    </div>
+</body>
+<!-- 侧边导航栏 签到日历 -->
+<div id='schedule-box' class="boxshawv signin-box"></div>
+
+</html>

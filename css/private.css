@@ -1,0 +1,282 @@
+.banner{
+    height: 79px;
+    background: black;
+    margin-bottom: 40px;
+}
+.clearfloat{
+    position: relative;
+}
+.clearfloat::after{
+    display: block;
+    content: '';
+    clear: both;
+}
+body{
+    background: #f4f4f4;
+}
+.midbox{
+    width: 1200px;
+    position: relative;
+}
+.midbox::after{
+    display: block;
+    content: '';
+    clear: both;
+}
+.midbox > .left,.midbox > .right{
+    float: left;
+}
+.midbox > .left{
+    width: 260px;
+    margin-right: 20px;
+    margin-bottom: 116px;
+    background-color: #ffffff;
+    text-align: center;
+    border-radius: 12px 12px 0px 0px;
+}
+.midbox > .right{
+    width: 920px;
+	background-color: #ffffff;
+	border-radius: 8px;
+    border: solid 1px #e5e5e5;
+    padding: 22px 20px 59px 20px;
+    position: relative;
+}
+.midbox > .right::before{
+    display: block;
+    content: '';
+    position: absolute;
+    width: 889px;
+	height: 1px;
+    background-color: #d9d9d9;
+    right: 0px;
+    top: 64px;
+}
+.midbox > .left::before{
+    display: block;
+    content: '';
+    height: 40px;
+	background-color: #ffe405;
+	border-radius: 12px 12px 0px 0px;
+}
+.left .information img{
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin: 20px;
+}
+.information .name{
+    color: #000000;
+    font-size: 14px;
+}
+.information .id-num{
+    font-size: 12px;
+    letter-spacing: 1px;
+    color: #666666;
+    margin-top: 8px;
+    margin-bottom: 20px;
+}
+.jinbi{
+    position: relative;
+    padding-right: 20px;
+    padding-left: 35px;
+    line-height: 13px;
+}
+.jinbi::before{
+    display: inline-block;
+    content: url(../img/public/rewardgray.png);
+    position: absolute;
+    margin-left: 2px;
+    top: 1px;
+    left: 0px;
+}
+.jinbi::after{
+    display: inline-block;
+    content: url(../img/center/jinbi.png);
+    position: absolute;
+    margin-left: 2px;
+    top: 1px;
+}
+.red-num{
+    position: relative;
+    padding-left: 35px;
+    line-height: 13px;
+}
+.red-num::before{
+    display: inline-block;
+    content: url(../img/public/redgray.png);
+    position: absolute;
+    margin-left: 2px;
+    top: 1px;
+    left: 0px;
+}
+.hover-p{
+    font-size: 13px;
+    color: #333333;
+    width: 220px;
+	height: 36px;
+    border-radius: 4px;
+    line-height: 36px;
+}
+.hover-p:nth-last-child(1){
+    margin-top: 5px;
+    margin-bottom: 38px;
+}
+.hover-p:hover{
+    color: #fe8f00;
+    border: solid 1px #e5e5e5;
+}
+.hover-p:hover .jinbi::before{
+    content: url(../img/public/rewardye.png);
+}
+.hover-p:hover .red-num::before{
+    content: url(../img/public/redye.png);
+}
+.nav-tab{
+    position: absolute;
+    width: 260px;
+	height: 100px;
+	background-color: #ffffff;
+    border-radius: 8px;
+    top: 354px;
+}
+.layui-tab-title .layui-this:after{
+    border: none;
+    display: block;
+    width: 3px;
+	height: 32px;
+	background-color: #ffe405;
+    border-radius: 1px;
+    top: 4px;
+}
+.nav-tab li{
+    display: block;
+    margin: 6px 0px;
+    text-align: left;
+    padding-left: 30px;
+}
+.head-title button{
+    width: 100px;
+	height: 26px;
+	background-color: rgba(252, 182, 12,1);
+    border-radius: 4px;
+    border: none;
+    color: #fff;
+    margin-left: 20px;
+}
+.head-title button:nth-last-child(1){
+    margin-right: 21px;
+}
+.head-title>.box{
+    float: right;
+}
+.head-title button:hover{
+    background-color: rgba(252, 182, 12,0.8);
+}
+.choose,.choosed{
+    padding-left: 24px;
+    position: relative;
+}
+.choose::before{
+    display: block;
+    position: absolute;
+    content: '';
+    background: url(../img/public/cho.png) center center no-repeat;
+    width: 14px;
+    height: 14px;
+    top: 50%;
+    margin-top: -7px;
+    left: 0px;
+}
+
+.choosed::before{
+    display: block;
+    position: absolute;
+    content: '';
+    background: url(../img/public/cho2.png) center center no-repeat;
+    width: 14px;
+    height: 14px;
+    top: 50%;
+    margin-top: -7px;
+    left: 0px;
+}
+.head-title>span:nth-child(1){
+    position: relative;
+    margin-left: 11px;
+}
+.head-title>span:nth-child(1)::after{
+    position: absolute;
+    display: block;
+    content: '';
+    width: 100%;
+	height: 2px;
+    background-color: #000000;
+    bottom: -24px;
+    left: 0px;
+}
+/* 表格样式 */
+.midbox .right ul{
+    margin-top: 26px;
+}
+.layui-collapse{
+    border: none;
+}
+.layui-colla-item{
+    border: none;
+}
+.midbox .right ul li{
+    border-bottom: 1px solid #e5e5e5;
+    padding-left: 11px;
+    padding-right: 21px;
+    line-height: 50px;
+    font-size: 13px;
+    color: #000000;
+}
+.midbox .right ul li .time{
+    color: #666666;
+    float: right;
+}
+.read{
+    color: #666666;
+}
+.layui-colla-title{
+    background: #fff;
+    padding-left: 0px;
+}
+.shenglue{
+    display: inline-block;
+    background: #fff;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 500px;
+    white-space: nowrap;
+    vertical-align: middle;
+    height: 47px;
+    font-size: 13px;
+}
+.layui-colla-icon{
+    position: relative;
+    float: right;
+    height: 50px;
+    line-height: 50px;
+}
+.layui-colla-content{
+    padding: 10px 32px;
+    line-height: 28px;
+}
+.layui-laypage a, .layui-laypage span{
+    height: 25px;
+    line-height: 25px;
+    margin-left: 8px;
+}
+.layui-laypage{
+    margin: 0px;
+    margin-top: 72px;
+    margin-left: 12px;
+}
+.layui-laypage .layui-laypage-curr .layui-laypage-em{
+    background: #ffe405;
+}
+.layui-laypage .layui-laypage-curr em{
+    color: #000;
+}

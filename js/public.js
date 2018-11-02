@@ -16,6 +16,10 @@
                 console.log(file);
                 // 添加图片路径到img src中进行预览
                 if(!type){
+                    if(!file){
+                        jQuery(target).attr('src',jQuery(target).attr('data-src'));
+                        return false;
+                    }
                     jQuery(target).attr('src',getObjectURL(file));
                     return false;
                 }

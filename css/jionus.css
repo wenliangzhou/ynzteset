@@ -1,0 +1,126 @@
+.midbox{
+    width: 1200px;
+}
+.logobox{
+    overflow: hidden;
+}
+.logobox span{
+    display: inline-block;
+    color: #333333;
+    font-size: 16px;
+    padding: 1px 12px;
+    border-left: 1px solid #ffe405;
+    margin-left: 20px;
+    margin-bottom: 20px;
+    vertical-align: bottom;
+}
+.title{
+    width: 1200px;
+	height: 40px;
+    background-color: #1f1f1f;
+    color: #ffe405;
+    font-size: 16px;
+    line-height: 40px;
+    padding-left: 20px;
+    margin-top: 27px;
+}
+body{
+    background: #f5f5f5;
+}
+.item{
+    width: 1160px;
+	height: 497px;
+    background-color: #ffffff;
+    overflow: hidden;
+}
+.biaoti{
+    border-bottom: #e6e6e6 solid 2px;
+    height: 34px;
+    line-height: 34px;
+    width: 954px;
+    margin-left: 67px;
+    margin-top: 5px;
+}
+.biaoti span{
+    display: inline-block;
+    height: 100%;
+    position: relative;
+    margin-right: 10px;
+}
+.biaoti span::after{
+    display: block;
+    width: 100%;
+    position: absolute;
+    bottom: -2px;
+    content: '';
+    height: 2px;
+    background: #ffe405;
+    z-index: 2;
+}
+.uploadbox{
+    height: 142px;
+    margin-left: 67px;
+}
+.uploadbox img{
+    max-height: 140px;
+}
+.uploadbox > span:nth-child(1){
+    display: inline-block;
+    width: 210px;
+    text-align: right;
+    padding-right: 5px;
+}
+.uploadbox1{
+    margin-top: 47px;
+    margin-bottom: 20px;
+}
+.uploadbox2{
+    position: relative;
+}
+.uploadbox2 label{
+    position: relative;
+    font-weight: normal;
+}
+.fan{
+    margin-left: 40px;
+}
+.upload-btn-pic{
+    width: 140px;
+    height: 36px;
+    background-color: #ffe405;
+    border-radius: 8px;
+    margin-top: 50px;
+    margin-left: 384px;
+}
+.biaoshi{
+    position: absolute;
+}
+.biaoshi1{
+    bottom: -150px;
+    left: 50%;
+    margin-left: -35px;
+}
+.biaoshi2{
+    bottom: -150px;
+    left: 50%;
+    margin-left: -35px;
+}
+.text_s{
+    text-decoration: none;
+    cursor: auto;
+}
+.text_s:hover{
+    text-decoration: none;
+    color: #333;
+}
+.text_s:focus{
+    text-decoration: none;
+    color: #333;
+}
+.item3{
+    text-align: center;
+}
+.item3 a{
+    margin-top: 50px;
+    display: inline-block;
+}

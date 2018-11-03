@@ -1,0 +1,242 @@
+.banner{
+    overflow: hidden;
+    width: 100%;
+    height: 450px;
+    background: url(../img/everyday/banner.png) center center no-repeat;
+}
+.midbox{
+    width: 1200px;
+}
+.item{
+    position: relative;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+.item1{
+    width: 1200px;
+	height: 336px;
+	background-color: #fff8f0;
+	box-shadow: 0px 3px 7px 0px 
+		rgba(0, 0, 0, 0.14);
+    border-radius: 24px 24px 0px 0px;
+    margin-top: 110px;
+}
+.item .biaoti{
+    margin-left: -20px;
+    width: 1200px;
+    height: 60px;
+	background-color: #ffe405;
+    border-radius: 24px 24px 0px 0px;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-bottom: 5px;
+}
+.item1 .decorate{
+    position: absolute;
+    top: -207px;
+    left: 50%;
+    margin-left: -124px;
+}
+.item .h-title{
+    font-family: MicrosoftYaHei-Bold;
+    color: #000000;
+    font-size: 18px;
+    line-height: 60px;
+}
+.item .text{
+    color: #333333;
+    font-size: 14px;
+    line-height: 60px;
+    margin-left: 5px;
+}
+.wrapper1{
+    float: left;
+}
+.wrapper2{
+    float: right;
+    width: 432px;
+}
+.item>.left{
+    float: left;
+    width: 580px;
+    height: 270px;
+    border-right: 2px dashed #e5e5e5;
+}
+.item>.right{
+    float: right;
+    width: 580px;
+}
+.item .childbox{
+    color: #000000;
+    font-size: 14px;
+    padding-top: 25px;
+    padding-bottom: 25px;
+}
+.lingqu-btn{
+    background: rgba(255, 228, 5,1);
+    border-radius: 4px;
+    border: none;
+    width: 80px;
+	height: 30px;
+}
+.lingqu-btn:hover{
+    background: rgba(255, 228, 5,0.5);
+}
+.item>.left .lingqu-btn{
+    float: right;
+    margin-right: 144px;
+}
+.item>.right .lingqu-btn{
+    float: right;
+}
+.item>.right .childbox{
+    padding-left: 148px;
+}
+.item>.right .lingqu-btn-ok{
+    float: right;
+    margin-right: 150px;
+    margin-top: 10px;
+}
+.item>.left .lingqu-btn-ok{
+    margin-left: 150px;
+    margin-top: 10px;
+}
+.lingqu-btn-ok{
+    width: 107px;
+    height: 36px;
+    border-radius: 18px;
+    border: none;
+    color: #fff;
+    background: url(../img/everyday/btnbj.png) center center no-repeat;
+}
+.lingqu-btn-ok:hover{
+    opacity: 0.8;
+}
+.lingqu-btn-huise{
+    background: url(../img/everyday/lingquokhuise.png) center center no-repeat;
+}
+.lingqu-btn-huise:disabled{
+    cursor: not-allowed;
+}
+.lingqu-btn-huise:disabled:hover{
+    opacity: 1;
+}
+.item3{
+    height: 295px;
+    background: #fff8f0;
+    box-shadow: 0px 3px 7px 0px 
+		rgba(0, 0, 0, 0.14);
+    border-radius: 24px 24px 0px 0px;
+}
+.item3 .lingqu-btn:disabled{
+    background: #a8a8a8;
+    cursor: not-allowed;
+    color: #fff;
+}
+.item3>.left{
+    height: 230px;
+}
+.item4{
+    height: 362px;
+    background-color: #fff8f0;
+    margin-top: 40px;
+    box-shadow: 0px 3px 7px 0px 
+		rgba(0, 0, 0, 0.14);
+    border-radius: 0px 0px 24px 24px;
+    margin-bottom: 62px;
+}
+.item4>p{
+    line-height: 48px;
+}
+.stepbj{
+    display: block;
+}
+.imgbox{
+    display: flex;
+    justify-content: space-between;
+    width: 1045px;
+}
+.item2{
+    margin-top: 40px;
+    margin-bottom: 40px;
+    position: relative;
+}
+.imgbox2{
+    display: flex;
+    justify-content: space-between;
+    width: 984px;
+    margin-top: -62px;
+    position: absolute;
+    left: 50%;
+    margin-left: -492px;
+    z-index: 5;
+}
+.imgbox3{
+    display: flex;
+    justify-content: space-between;
+    width: 1045px;
+    text-align: center;
+    margin-top: 20px;
+    font-size: 13px
+}
+.imgbox3 p{
+    margin-bottom: 8px;
+}
+.step{
+    width: 44px;
+	height: 44px;
+	background-image: linear-gradient(0deg, 
+		#ebde6f 0%, 
+		#fffbdb 100%), 
+	linear-gradient(
+		#000000, 
+		#000000);
+	background-blend-mode: normal, 
+		normal;
+	box-shadow: 0px 1px 1px 0px 
+		rgba(142, 115, 91, 0.75), 
+		inset 0px 0px 0px 0px 
+        rgba(255, 255, 255, 0.75);
+        border-radius: 50%;
+        line-height: 44px;
+        text-align: center;
+        color: #666666;
+        font-size: 26px
+}
+
+.jinbi{
+    color: #ff0700;
+    position: relative;
+    margin-right: 20px !important;
+}
+.jinbi::after{
+    display: inline-block;
+    content: url(../img/center/jinbi.png);
+    position: absolute;
+    margin-left: 2px;
+    top: 1px;
+}
+.step-active{
+    background-image:url(../img/everyday/stepactive.png);
+    color: #fff;
+}
+.step3,.step2{
+    margin-left: -2px;
+}
+.barbox{
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    width: 900px;
+    left: 50%;
+    margin-left: -450px;
+    margin-top: -44px;
+}
+.barbox .layui-progress{
+    width: 194px;
+}
+.layui-progress-bar{
+    background: #ffed28;
+    border-radius: 0px;
+    -moz-box-shadow:2px 2px 5px #333333; -webkit-box-shadow:2px 2px 5px #333333; box-shadow:2px 2px 5px #333333;
+}

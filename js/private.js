@@ -18,12 +18,15 @@ $(document).ready(function () {
             layer.msg('切到到了' + data.index + '：' + this.innerHTML);
         });
         function xr(res, curr, limit, pagebox, tablebox) {
+            console.log(element);
+            
             var html = '',
                 i = 0;
             for (i; i < res.length; i++) {
-                html += '<li><span class="choose checkbox_">【新游戏】三国论剑上线！奖励20.1万U币+62积分！ </span> <span class="time">2013-06-06 15:54:24</span></li>';
+                html += '<li class="layui-colla-item"><span class="choose checkbox_"></span><span class="layui-colla-title"><span class="shenglue" title="点击查看更多">很沉踩踩踩踩踩踩踩踩踩踩踩踩踩踩踩踩踩很沉踩踩踩踩踩踩踩踩踩踩踩踩踩踩踩踩踩</span> </span> <span class="time">日期</span><div class="layui-colla-content">很沉踩踩踩踩踩踩踩踩踩踩踩踩踩踩踩踩踩很沉踩踩踩踩踩踩踩踩踩踩踩踩踩踩踩踩踩</div></li>';
             }
             $('#' + tablebox).html(html);
+            element.init();
         }
 
 
@@ -33,12 +36,13 @@ $(document).ready(function () {
                 case '0':
                     // 标记已读操作
                     var data0 = filter_el(this, con);
-                    // ajax
+                        data0.caozuotype = 0;
                     send(data0);
                     break;
                 case '1':
                     var data1 = filter_el(this);
                     // ajax
+                        data1.caozuotype = 1;
                     send(data1);
                     break;
                 case '2':
@@ -92,7 +96,7 @@ $(document).ready(function () {
 
         // 已读条件
         function con(el) {
-            return $(el).children().children().hasClass('read');
+            return !$(el).children().children().hasClass('read');
         }
         // 添加已读样式
         // 发送ajax
@@ -103,12 +107,16 @@ $(document).ready(function () {
             if (d.box == 0) {
                 url_ = 'https://test0.php';
                 url_xr = url_xr_arr[0];
+                // ajax
+                // $.post(url_,d,function () {
+                    
+                // });
             } else {
                 url_ = 'https://test1.php';
                 url_xr = url_xr_arr[1];
             }
             $.post(url_, d, function (s) {
-                wlz.tableRequsetDate({ url: url_, pagebox: 'sixinfan', tablebox: 'sixinbox', fn: xr, limit: 2 });
+                wlz.tableRequsetDate({ url: url_xr, pagebox: 'sixinfan', tablebox: 'sixinbox', fn: xr, limit: 2 });
             });
         }
 

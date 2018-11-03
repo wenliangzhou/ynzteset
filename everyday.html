@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>每日任务</title>
+    <!-- 公共 -->
+    <link rel="stylesheet" href="js/bootstrap-3.3.7-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="js/layui/css/layui.css">    
+    <link rel="stylesheet" href="css/public.css">
+    <!--  私有 -->
+    <link rel="stylesheet" href="css/everyday.css">
+</head>
+<body>
+    <!-- 头部导航栏 -->
+    <ul class="login">
+        <li class="sign">登陆</li>
+        <li><a class="reg" href="reg.html">注册</a></li>
+    </ul>
+    <img class="private-btn" key = "false" src="img/public/menu.png" alt="">
+    <nav class="nav-top">
+        <div class="nav-box center">
+            <img src="img/index/logo.png" alt="">
+            <ul class="nav-ul center">
+                <li><a href="index.html">首页</a></li>
+                <li><a href="task.html">任务大厅</a></li>
+                <li><a href="reward.html">悬赏大厅</a></li>
+                <li><a href="dingzhi.html">定制中心</a></li>
+                <li><a href="javascript:void(0);">游戏试玩</a></li>
+                <li><a href="vipcenter.html">会员中心</a></li>
+                <li class="active"><a href="javascript:void(0);">兑换专区</a></li>
+                <li><a href="newperson.html">新人专区</a></li>
+            </ul>
+        </div>
+    </nav>
+    <!-- banner部分 -->
+    <div class="banner">
+        
+    </div>
+    <!-- 主体部分 -->
+    <div class="midbox center">
+        <div class="item item1">
+            <img class="decorate" src="img/everyday/cat.png" alt="">
+            <div class="biaoti">
+                <div class="wrapper1">
+                    <span class="h-title">每日任务：</span>
+                    <span class="text"> 完成每日任务可得一猫粮</span>
+                </div>
+                <div class="wrapper2">
+                    <span class="h-title">额外任务：</span>
+                    <span class="text"> 完成额外任务可得一猫粮</span>
+                </div>
+            </div>
+            <div class="left">
+                <div class="childbox">
+                    每日完成一次任务（一日一审） <button class="lingqu-btn">去完成</button>
+                </div>
+                <div class="childbox">
+                    每日签到    <button class="lingqu-btn">去完成</button>
+                </div>
+                <div class="childbox">
+                    每日分享    <button class="lingqu-btn">去完成</button>
+                </div>
+                <button class="lingqu-btn-ok lingqu-btn-huise" disabled>点击领取</button>
+            </div>
+            <div class="right">
+                <div class="childbox">
+                    转动转盘2次 <button class="lingqu-btn">去完成</button>
+                </div>
+                <div class="childbox">
+                    兑换2次物品    <button class="lingqu-btn">去完成</button>
+                </div>
+                <div class="childbox">
+                    邀请的好友完成一次任务    <button class="lingqu-btn">去完成</button>
+                </div>
+                <button class="lingqu-btn-ok">点击领取</button>
+            </div>
+        </div>
+        <div class="item item2">
+            <div class="imgbox center">
+                <img src="img/everyday/1.png" alt="">
+                <img src="img/everyday/2.png" alt="">
+                <img src="img/everyday/3.png" alt="">
+                <img src="img/everyday/4.png" alt="">
+                <img src="img/everyday/5.png" alt="">
+            </div>
+            <img class="stepbj center" src="img/everyday/stepbj.png" alt="">
+            <div class="imgbox2">
+                <div class="step1 step step-active">1</div>
+                <div class="step2 step">2</div>
+                <div class="step3 step">3</div>
+                <div class="step4 step">4</div>
+                <div class="step5 step">5</div>
+            </div>
+            <div class="barbox">
+                <div class="layui-progress">
+                    <div class="layui-progress-bar" lay-percent="100%"></div>
+                </div>
+                <div class="layui-progress">
+                    <div class="layui-progress-bar" lay-percent="0%"></div>
+                </div>
+                <div class="layui-progress">
+                    <div class="layui-progress-bar" lay-percent="0%"></div>
+                </div>
+                <div class="layui-progress">
+                    <div class="layui-progress-bar" lay-percent="0%"></div>
+                </div>
+            </div>
+            <div class="imgbox3 center">
+                <div><p>一级猫粮（0/10）</p><span class="jinbi">奖励：10000</span></div>
+                <div><p>二级猫粮（0/20）</p><span class="jinbi">奖励：20000</span></div>
+                <div><p>三级猫粮（0/30）</p><span class="jinbi">奖励：30000</span></div>
+                <div><p>四级猫粮（0/40）</p><span class="jinbi">奖励：40000</span></div>
+                <div><p>五级猫粮（0/50）</p><span class="jinbi">奖励：50000</span></div>
+            </div>
+        </div>
+        <div class="item item3">
+                <div class="biaoti">
+                        <div class="wrapper1">
+                            <span class="h-title">每周任务：</span>
+                        </div>
+                        <div class="wrapper2">
+                            <span class="h-title">每月任务：</span>
+                        </div>
+                    </div>
+                    <div class="left">
+                        <div class="childbox">
+                            每周全勤（每天完成/每日任务）（0/7） <button class="lingqu-btn">点击领取</button>
+                        </div>
+                        <div class="childbox">
+                            每周全签  （0/7）  <button class="lingqu-btn">点击领取</button>
+                        </div>
+                        <div class="childbox">
+                            每周分享 （0/7）   <button class="lingqu-btn">点击领取</button>
+                        </div>
+                    </div>
+                    <div class="right">
+                        <div class="childbox">
+                            每月全勤 <button class="lingqu-btn" disabled>点击领取</button>
+                        </div>
+                        <div class="childbox">
+                            每月全签（0/30）   <button class="lingqu-btn">点击领取</button>
+                        </div>
+                        <div class="childbox">
+                            每月有效好友 （0/15）   <button class="lingqu-btn">点击领取</button>
+                        </div>
+                    </div>
+        </div>
+        <div class="item item4">
+            <span class="h-title">活动说明：</span>
+            <p>
+                1.每日任务以及额外任务每天只能领取一次，次日准点更新<br>
+                2.周任务每周一更新，月任务每月一号更新<br>
+                3.周任务以及月任务计算的是每日任务，额外任务不计入其中<br>
+                4.每个月的猫粮也会随之清零<br>
+                5.所有解释权都归找财猫所有，找财猫有权修改抽奖物品以及内容<br>
+                6.每日任务累计领取的猫粮奖励将自动发放至会员的账户余额，请您及时查看
+            </p>
+        </div>
+    </div>
+    
+    <!-- footer -->
+    <div class="footer">
+        <ul>
+            <li>关于我们</li>
+            <li>联系我们</li>
+            <li>服务条款</li>
+        </ul>
+        <p>备案/许可证号:浙ICP备18012760号-1 Copyright 2018 找财猫 www.doucaishen.com</p>
+        <div>
+            <img src="img/index/yejiao.png" alt="">
+        </div>
+    </div>
+    <!-- JQ > 框架  > 签到日历插件 > 手写公共JS  公共 -->
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/layui/layui.js"></script>
+    <script src="js/schedule.js"></script>
+    <script src="js/public.js"></script>
+
+    <!-- 私人 -->
+    <script src="js/everyday.js"></script>
+    <!-- 侧边导航栏 -->
+    <div class="nav-wrapper">
+        <div class="nav-item nav-item1">
+        </div>
+        <div class="nav-item nav-item2"></div>
+        <div class="nav-item nav-item3"></div>
+        <div class="nav-item nav-item4"></div>
+        <div class="nav-item nav-item5"></div>
+        <div class="nav-item nav-item6"></div>
+        <div class="nav-item nav-item7"></div>
+        <div class="nav-item nav-item8"></div>
+    </div>
+</body>
+<!-- 侧边导航栏 签到日历 -->
+<div id='schedule-box' class="boxshawv signin-box"></div>
+</html>

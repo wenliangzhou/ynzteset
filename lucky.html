@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>转盘抽奖</title>
+    <!-- 公共 -->
+    <link rel="stylesheet" href="js/bootstrap-3.3.7-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="js/layui/css/layui.css">    
+    <link rel="stylesheet" href="css/public.css">
+    <!--  私有 -->
+    <link rel="stylesheet" href="js/slick/slick.css">
+    <link rel="stylesheet" href="css/lucky.css">
+</head>
+<body>
+    <div class="bj">
+        
+    </div>
+    <!-- 头部导航栏 -->
+    <ul class="login">
+        <li class="sign">登陆</li>
+        <li><a class="reg" href="reg.html">注册</a></li>
+    </ul>
+    <img class="private-btn" key = "false" src="img/public/menu.png" alt="">
+    <nav class="nav-top">
+        <div class="nav-box center">
+            <img src="img/index/logo.png" alt="">
+            <ul class="nav-ul center">
+                <li><a href="index.html">首页</a></li>
+                <li><a href="task.html">任务大厅</a></li>
+                <li><a href="reward.html">悬赏大厅</a></li>
+                <li><a href="dingzhi.html">定制中心</a></li>
+                <li><a href="javascript:void(0);">游戏试玩</a></li>
+                <li><a href="vipcenter.html">会员中心</a></li>
+                <li class="active"><a href="javascript:void(0);">兑换专区</a></li>
+                <li><a href="newperson.html">新人专区</a></li>
+            </ul>
+        </div>
+    </nav>
+    
+    <!-- banner部分 -->
+    <div class="banner">
+        
+    </div>
+    <!-- 主体部分 -->
+    <div class="midbox center">
+        <div class="choujiangbox center">
+            <img class="decorate" src="img/activity/freejiang.png" alt="">
+            <div class="wrapper">
+                <img src="img/activity/pan.png" alt="">
+                <canvas id="mycanvas" class="mybox" width="386px" height="386px">你的浏览器版本太低了</canvas>
+                <div class="tupBtn">
+                    <button id="tupBtn"></button>
+                </div>
+                <p class="zhushi">
+                    注：赏金奖励分别有（5000、8000、10000、50000、80000）<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 红包奖励分别有（6元、10元、15元、20元、30元、50元）
+                </p>
+            </div>
+            <div class="itemright">
+                <div class="center biaoti">恭喜以下客户获得奖品</div>
+                <ul class="center vertical-center-4">
+                    <div>
+                        <span class="rank rank1">1</span> <span>爱吃的兔子</span><span>笔记本 MAC PRO</span>
+                    </div>
+                    <div>
+                        <span class="rank rank2">2</span><span>爱吃的兔子sdssads</span><span>平板 IPAD MINI4</span>
+                    </div>
+                    <div>
+                        <span class="rank rank3">3</span><span>爱吃的</span><span>iphoneX手机一台</span>
+                    </div>
+                    <div>
+                        <span class="">4</span><span>爱吃的sdfsdfsdf兔子</span><span>手机小米8</span>
+                    </div>
+                    <div>
+                        <span class="">5</span><span>爱吃的兔子爱吃的兔子</span><span>现金红包50元</span>
+                    </div>
+                    <div>
+                        <span class="">7</span><span>爱吃的兔子</span><span>现金红包30元</span>
+                    </div>
+                    <div>
+                        <span class="">8</span><span>爱吃的兔子</span><span>8000赏金</span>
+                    </div>
+                    <div>
+                        <span class="">9</span><span>爱吃的兔子</span><span>现金红包30元</span>
+                    </div>
+                    <div>
+                        <span class="">10</span><span>爱吃的兔子</span><span>8000赏金</span>
+                    </div>
+                    <div>
+                        <span class="">11</span><span>爱吃的兔子</span><span>现金红包30元</span>
+                    </div>
+                    <div>
+                        <span class="">12</span><span>爱吃的兔子</span><span>8000赏金</span>
+                    </div>
+                </ul>
+                <p class="residue">您还有<b>1</b>次抽奖机会!</p>
+            </div>
+        </div>
+        <div class="shuoming center">
+            <img class="decorate" src="img/activity/jiangdecrator.png" alt="">
+            <p>
+                <b>抽奖规则：</b> <br>
+                1：普通用户每日可获得一次抽奖机会 <br>
+                2：VIP用户每日可额外获得一次抽奖机会 <br>
+                3：抽奖次数将在次日00:00刷新 <br>
+                4：抽奖获得的奖品仅限本人使用，禁止交易，如因私下交易造成损失，由获奖者自行承担 <br>
+                5：本活动的奖品样式以实体物品为准 <br>
+                6：所有解释权都归找财猫所有，找财猫有权修改抽奖物品以及内容 
+            </p>
+        </div>
+    </div>
+    
+    <!-- footer -->
+    <div class="footer">
+        <ul>
+            <li>关于我们</li>
+            <li>联系我们</li>
+            <li>服务条款</li>
+        </ul>
+        <p>备案/许可证号:浙ICP备18012760号-1 Copyright 2018 找财猫 www.doucaishen.com</p>
+        <div>
+            <img src="img/index/yejiao.png" alt="">
+        </div>
+    </div>
+    <!-- JQ > 框架  > 签到日历插件 > 手写公共JS  公共 -->
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/layui/layui.js"></script>
+    <script src="js/schedule.js"></script>
+    <script src="js/public.js"></script>
+
+    <!-- 私人 -->
+    <script src="js/slick/slick.min.js"></script>
+    <script src="js/lucky.js"></script>
+    <!-- 侧边导航栏 -->
+    <div class="nav-wrapper">
+        <div class="nav-item nav-item1">
+        </div>
+        <div class="nav-item nav-item2"></div>
+        <div class="nav-item nav-item3"></div>
+        <div class="nav-item nav-item4"></div>
+        <div class="nav-item nav-item5"></div>
+        <div class="nav-item nav-item6"></div>
+        <div class="nav-item nav-item7"></div>
+        <div class="nav-item nav-item8"></div>
+    </div>
+</body>
+<!-- 侧边导航栏 签到日历 -->
+<div id='schedule-box' class="boxshawv signin-box"></div>
+</html>

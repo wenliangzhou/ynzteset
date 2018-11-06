@@ -1,0 +1,178 @@
+.banner{
+    overflow: hidden;
+    width: 100%;
+    height: 559px;
+    background: url(../img/activity/bannerzhuan.png) center center no-repeat;
+}
+.mybox{
+    -o-transform-origin:  50% 50%;
+	-ms-transform-origin:  50% 50%;
+	-moz-transform-origin:  50% 50%;		
+	-webkit-transform-origin:  50% 50%;
+	transform-origin: 50% 50%;
+	transition:transform 6s;
+	-moz-transition:transform 6s; /* Firefox 4 */
+	-webkit-transition:transform 6s; /* Safari and Chrome */
+    -o-transition:transform 6s; /* Opera */
+    position: absolute;
+    left: 75px;
+    top: 39px;
+    border-radius: 50%;
+}
+.wrapper{
+    position: relative;
+    display: inline-block;
+    margin-top: 105px;
+    margin-left: 50px;
+}
+.tupBtn{
+    position: absolute;
+    left: 180px;
+    top: 85px;
+    width: 181px;
+    height: 239px;
+    background: url(../img/activity/zhizhen.png) center center no-repeat;
+}
+#tupBtn{
+    bottom: 10px;
+    width: 160px;
+    height: 160px;
+    left: 10px;
+    border-radius: 50%;
+    border: none;
+    position: absolute;
+    cursor: pointer;
+    background: transparent;
+}
+.bj{
+    z-index: -1;
+    color: #fff;
+    top: 0px;
+    width: 100%;
+    position: absolute;
+    height: 2009px;
+    background: url(../img/activity/zhuanpanbj.png) top center no-repeat;
+}
+body{
+    position: relative;
+    background: black;
+}
+.choujiangbox{
+    position: relative;
+    width: 1180px;
+	height: 750px;
+	background-color: rgba(255, 255, 255,0.88);
+	box-shadow: 3px 0px 10px 0px 
+		rgba(255, 244, 188, 0.55);
+    border-radius: 67px 67px 0px 0px;
+    margin-top: 37px;
+}
+.decorate{
+    position: absolute;
+    left: -25px;
+    top: 0px;
+}
+.itemright{
+    width: 400px;
+    display: inline-block;
+    vertical-align: top;
+    margin-top: 80px;
+}
+
+.itemright ul div{
+    line-height: 36px;
+    font-size: 14px;
+}
+.itemright ul div span:nth-child(1){
+    font-size: 13px;
+    color: #000;
+    text-align: center;
+    display: inline-block;
+    height: 36px;
+    width: 38px;
+    margin-left: 11px;
+    margin-right: 23px;
+    vertical-align: middle;
+}
+.itemright ul div span:nth-child(3){
+    color: #ff0000;
+    display: inline-block;
+    height: 36px;
+    margin-left: 36px;
+    margin-right: 11px;
+    vertical-align: middle;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    width: 122px;
+}
+.itemright ul div span:nth-child(2){
+    vertical-align: middle;
+    display: inline-block;
+    height: 36px;
+    width: 112px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.itemright ul div span:nth-child(1).rank{
+    font-size: 12px;
+    text-align: center;
+    line-height: 45px;
+    color: #fff;
+}
+.itemright ul div span:nth-child(1).rank1{
+    background: url(../img/activity/guan1.png) center center no-repeat;
+}
+.itemright ul div span:nth-child(1).rank2{
+    background: url(../img/activity/guan2.png) center center no-repeat;
+}
+.itemright ul div span:nth-child(1).rank3{
+    background: url(../img/activity/guan3.png) center center no-repeat;
+}
+.itemright .biaoti{
+    height: 40px;
+    background-color: #ffe405;
+    color: #623700;
+    font-size: 18px;
+    line-height: 40px;
+    text-align: center;
+}
+.zhushi{
+    line-height: 24px;
+    color: #333333;
+    margin-top: -30px;
+    margin-left: 50px;
+    font-size: 13px;
+}
+
+.residue{
+    margin-top: 40px;
+    margin-left: 50px;
+    font-size: 18px;
+}
+.residue b{
+    color: red;
+}
+
+.shuoming{
+    margin-top: 123px;
+    position: relative;
+    width: 1179px;
+	height: 461px;
+	background-color: #ffffff;
+    border-radius: 67px 67px 0px 0px;
+    padding-top: 114px;
+    padding-left: 116px;
+}
+.shuoming b{
+    color: #000;
+}
+.shuoming p{
+    line-height: 47px;
+    color: #333333;
+    font-size: 20px;
+}
+.footer{
+    margin-top: 40px;
+}

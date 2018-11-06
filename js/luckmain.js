@@ -9,7 +9,7 @@ $(document).ready(function(){
 	var notice = null;
 	//转盘初始化
 	var color = ["#626262","#787878","rgba(0,0,0,0.5)","#DCC722","white","#FF4350"];
-	var info = ["0","1","2","3","4","5","6","7"];
+	var info = ["谢谢参与","天梭魅时男表","小米手机8","赏金","看尚电视","现金红包","奔驰汽车","笔记本 MAC"];
 	var info1 = [];
 	var img = ['img/activity/xiexie.png','img/activity/jinbi.png','img/activity/hongbao.png','img/activity/diannao.png','img/activity/qiche.png','img/activity/dianshi.png','img/activity/shoubiao.png','img/activity/shouji.png',];
 	canvasRun();
@@ -154,11 +154,9 @@ $(document).ready(function(){
 					function drawImg(){
 						var ctx = canvas.getContext('2d');
 						ctx.drawImage(imgs,30,30);
+						ctx.rotate(Math.PI*2/(i*6));
 					}
 				}(i));
-				
-				
-				console.log(typeof canvas.width)
 		    }
 		}
 

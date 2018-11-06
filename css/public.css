@@ -980,3 +980,42 @@ body .sign-class{
 .private-class.layui-layer-page .layui-layer-content{
     overflow:visible !important;
 }
+
+.fankui-class .layui-layer-title{
+    background-color: #ffe405;
+    font-size: 18px;
+}
+.fankui-class .layui-layer-title b{
+    font-weight: normal;
+    color: #fb0000;
+}
+.fankui-class .fankui-box{
+    width: 500px;
+	height: 551px;
+    background-color: #ffffff;
+    padding: 20px;
+}
+.fankui-class .suggest{
+    vertical-align: middle;
+    margin-bottom: 22px;
+}
+.fankui-class p{
+    margin-bottom: 20px;
+}
+.fankui-box .radio{
+    margin-bottom: 20px;
+    font-size: 12px;
+    margin-left: 18px;
+}
+.fankui-box textarea{
+    margin-bottom: 20px;
+}
+.fankui-btn{
+    display: block;
+    width: 120px;
+	height: 36px;
+	background-color: #ffe50a;
+    border-radius: 4px;
+    border: none;
+    margin-top: 40px;
+}

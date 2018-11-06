@@ -253,6 +253,35 @@
             });
         }); 
         
+        // 反馈弹框
+        $('.nav-item8').click(function () {
+            if($('.fankui-box').css('display')=='block'){
+                return false;
+            }
+            qianindex = layer.open({
+                type: 1,
+                shadeClose:true,
+                resize:false,
+                move: false,
+                area:['auto'],
+                shade: 0.8,
+                skin: 'fankui-class',
+                title:'<div>您好！以下是您对<b>找财猫</b>的意见反馈。</div>',
+                content:'<div class="fankui-box"><p class="suggest"><img src="img/public/suggest.png" alt=""> 提交建议</p><p>您使用“找财猫”的过程中，总体满意程度如何？</p><div class="radio"><label><input type="radio" name="optionsRadios" value="option1" checked>非常满意</label></div><div class="radio"><label><input type="radio" name="optionsRadios" value="option2">一般</label></div><div class="radio disabled"><label><input type="radio" name="optionsRadios" value="option3" disabled>非常不满意</label></div><p>* 请留下您对“找财猫”的意见和建议！</p><textarea class="form-control" rows="3" placeholder="至少10个字，提出建议可得一定赏金哦~用心填写赏 金更多哦!"></textarea><p>联系方式：</p><input type="text" class="form-control" placeholder="请留下您的微信/QQ，以便与您联系~"><button class = "fankui-btn center">提交</button></div>',
+                end:function (){
+                    $('.fankui-box').css('display','none');            
+                }
+            });
+        });
+        // 反馈提交信息
+        $(document).on('click','.fankui-btn',function () {
+            var text = $('.fankui-box textarea').val(),
+                phone = $('.fankui-box input').val();
+                // ajax
+                console.log(text);
+                console.log(phone);
+        });
+        
         // 渲染签到
         if($('#schedule-box')[0]){
             var mySchedule = new Schedule({

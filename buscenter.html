@@ -49,6 +49,7 @@
                     <li class="layui-this">商家信息</li>
                     <li>发布任务</li>
                     <li>任务详情</li>
+                    <li>商家审核</li>
                     <li>财富明细</li>
                     <li>安全中心</li>
                     <li>充值中心</li>
@@ -270,13 +271,14 @@
                             <div class="form-group">
                                 <label for="shangjin" class="col-sm-3 control-label">任务赏金 ：</label>
                                 <div class="col-sm-9">
-                                    <input type="text" class="form-control" id="shangjin" placeholder="">
+                                    <input type="text" class="form-control" id="shangjin" onkeyup="this.value=this.value.replace(/[^\d]/g,'');" onchange="this.value = this.value>200?this.value:200">
+                                    <span class="minprice">(最底单价：<b>200</b>)</span>
                                 </div>
                             </div>
                             <div class="form-group">
                                 <label for="renshu" class="col-sm-3 control-label">人数 ：</label>
                                 <div class="col-sm-9">
-                                    <input type="text" class="form-control" id="renshu" placeholder="">
+                                    <input type="text" class="form-control" id="renshu" onkeyup="this.value=this.value.replace(/[^\d]/g,'');">
                                 </div>
                             </div>
                             <div class="form-group">
@@ -288,6 +290,7 @@
                                     <label class="radio-inline">
                                         <input type="radio" name="renwuleixing" id="jingbiaorenwu" value="1"> 竞标任务
                                     </label>
+                                    <label class="radio-inline sumprice">(总赏金：<b>8888</b>)</label>
                                 </div>
                                 
                             </div>
@@ -432,6 +435,84 @@
                                 </table>
                                 <!-- 翻页结构 -->
                                 <div id="taskfan" class="center"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 商家审核 -->
+                    <div class="layui-tab-item">
+                        <div class="ziliao">
+                            <span>
+                                商家审核
+                            </span>
+                        </div>
+                        <div class="judgementbox">
+                            <div class="condition layui-form">
+                                <span class="biaoti">发布时间:</span>
+                                
+                                <span class="rili"><input type="text" class="layui-input time1" id="judgementtime3"></span>
+                                <span class="heng">-</span>
+                                <span class="rili"><input type="text" class="layui-input time2" id="judgementtime2"></span>
+                                <ul class="tiao-btn">
+                                    <li num="1" class="li-active">全部</li>
+                                    <li num="2">今日</li>
+                                    <li num="3">近一周</li>
+                                    <li num="4">本月</li>
+                                </ul>
+                                <select class="status">
+                                    <option value="0">状态</option>
+                                    <option value="1">待审核</option>
+                                    <option value="2">审核通过</option>
+                                    <option value="3">审核失败</option>
+                                </select>
+                                <button class="cha">查询</button>
+                            </div>
+                            <div class="tablebox">
+                                <table class="layui-table" lay-skin="line">
+                                    <thead>
+                                        <tr>
+                                            <th>ID</th>
+                                            <th>用户名</th>
+                                            <th>任务名称</th>
+                                            <th>任务类型</th>
+                                            <th>任务赏金</th>
+                                            <th>接取任务时间</th>
+                                            <th>任务提交时间</th>
+                                            <th>审核状态</th>
+                                            <th>操作</th>
+                                        </tr>
+                                    </thead>
+                                    <!-- 回调函数渲染的部分 -->
+                                    <tbody id="judgementbox">
+                                        <tr>
+                                            <td>123456</td>
+                                            <td>爱笑的眼睛</td>
+                                            <td>新注册礼包</td>
+                                            <td>悬赏类</td>
+                                            <td>3000mb</td>
+                                            <td>2018-08-22 18:59:00</td>
+                                            <td>2018-08-22 18:59:00</td>
+                                            <td>待审核</td>
+                                            <td>
+                                                <button class="btn2">查看</button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>123456</td>
+                                            <td>爱笑的眼睛</td>
+                                            <td>新注册礼包</td>
+                                            <td>悬赏类</td>
+                                            <td>3000mb</td>
+                                            <td>2018-08-22 18:59:00</td>
+                                            <td>2018-08-22 18:59:00</td>
+                                            <td>待审核</td>
+                                            <td>
+                                                <button class="btn2">查看</button>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <!-- 翻页结构 -->
+                                <div id="judgementfan" class="center"></div>
                             </div>
                         </div>
                     </div>
@@ -982,4 +1063,20 @@
 <div  id="showimg1"><img src="img/center/touxiang.png" alt=""></div>
 <div  id="showimg2"><img src="img/center/touxiang.png" alt=""></div>
 <div  id="showimg3"><img src="img/center/touxiang.png" alt=""></div>
+<!-- 商家审核 查看弹框 -->
+<div class="judgement-tan">
+    <p><span>ID：</span>21033468</p>
+    <p><span>用户名：</span>会员-2013</p>
+    <p><span>任务名称：</span>新注册礼包</p>
+    <p><span>任务赏金：</span>30M赏金</p>
+    <p><span>任务源文件：</span><a href="">84a2bb886e812f84c3e4b0cf743cade4.rar</a></p>
+    <p><span>任务缩略图：</span><a href="">84a2bb886e812f84c3e4b0cf743cade4.rar</a></p>
+    <button class="judgement-btn">通过</button>
+    <button class="judgement-btn2">拒绝</button>
+</div>
+<!-- 商家拒绝原因 弹框 -->
+<div class="refusebox">
+    <textarea class="form-control" cols="60" rows="8" placeholder="  请提供您审核不通过的原因，以方便会员调整以及平台方了解详情..."></textarea>
+    <button class="sure center">确认</button>
+</div>
 </html>

@@ -215,7 +215,7 @@ body{
 }
 .main .nav-right{
     width: 180px;
-	height: 320px;
+	height: auto;
     background-color: #1f1f1f;
     margin-top: 48px;
     padding-top: 5px;
@@ -874,4 +874,92 @@ background-blend-mode: normal,
     height: 36px;
     background-color: #ffe405;
     border-radius: 8px;
+}
+.judgement-class .layui-layer-content{
+    padding-top: 25px;
+    padding-bottom: 30px;
+    font-size: 13px;
+    padding-right: 60px;
+    color: #fe8f00;
+}
+.judgement-class .layui-layer-title{
+    background-color: #e8e8e8;
+	border: solid 1px #d9d9d9;
+}
+.judgement-class .judgement-tan p{
+    margin-bottom: 10px;
+}
+.judgement-class .judgement-tan p>span{
+    display: inline-block;
+    width: 160px;
+    padding-left: 80px;
+    color: #666666;
+}
+.judgement-class .layui-layer-content button{
+    border: none;
+    width: 110px;
+    height: 30px;
+    color: #000;
+    font-size: 14px;
+    margin-left: 125px;
+    margin-top: 30px;
+}
+.judgement-class .judgement-btn{
+    background-image: linear-gradient(0deg, 
+		#f1d700 0%, 
+		#feec54 100%), 
+	linear-gradient(
+		#ffe405, 
+		#ffe405);
+	background-blend-mode: normal, 
+		normal;
+}
+.judgement-class .judgement-btn2{
+    background-image: linear-gradient(0deg, 
+		#d7d7d7 0%, 
+		#ffffff 100%), 
+	linear-gradient(
+		#ffe405, 
+		#ffe405);
+	background-blend-mode: normal, 
+        normal;
+        border: solid 1px #d9d9d9 !important;
+        margin-left: 20px !important;
+}
+.refusebox textarea{
+    font-size: 13px;
+    margin-bottom: 20px;
+}
+.refusebox{
+    padding: 20px;
+}
+.refusebox .sure{
+    width: 110px;
+    height: 30px;
+    background-image: linear-gradient(0deg, 
+		#f1d700 0%, 
+		#feec54 100%), 
+	linear-gradient(
+		#ffe405, 
+		#ffe405);
+	background-blend-mode: normal, 
+        normal;
+        border: none;
+        display: block;
+}
+#shangchuan .form-control{
+    display: inline-block;
+}
+.minprice{
+    margin-left: 27px;
+}
+.minprice b{
+    color: red;
+}
+.sumprice{
+    cursor: auto;
+    margin-left: 60px !important;
+}
+.sumprice b{
+    color: red;
 }

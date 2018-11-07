@@ -607,6 +607,16 @@
                 ,format:'yyyy-MM-dd HH:mm:ss'
                 ,type: 'datetime'
             });
+            laydate.render({
+                elem: '#judgementtime3' //指定元素
+                ,format:'yyyy-MM-dd HH:mm:ss'
+                ,type: 'datetime'
+            });
+            laydate.render({
+                elem: '#judgementtime2' //指定元素
+                ,format:'yyyy-MM-dd HH:mm:ss'
+                ,type: 'datetime'
+            });
             function xr(res,curr,limit) {
                 
             }
@@ -654,8 +664,48 @@
                 if(fu==='moneybox'){
                     console.log(data);
                     wlz.tableRequsetDate({url:'https://api.github.com/repos/momodiy/sudoku/commits?per_page=2&sha=master',pagebox:'moneyfan',tablebox:'moneybox',fn:xr,limit:2,data:data});
+                }
+                if(fu==='judgementbox'){
+                    console.log(data);
+                    wlz.tableRequsetDate({url:'https://api.github.com/repos/momodiy/sudoku/commits?per_page=2&sha=master',pagebox:'moneyfan',tablebox:'moneybox',fn:xr,limit:2,data:data});
                 }  
                 
+            });
+            // 商家审核 查看 弹框
+            $(document).on('click','.judgementbox .btn2',function () {
+                $.get("http://test.php",{},function (data) {
+                    console.log(data);
+                });
+                // 返回数据后
+                layer.open({
+                    type: 1,
+                    resize: false,
+                    move: false,
+                    area:['auto'],
+                    shade: 0,
+                    skin: 'judgement-class',
+                    title: '商家审核',
+                    content: $('.judgement-tan')
+                });
+            });
+            // 商家审核 弹框 确认点击事件
+            $('.judgement-btn').click(function () {
+                console.log('ok'); 
+            });
+            // 拒绝事件
+            $('.judgement-btn2').click(function () {
+                console.log('拒绝'); 
+                layer.open({
+                    type: 1,
+                    resize: false,
+                    move: false,
+                    shadeClose: true,
+                    area:['auto'],
+                    shade: 0.6,
+                    skin: 'refuse-class',
+                    title: '拒绝说明',
+                    content: $('.refusebox')
+                });
             });
         });
         // 表格条件选择添加样式
@@ -693,12 +743,6 @@
                 console.log(data);
             })
         });
-        $('.btn2').click(function () {
-            alert(2)
-            $.get("http://test.php",{},function (data) {
-                console.log(data);
-            })
-        })
 
         // 充值中心
         $('ul.jine li').click(function () {
@@ -818,5 +862,21 @@
             $(this).parent().parent().addClass('hide');
             return false;
         })
+
+        // 商家审核 预估金额联动
+        $('#shangjin,#renshu,input[name = "renwuleixing"]').change(function () {
+            var d = $('#shangjin').val(),
+                s = $('#renshu').val(),
+                l = $('input[name = "renwuleixing"]:checked').val();
+                if(!(d && s && l)){
+                    return false;
+                }
+                if(l == 0){
+                    $('.sumprice b').html(d*s);
+                }
+                if(l == 1){
+                    $('.sumprice b').html(d);
+                }
+        });
     });
 }());

@@ -164,7 +164,7 @@ body{
     display: inline-block;
 }
 .condition .layui-unselect{
-    width: 80px;
+    width: 90px;
 }
 .condition .layui-form-select .layui-edge{
     border-top-color:#ffe405;

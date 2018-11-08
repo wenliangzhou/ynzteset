@@ -128,7 +128,7 @@
 		rgba(0, 0, 0, 0.14);
     border-radius: 24px 24px 0px 0px;
 }
-.item3 .lingqu-btn:disabled{
+.item3 .lingqu-btn:disabled,.item1 .lingqu-btn:disabled{
     background: #a8a8a8;
     cursor: not-allowed;
     color: #fff;

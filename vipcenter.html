@@ -27,7 +27,7 @@
                 <li><a href="reward.html">悬赏大厅</a></li>
                 <li><a href="dingzhi.html">定制中心</a></li>
                 <li><a href="javascript:void(0);">游戏试玩</a></li>
-                <li class="active"><a href="javascript:void(0);">会员中心</a></li>
+                <li data-private="ok" class="active"><a href="javascript:void(0);">会员中心</a></li>
                 <li><a href="exchange.html">兑换专区</a></li>
                 <li><a href="newperson.html">新人专区</a></li>
             </ul>
@@ -53,8 +53,8 @@
                 <div class="title">个人中心</div>
                 <ul class="nav-right layui-tab-title">
                     <li class="layui-this"  >详细资料</li>
-                    <li >安全中心</li>
-                    <li send = "0" send2 = "5">财富明细</li>
+                    <li lay-id="safe">安全中心</li>
+                    <li send = "0" send2 = "5" lay-id="mingxi">财富明细</li>
                     <li send = "1" id="detail" lay-id="detail">任务详情</li>
                     <li >VIP详情</li>
                     <li >申请提现</li>
@@ -206,10 +206,10 @@
                     <!-- 财富明细 -->
                     <div class="layui-tab-item mingxi-item">
                         <div class="ziliao">
-                            <span class="tab">
+                            <span class="tab" id="shangjing_">
                                 赏金明细
                             </span>
-                            <span class="tab tabhide">
+                            <span class="tab tabhide" id="hongbao_">
                                 红包明细
                             </span>
                         </div>

@@ -1,5 +1,11 @@
 (function () {
     $(document).ready(function () {
+        // 初始化提现选项卡
+        wlz.tabInit('.tixian-item');
+        wlz.tabInit('.mingxi-item');
+        wlz.tabInit('.shenqing-item');  
+        wlz.tabInit2('shang');
+        wlz.tabInit2('red');
         layui.use(['element', 'laydate','layer'], function () {
             var element = layui.element,
                 laydate = layui.laydate,
@@ -32,6 +38,21 @@
             if(str == 'pageA'){
                 element.tabChange('test1', 'detail');
                 sessionStorage.setItem("from","");
+            }
+            var str = sessionStorage.getItem('fromb');
+            if(str == 'pageB'){
+                element.tabChange('test1', 'safe');
+                sessionStorage.setItem("fromb","");
+                $('.mingxi-item #shangjing_').click();
+            }
+            var str = sessionStorage.getItem('private');
+            if(str == 'pageprivate-a'){
+                element.tabChange('test1', 'mingxi');
+                sessionStorage.setItem("private","");
+            }else if(str == 'pageprivate-b'){
+                element.tabChange('test1', 'mingxi');
+                sessionStorage.setItem("private","");
+                $('.mingxi-item #hongbao_').click();
             }
         });
         
@@ -481,12 +502,6 @@
                     wlz.tableRequsetDate({url:'https://api.github.com/repos/momodiy/sudoku/commits?per_page=2&sha=master',pagebox:'moneyfan',tablebox:'moneybox',fn:xr,limit:2,data:data});
                 }
             });
-            // 初始化提现选项卡
-            wlz.tabInit('.tixian-item');
-            wlz.tabInit('.mingxi-item');
-            wlz.tabInit('.shenqing-item');  
-            wlz.tabInit2('shang');
-            wlz.tabInit2('red');
         });
         // 表格条件选择添加样式
         $('.tiao-btn li').click(function () {

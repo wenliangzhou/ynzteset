@@ -1,4 +1,8 @@
 (function () {
+    $('.item4 .text_s').click(function () {
+        sessionStorage.setItem("fromc","pageC"); 
+    });
+
     function step(k=1) {
         var c = document.getElementById('stepprogress'),
         ctx = c.getContext('2d'),
@@ -60,48 +64,48 @@
             touxiangvalue = $('#touxiang')[0].defaultValue,
             realreg = /^[1-9]\d{5}(18|19|20)\d{2}((0[1-9])|(1[0-2]))(([0-2][1-9])|10|20|30|31)\d{3}[0-9Xx]$/,
             phonereg = /^((13[0-9])|(14[5|7])|(15([0-3]|[5-9]))|(18[0,5-9]))\d{8}$/;
-        if (touxiang == undefined && touxiangvalue =='') {
-            layer.tips('请上传头像 !', '.pic', {
-                anim: 6
-            });
-            return false;
-        }
-        if (nichen == '') {
-            layer.tips('昵称不能为空 !', '#nichen', {
-                anim: 6
-            });
-            return false;
-        }
-        if (user == '') {
-            layer.tips('姓名不能为空 !', '#xingming', {
-                anim: 6
-            });
-            return false;
-        }
-        if (shenfennum == '' || !realreg.test(shenfennum)) {
-            layer.tips('身份证号格式不对 !', '#shenfennum', {
-                anim: 6
-            });
-            return false;
-        }
-        if (phone == '' || !phonereg.test(phone)) {
-            layer.tips('联系方式不能为空 !', '#phone', {
-                anim: 6
-            });
-            return false;
-        }
-        if (yinyehao == '') {
-            layer.tips('营业号不能为空 !', '#yinyehao', {
-                anim: 6
-            });
-            return false;
-        }
-        if (place == '') {
-            layer.tips('地址不能为空 !', '#place', {
-                anim: 6
-            });
-            return false;
-        }
+        // if (touxiang == undefined && touxiangvalue =='') {
+        //     layer.tips('请上传头像 !', '.pic', {
+        //         anim: 6
+        //     });
+        //     return false;
+        // }
+        // if (nichen == '') {
+        //     layer.tips('昵称不能为空 !', '#nichen', {
+        //         anim: 6
+        //     });
+        //     return false;
+        // }
+        // if (user == '') {
+        //     layer.tips('姓名不能为空 !', '#xingming', {
+        //         anim: 6
+        //     });
+        //     return false;
+        // }
+        // if (shenfennum == '' || !realreg.test(shenfennum)) {
+        //     layer.tips('身份证号格式不对 !', '#shenfennum', {
+        //         anim: 6
+        //     });
+        //     return false;
+        // }
+        // if (phone == '' || !phonereg.test(phone)) {
+        //     layer.tips('联系方式不能为空 !', '#phone', {
+        //         anim: 6
+        //     });
+        //     return false;
+        // }
+        // if (yinyehao == '') {
+        //     layer.tips('营业号不能为空 !', '#yinyehao', {
+        //         anim: 6
+        //     });
+        //     return false;
+        // }
+        // if (place == '') {
+        //     layer.tips('地址不能为空 !', '#place', {
+        //         anim: 6
+        //     });
+        //     return false;
+        // }
         
         var form = $('#form-ziliao').serializeArray();
         var data = wlz.zhuan(form);
@@ -122,24 +126,24 @@
             zhengmianvalue = $('#zhengmian')[0].defaultValue,
             fanmian = $('#fanmian')[0].files[0],
             fanmianvalue = $('#fanmian')[0].defaultValue;
-        if (zhizhao == undefined && zhizhaovalue =='') {
-            layer.tips('请上传营业执照 !', '.zhizhao', {
-                anim: 6
-            });
-            return false;
-        }
-        if (zhengmian == undefined && zhengmianvalue =='') {
-            layer.tips('请上传正面身份证 !', '.zhengmian', {
-                anim: 6
-            });
-            return false;
-        }
-        if (fanmian == undefined && fanmianvalue =='') {
-            layer.tips('请上传反面身份证 !', '.fanmian', {
-                anim: 6
-            });
-            return false;
-        }
+        // if (zhizhao == undefined && zhizhaovalue =='') {
+        //     layer.tips('请上传营业执照 !', '.zhizhao', {
+        //         anim: 6
+        //     });
+        //     return false;
+        // }
+        // if (zhengmian == undefined && zhengmianvalue =='') {
+        //     layer.tips('请上传正面身份证 !', '.zhengmian', {
+        //         anim: 6
+        //     });
+        //     return false;
+        // }
+        // if (fanmian == undefined && fanmianvalue =='') {
+        //     layer.tips('请上传反面身份证 !', '.fanmian', {
+        //         anim: 6
+        //     });
+        //     return false;
+        // }
         var files = $('#form-ziliao input[type=file]');
         var formData = new FormData();
         for(var i = 0;i<files.length;i++){
@@ -159,8 +163,9 @@
         });
 
         // 成功后的操作
-        $('.item3').removeClass('hide');
+        // $('.item3').removeClass('hide');
         $('.item2').addClass('hide');
+        $('.item4').removeClass('hide');
         step(3);
         return false;
     });

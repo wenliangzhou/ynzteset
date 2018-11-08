@@ -188,11 +188,43 @@
                     area: 'auto',
                     title: false,
                     content: '<div class="private-menu"><img class="close-btn" src="img/public/private-close.png"><div class=""><img src="img/public/touxiang.png" alt=""><div><span>爱笑的兔子</span><span>ID : 153263</span></div></div>' +
-                        '<ul><li><a href="" target="blank">个人中心</a></li><li>赏金余额 : <span>10M</span></li><li>红包余额 : 200.5元</li><li><a href="everyday.html">每日任务</a></li><li><a href="jionus.html">加入我们</a></li><li><a href="private.html">私信</a></li><li class="tuichu">退出</li></ul></div>'
+                        '<ul><li><a href="vipcenter.html">个人中心</a></li><li><a class = "private-a" href="vipcenter.html#kkk">赏金余额 : <span>10M</span></a></li><li><a class = "private-b" href="vipcenter.html#kkk">红包余额 : 200.5元</a></li><li><a href="everyday.html">每日任务</a></li><li><a href="jionus.html">加入我们</a></li><li><a href="private.html">私信</a></li><li class="tuichu">退出</li></ul></div>'
                 });
             }else{
                 $('.private-btn').attr('key',false);
                 layer.close(index);
+            }
+        });
+
+        //a链接 跳转到指定会员中心的位子
+        $(document).on('click','.private-a',function () {
+            sessionStorage.setItem('private','pageprivate-a');
+            var strs = $('.nav-ul li.active').attr('data-private');
+            var str = sessionStorage.getItem('private');
+            if(strs =='ok'){
+                layui.use('element', function () {
+                    var element = layui.element;
+                    if (str == 'pageprivate-a') {
+                        element.tabChange('test1', 'mingxi');
+                        sessionStorage.setItem("private", "");
+                        $('.mingxi-item #shangjing_').click();
+                    }
+                });
+            }
+        });
+        $(document).on('click','.private-b',function () {
+            sessionStorage.setItem('private','pageprivate-b');
+            var strs = $('.nav-ul li.active').attr('data-private');
+            var str = sessionStorage.getItem('private');
+            if(strs =='ok'){
+                layui.use('element', function () {
+                    var element = layui.element;
+                    if (str == 'pageprivate-b') {
+                        element.tabChange('test1', 'mingxi');
+                        sessionStorage.setItem("private", "");
+                        $('.mingxi-item #hongbao_').click();
+                    }
+                });
             }
         });
         // 登陆弹出事件
@@ -342,7 +374,6 @@
         $('.nav-item7').click(function () {
             window.location.href="activity.html";
         });
-
     });
     
 })();

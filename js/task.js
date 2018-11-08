@@ -2,10 +2,11 @@
     function xr() {
         console.log('渲染');
     }
-    layui.use(['element', 'laydate','layer'], function () {
+    layui.use(['element', 'laydate','layer','laypage'], function () {
         var element = layui.element,
             laydate = layui.laydate,
             layer = layui.layer;
+            laypage = layui.laypage;
         laydate.render({
             elem: '#shengri' //指定元素
         });

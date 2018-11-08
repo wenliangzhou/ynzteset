@@ -1,5 +1,6 @@
 (function () {
     $(document).ready(function () {
+        
         layui.use(['element', 'laydate','layer'], function () {
             var element = layui.element,
                 laydate = layui.laydate,
@@ -17,7 +18,13 @@
                         title: false,
                         content: $(id)
                     });
-                });     
+                });
+            // 如果是跳转过来的打开指定位子
+            var str = sessionStorage.getItem('fromc');
+            if(str == 'pageC'){
+                element.tabChange('test1', 'fabu');
+                sessionStorage.setItem("fromc","");
+            }
         });
 
         

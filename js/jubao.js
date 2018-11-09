@@ -12,7 +12,9 @@
     });
     // 文本滚动
     $('.dowebok').liMarquee({
-		direction: 'up',
+        direction: 'up',
+        drag:false,
+        hoverstop:false,
 		runshort: false
     });
     

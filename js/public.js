@@ -188,7 +188,7 @@
                     area: 'auto',
                     title: false,
                     content: '<div class="private-menu"><img class="close-btn" src="img/public/private-close.png"><div class=""><img src="img/public/touxiang.png" alt=""><div><span>爱笑的兔子</span><span>ID : 153263</span></div></div>' +
-                        '<ul><li><a href="vipcenter.html">个人中心</a></li><li><a class = "private-a" href="vipcenter.html#kkk">赏金余额 : <span>10M</span></a></li><li><a class = "private-b" href="vipcenter.html#kkk">红包余额 : 200.5元</a></li><li><a href="everyday.html">每日任务</a></li><li><a href="jionus.html">加入我们</a></li><li><a href="private.html">私信</a></li><li class="tuichu">退出</li></ul></div>'
+                        '<ul><li data-nav-id = "5"><a href="vipcenter.html">个人中心</a></li><li data-nav-id = "5"><a class = "private-a" href="vipcenter.html#kkk">赏金余额 : <span>10M</span></a></li><li data-nav-id = "5"><a class = "private-b" href="vipcenter.html#kkk">红包余额 : 200.5元</a></li><li><a href="everyday.html">每日任务</a></li><li><a href="jionus.html">加入我们</a></li><li><a href="private.html">私信</a></li><li class="tuichu">退出</li></ul></div>'
                 });
             }else{
                 $('.private-btn').attr('key',false);
@@ -371,9 +371,31 @@
         });
         
         // 侧边导航栏跳转
+        $('.nav-item6').click(function () {
+            window.location.href="lucky.html";
+        });
         $('.nav-item7').click(function () {
             window.location.href="activity.html";
         });
+        // 添加导航条的active
+        function nav_init() {
+            $('.nav-ul li').click(function () {
+                sessionStorage.setItem('data-nav-id',$(this).attr('data-nav-id'));
+            });
+            // 私人导航条设置data-nav-id
+            $(document).on('click','.private-class ul li',function () {
+                var data_nav_id = $(this).attr('data-nav-id');
+                if(data_nav_id){
+                    sessionStorage.setItem("data-nav-id", data_nav_id);
+                }
+            });
+            var num = sessionStorage.getItem('data-nav-id');
+            var str = '.nav-ul li[data-nav-id = "'+num+'"]';
+            $('.nav-ul li').removeClass('active');
+            $(str).addClass('active');
+            
+        }
+        nav_init();
     });
     
 })();

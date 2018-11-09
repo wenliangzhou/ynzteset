@@ -1023,3 +1023,8 @@ body .sign-class{
 .nav-top ul li.index-nav{
     padding: 0px 30px;
 }
+/* 页脚添加链接css */
+.footer ul li a{
+    color: white;
+    text-decoration: none;
+}

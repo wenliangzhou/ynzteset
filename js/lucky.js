@@ -1,15 +1,22 @@
 
+
+
+// ajax
 var angles,
+    //获取随机数
+    num = 0;
     clickNum = 5,
     rotNum = 0,
     color = ['#e49530','#ffffff','#e49530','#ffffff','#ffeab0','#ffffff','#ffeab0','#ffffff'],
-    info = ["天梭魅时男表","小米手机8","赏金","看尚电视","现金红包","谢谢参与","奔驰汽车","笔记本 MAC"],
-    info1 = [],
-    imgs = ['img/activity/shoubiao.png','img/activity/shouji.png','img/activity/jinbi.png','img/activity/dianshi.png','img/activity/hongbao.png','img/activity/xiexie.png','img/activity/qiche.png','img/activity/diannao.png'];
+    info = ["天梭魅时男表","小米手机8","赏金","看尚电视","现金红包","奔驰汽车","笔记本 MAC","谢谢参与"],
+    imgs = ['img/activity/shoubiao.png','img/activity/shouji.png','img/activity/jinbi.png','img/activity/dianshi.png','img/activity/hongbao.png','img/activity/qiche.png','img/activity/diannao.png','img/activity/xiexie.png'];
 // 绘制
 drawpan();
 // 绑定开始事件
 $('#tupBtn').bind('click',function(){
+    // ajax 拿随机数
+        num = 7;
+        var jiangping = '200赏金';
     if (clickNum >= 1) {
         //可抽奖次数减一
         clickNum = clickNum-1;
@@ -21,7 +28,46 @@ $('#tupBtn').bind('click',function(){
         rotNum = rotNum + 1;
         //“开始抽奖”按钮无法点击恢复点击
         setTimeout(function(){
-            alert(notice);
+            
+            // 弹出层
+            // 恭喜弹框
+            if(num == 7){
+                // 遗憾弹框
+                layui.use('layer',function () {
+                    var layer = layui.layer;
+                    layer.open({
+                        type: 1,
+                        shadeClose: true,
+                        resize: false,
+                        move: false,
+                        area:['auto'],
+                        shade: 0.8,
+                        skin: 'yihan-class',
+                        title: false,
+                        content: $('.yihan')
+                    });
+                });
+            }else{
+                layui.use('layer', function () {
+                    var layer = layui.layer;
+                    layer.open({
+                        type: 1,
+                        shadeClose: true,
+                        closeBtn: false,
+                        resize: false,
+                        move: false,
+                        area: ['auto'],
+                        shade: 0.8,
+                        skin: 'gongxi-class',
+                        title: false,
+                        content: $('.gongxibox')
+                    });
+                });
+            }
+            
+            
+            
+
             $('#tupBtn').removeAttr("disabled", true);
         },6000);
     }
@@ -29,6 +75,19 @@ $('#tupBtn').bind('click',function(){
         alert("亲，抽奖次数已用光！");
     }
 });
+// 信息弹出关闭弹框
+$(document).on('click','.yihan-bj',function () {
+    layer.closeAll();
+});
+// 恭喜弹框关闭
+$(document).on('click','.gongxi',function () {
+    layer.closeAll();
+});
+// 再抽一次时间
+$(document).on('click','.gongxi-btn',function () {
+    console.log('再抽一次')
+});
+
 //转盘旋转
 function runCup(){
     probability();
@@ -41,47 +100,46 @@ function runCup(){
 }
 //各奖项对应的旋转角度及中奖公告内容
 function probability(){
-    //获取随机数
-    var num = 0;
+    
     //概率
     if ( num == 0 ) {
         angles = 2160 * rotNum + 1800;
-        notice = info[0] + info1[0];
+        notice = info[0];
     }
     //概率
     else if ( num == 7 ) {
         angles = 2160 * rotNum + 1845;
-        notice = info[7] + info1[7];
+        notice = info[7];
     }
     //概率
     else if ( num == 6 ) {
         angles = 2160 * rotNum + 1890;
-        notice = info[6] + info1[6];
+        notice = info[6];
     }
     //概率
     else if ( num == 5 ) {
         angles = 2160 * rotNum + 1935;
-        notice = info[5] + info1[5];
+        notice = info[5];
     }
     //概率
     else if ( num == 4 ) {
         angles = 2160 * rotNum + 1980;
-        notice = info[4] + info1[4];
+        notice = info[4];
     }
     //概率
     else if ( num == 3 ) {
         angles = 2160 * rotNum + 2025;
-        notice = info[3] + info1[3];
+        notice = info[3];
     }
     //概率
     else if ( num == 2 ) {
         angles = 2160 * rotNum + 2070;
-        notice = info[2] + info1[2];
+        notice = info[2];
     }
     //概率
     else if ( num == 1 ) {
         angles = 2160 * rotNum + 2115;
-        notice = info[1] + info1[1];
+        notice = info[1];
     }
 }
 // 绘制转盘

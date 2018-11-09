@@ -227,6 +227,11 @@
                 });
             }
         });
+        // 页脚调到位子
+        $('.footer ul li').click(function () {
+            var id = $(this).attr('data-footer-id');
+            sessionStorage.setItem('data-footer-id',id);
+        });
         // 登陆弹出事件
         $('.sign').click(function () {
             layer.open({

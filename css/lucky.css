@@ -176,3 +176,55 @@ body{
 .footer{
     margin-top: 40px;
 }
+.gongxi{
+    position: absolute;
+    width: 1258px;
+    height: 834px;
+    background: url(../img/activity/caixing.png) center center no-repeat;
+    top: -244px;
+    left: -354px;
+    z-index: -1;
+}
+.gongxibox{
+    width: 466px;
+    height: 466px;
+    position: relative;
+    font-size: 30px;
+    color: #fff;
+    padding-top: 174px;
+    text-align: center;
+    line-height: 50px;
+}
+.gongxibox button{
+    width: 270px;
+    height: 55px;
+    background: rgba(255, 238, 141,1);
+    color: #f62a39;
+    border: none;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+.gongxibox button:hover{
+    background: rgba(255, 238, 141,0.8);
+}
+.gongxi-class .layui-layer-content,.yihan-class .layui-layer-content{
+    overflow: visible !important;
+}
+.gongxi-class {
+    background: transparent !important;
+    box-shadow: none !important;
+}
+.yihan{
+    width: 490px;
+    height: 300px;
+    position: relative;
+}
+.yihan-bj{
+    position: absolute;
+    display: block;
+    bottom: 0px;
+}
+.yihan-class{
+    background: transparent !important;
+    box-shadow: none !important;
+}

@@ -1,4 +1,28 @@
 (function () {
+    // 初始化懒加载
+    lazyLoadInit({
+        coverColor:"white",
+        offsetBottom:330,
+        offsetTopm:330,
+        showTime:0
+        // onLoadBackEnd:function(i,e){
+        //     console.log("onLoadBackEnd:"+i);
+        // }
+        // ,onLoadBackStart:function(i,e){
+        //     console.log("onLoadBackStart:"+i);
+        // }
+    });
+    // 初始化滚动
+    $('.dowebok').liMarquee();
+    // 推荐轮播
+    $('.lunbo').slick({
+        lazyLoad: 'ondemand',
+        vertical: false,
+        slidesToShow: 4,
+        slidesToScroll: 4,
+        prevArrow: '<span class="prev"><img src="img/task/right.png" alt=""></span>',
+        nextArrow: '<span class="next"><img src="img/task/left.png" alt=""></span>'
+    });
     function xr() {
         console.log('渲染');
     }
@@ -20,10 +44,6 @@
                         ,{url:'https://api.github.com/users',pagebox:'redtifan',tablebox:'redtibox',fn:xr,limit:2}
                         ,{url:'https://api.github.com/users',pagebox:'redxifan',tablebox:'redxibox',fn:xr,limit:2}];
             if(send !== 'yes' && send !== undefined){
-                // 财富明细表格第一次渲染
-                if(send2){
-                    wlz.tableRequsetDate(urldata[send2]);
-                }
                 wlz.tableRequsetDate(urldata[send]);
             }
             $(this).attr('send',"yes");

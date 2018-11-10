@@ -9,7 +9,9 @@
     <link rel="stylesheet" href="js/layui/css/layui.css">    
     <link rel="stylesheet" href="css/public.css">
     <!--  私有 -->
-    <link rel="stylesheet" href="css/task.css">
+    <link rel="stylesheet" href="css/liMarquee.css">
+    <link rel="stylesheet" href="js/slick/slick.css">
+    <link rel="stylesheet" href="css/reward.css">
 </head>
 <body>
     <!-- 头部导航栏 -->
@@ -35,36 +37,107 @@
     </nav>
     <!-- banner部分 -->
     <div class="banner">
+        <div class="dowebok">
+            <li>会员*** 完成:百度知道任务 提现了：5元</li>
+            <li>会员*** 完成:百度知道任务 提现了：10元</li>
+            <li>会员*** 完成:百度知道任务 提现了：15元</li>
+            <li>会员*** 完成:百度知道任务 提现了：5元</li>
+        </div>
     </div>
-    <div class="rank center">
-        <span class="bj">
-            本周任务赏金排行
-        </span>
-        <span class="one">VIP4 爱吃的***子 累计<span class="jin1">945,000</span> M赏金</span>
-        <span class="second">VIP4 爱吃的***子 <span class="jin1">945,000</span> M赏金</span>
-        <span class="third">VIP4 爱吃的***子 <span class="jin1">945,000</span> M赏金</span>
-        <ul class="box">
-            <div class="marquee">
-                <li>会员*** 完成:百度知道任务 提现了：5元</li>
-                <li>会员*** 完成:百度知道任务 提现了：10元</li>
-                <li>会员*** 完成:百度知道任务 提现了：15元</li>
-                <li>会员*** 完成:百度知道任务 提现了：5元</li>
-            </div>
-        </ul>
+    <div class="recommend">
+        <span>RECOMMEND</span>
+    </div>
+    <div class="tuijian lunbo center">
+        <div class="item">
+            <img src="img/task/tuijian.png" alt="">
+        </div>
+        <div class="item">
+            <img src="img/task/tuijian.png" alt="">
+        </div>
+        <div class="item">
+            <img src="img/task/tuijian.png" alt="">
+        </div>
+        <div class="item">
+            <img src="img/task/tuijian.png" alt="">
+        </div>
+        <div class="item">
+            <img src="img/task/tuijian.png" alt="">
+        </div>
+        <div class="item">
+            <img src="img/task/tuijian.png" alt="">
+        </div>
+        <div class="item">
+            <img src="img/task/tuijian.png" alt="">
+        </div>
+        <div class="item">
+            <img src="img/task/tuijian.png" alt="">
+        </div>
     </div>
     <!-- 主体部分 -->
     <div class="main center">
             <div class="layui-tab" lay-filter = "test1">
-                <div class="title">悬赏大厅</div>
-                <ul class="nav-right layui-tab-title">
-                    <li send="0" class="layui-this"  >所有类别</li>
-                    <li send="1">广告代挂</li>
-                    <li send="2">发表新闻</li>
-                    <li send="3">APP上架</li>
-                    <li send="4">网站定制</li>
-                    <li send="5">新媒体</li>
-                    <li send="6">视频渠道</li>
-                </ul>
+                
+                <div class="rank-box">
+                    <div class="title">悬赏大厅</div>
+                    <ul class="nav-right layui-tab-title">
+                        <li send="0" class="layui-this">所有类别</li>
+                        <li send="1">广告代挂</li>
+                        <li send="2">发表新闻</li>
+                        <li send="3">APP上架</li>
+                        <li send="4">网站定制</li>
+                        <li send="5">新媒体</li>
+                        <li send="6">视频渠道</li>
+                    </ul>
+                    <div class="rank-reward">
+                        <div class="item item1">赏金排行</div>
+                        <div class="item item2">
+                            <span class="rank-num">NO.1</span>
+                            <img class="touxiang" src="img/task/touxiang.png" alt="">
+                            <img class="huangguang" src="img/task/huangguan.png" alt="">
+                            <img class="bj" src="img/task/frist.png" alt="">
+                            <span class="name_">这是个名字一个</span>
+                            <span class="jinbi">945000赏金</span>
+                        </div>
+                        <div class="item">
+                            <span class="rank-num">NO.2</span>
+                            <img src="img/task/touxiang.png" alt="">
+                            <span class="mingchen">这又是一个名字</span>
+                            <span class="jinbi">6000赏金</span>
+                        </div>
+                        <div class="item">
+                            <span class="rank-num">NO.3</span>
+                            <img src="img/task/touxiang.png" alt="">
+                            <span class="mingchen">这又是一个名字</span>
+                            <span class="jinbi">6000赏金</span>
+                        </div>
+                        <div class="item">
+                            <span class="rank-num">NO.4</span>
+                            <img src="img/task/touxiang.png" alt="">
+                            <span class="mingchen">这又是一个名字</span>
+                            <span class="jinbi">60000323赏金</span>
+                        </div>
+                        <div class="item">
+                            <span class="rank-num">NO.5</span>
+                            <img src="img/task/touxiang.png" alt="">
+                            <span class="mingchen">这又是一个名字</span>
+                            <span class="jinbi">6000赏金</span>
+                        </div>
+                        <div class="item">
+                            <span class="rank-num">NO.6</span>
+                            <img src="img/task/touxiang.png" alt="">
+                            <span class="mingchen">这又是一个名字</span>
+                            <span class="jinbi">6000赏金</span>
+                        </div>
+                        <div class="item">
+                            <span class="rank-num">NO.7</span>
+                            <img src="img/task/touxiang.png" alt="">
+                            <span class="mingchen">这又是一个名字</span>
+                            <span class="jinbi">6000赏金</span>
+                        </div>
+                    </div>
+                </div>
+                
+                
                 <div class="layui-tab-content mainbox">
                     <!-- 任务大厅 -->
                     <div class="layui-tab-item layui-show">
@@ -76,89 +149,89 @@
                         <ul class="all">
                             <a href="rewarddetail.html?idjjj">
                                 <li>
-                                    <img src="img/task/wenan.png" alt="">
+                                    <img data-lazy-src="img/task/wenan.png" alt="">
                                     <p>blued-3期</p>
                                     <p>任务奖励：<span class="jinbi">19.1万</span></p>
                                 </li>
                             </a>
                             <a href="rewarddetail.html?idjjj">
                             <li>
-                                <img src="img/task/lun1.png" alt="">
+                                <img data-lazy-src="img/task/wenan.png" alt="">
                                 <p>blued-3期</p>
                                 <p>任务奖励：<span class="jinbi">19.1万</span></p>
                             </li>
                             </a>
                             <a href="rewarddetail.html?idjjj">
                             <li>
-                                <img src="img/task/lun2.png" alt="">
+                                <img data-lazy-src="img/task/wenan.png" alt="">
                                 <p>blued-3期</p>
                                 <p>任务奖励：<span class="jinbi">19.1万</span></p>
                             </li>
                             </a>
                             <a href="rewarddetail.html?idjjj">
                             <li>
-                                <img src="img/task/lun3.png" alt="">
+                                <img data-lazy-src="img/task/wenan.png" alt="">
                                 <p>blued-3期</p>
                                 <p>任务奖励：<span class="jinbi">19.1万</span></p>
                             </li>
                             </a>
                             <a href="rewarddetail.html?idjjj">
                             <li>
-                                <img src="img/task/lun4.png" alt="">
+                                <img data-lazy-src="img/task/lun1.png" alt="">
                                 <p>blued-3期</p>
                                 <p>任务奖励：<span class="jinbi">19.1万</span></p>
                             </li>
                             </a>
                             <a href="rewarddetail.html?idjjj">
                             <li>
-                                <img src="img/task/lun5.png" alt="">
+                                <img data-lazy-src="img/task/lun1.png"  alt="">
                                 <p>blued-3期</p>
                                 <p>任务奖励：<span class="jinbi">19.1万</span></p>
                             </li>
                             </a>
                             <a href="rewarddetail.html?idjjj">
                             <li>
-                                <img src="img/task/lun6.png" alt="">
+                                <img data-lazy-src="img/task/lun1.png" alt="">
                                 <p>blued-3期</p>
                                 <p>任务奖励：<span class="jinbi">19.1万</span></p>
                             </li>
                             </a>
                             <a href="rewarddetail.html?idjjj">
                             <li>
-                                <img src="img/task/lun7.png" alt="">
+                                <img data-lazy-src="img/task/lun1.png"  alt="">
                                 <p>blued-3期</p>
                                 <p>任务奖励：<span class="jinbi">19.1万</span></p>
                             </li>
                             </a>
                             <a href="rewarddetail.html?idjjj">
                             <li>
-                                <img src="img/task/lun8.png" alt="">
+                                <img data-lazy-src="img/task/lun2.png" alt="">
                                 <p>blued-3期</p>
                                 <p>任务奖励：<span class="jinbi">19.1万</span></p>
                             </li>
                             </a>
                             <a href="rewarddetail.html?idjjj">
                             <li>
-                                <img src="img/task/wenan.png" alt="">
+                                <img data-lazy-src="img/task/lun2.png" alt="">
                                 <p>blued-3期</p>
                                 <p>任务奖励：<span class="jinbi">19.1万</span></p>
                             </li>
                             </a>
                             <a href="rewarddetail.html?idjjj">
                             <li>
-                                <img src="img/task/wenan.png" alt="">
+                                <img data-lazy-src="img/task/lun2.png" alt="">
                                 <p>blued-3期</p>
                                 <p>任务奖励：<span class="jinbi">19.1万</span></p>
                             </li>
                             </a>
                             <a href="rewarddetail.html?idjjj">
                             <li>
-                                <img src="img/task/wenan.png" alt="">
+                                <img data-lazy-src="img/task/lun2.png"  alt="">
                                 <p>blued-3期</p>
                                 <p>任务奖励：<span class="jinbi">19.1万</span></p>
                             </li>
                             </a>
-                            <div id="shangxifan" class="center fanye"></div>
+                            
                         </ul>
                     </div>
                     <!-- SEO类别 -->
@@ -239,6 +312,9 @@
 
     <!-- 详细资料的三级联动JS                    私人 -->
     <script src="js/YMDClass.js"></script>
+    <script src="js/jquery.liMarquee.js"></script>
+    <script src="js/slick/slick.min.js"></script>
+    <script src="js/EasyLazyload.min.js"></script>
     <script src="js/reward.js"></script>
     <!-- 侧边导航栏 -->
     <div class="nav-wrapper">

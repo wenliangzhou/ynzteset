@@ -1,4 +1,6 @@
 (function () {
+    // 初始化滚动
+    $('.dowebok').liMarquee();
     function xr() {
         console.log('渲染');
     }

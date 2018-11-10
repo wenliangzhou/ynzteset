@@ -41,13 +41,13 @@
     display: inline-block;
 }
 .rank .one{
-    margin-left: 200px;
+    margin-left: 210px;
 }
 .rank .second{
-    margin-left: 80px;
+    margin-left: 110px;
 }
 .rank .third{
-    margin-left: 80px;
+    margin-left: 110px;
 }
 .rank .jinbi{
     color: #ec0605;
@@ -95,8 +95,9 @@
     background-color: #ffe405;
     color: #1f1f1f;
     font-size: 16px;
-    text-align: center;
+    text-align: left;
     line-height: 48px;
+    padding-left: 30px;
 }
 .main .nav-right,.main .mainbox{
     float: left;
@@ -108,10 +109,11 @@
 }
 .main .nav-right{
     width: 180px;
-	height: 365px;
+	height: auto;
     background-color: #1f1f1f;
     margin-top: 48px;
     padding-top: 5px;
+    padding-bottom: 20px;
 }
 .main .nav-right li{
     display: block;
@@ -119,6 +121,8 @@
     line-height: 16px;
     padding: 16px 0px;
     color: #ffffff;
+    text-align: left;
+    padding-left: 30px;
 }
 .main .nav-right .layui-this{
     color: #ead109;
@@ -270,7 +274,6 @@ ul.box{
   overflow: hidden;
   position: relative;
   display: inline-block;
-  width: 450px;
   position: absolute;
   top: 130px;
   left: 300px;
@@ -341,4 +344,23 @@ ul.box li{
 }
 .jin1{
     color: #ec0605;
+}
+.dowebok{
+    width: 760px;
+    background: white;
+}
+.dowebok li{
+    display: inline-block;
+    margin-right: 20px;
+}
+.mainbox ul>a img{
+    transition: all 0.2s;
+}
+.mainbox ul>a img:hover{
+    border: 1px solid transparent;
+    border-radius: 8px;
+    padding: 2px;
+    -moz-box-shadow:0px 4px 9px 2px #CDDE35;
+    -webkit-box-shadow:0px 4px 9px 2px #CDDE35;
+    box-shadow:0px 4px 9px 2px #CDDE35;
 }

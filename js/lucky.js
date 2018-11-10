@@ -15,7 +15,7 @@ drawpan();
 // 绑定开始事件
 $('#tupBtn').bind('click',function(){
     // ajax 拿随机数
-        num = 7;
+        num = 3;
         var jiangping = '200赏金';
     if (clickNum >= 1) {
         //可抽奖次数减一
@@ -48,6 +48,9 @@ $('#tupBtn').bind('click',function(){
                     });
                 });
             }else{
+                // 更新恭喜框的文本
+                // 如果是红包 把notice再拼接一下
+                $('.jiangping').html(notice);
                 layui.use('layer', function () {
                     var layer = layui.layer;
                     layer.open({
@@ -76,7 +79,7 @@ $('#tupBtn').bind('click',function(){
     }
 });
 // 信息弹出关闭弹框
-$(document).on('click','.yihan-bj',function () {
+$(document).on('click','.yihan-bj,.yihan-btn',function () {
     layer.closeAll();
 });
 // 恭喜弹框关闭

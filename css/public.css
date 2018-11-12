@@ -1028,3 +1028,19 @@ body .sign-class{
     color: white;
     text-decoration: none;
 }
+.jiaobiao{
+    position: relative;
+}
+.jiaobiao::after{
+    content: attr(data-a);
+    display: inline-block;
+    margin-left: 20px;
+    background: red;
+    border-radius: 50%;
+    width: 13px;
+    height: 13px;
+    position: absolute;
+    text-align: center;
+    line-height: 13px;
+    font-size: 10px;
+}

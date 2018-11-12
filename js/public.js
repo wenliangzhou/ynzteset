@@ -188,7 +188,7 @@
                     area: 'auto',
                     title: false,
                     content: '<div class="private-menu"><img class="close-btn" src="img/public/private-close.png"><div class=""><img src="img/public/touxiang.png" alt=""><div><span>爱笑的兔子</span><span>ID : 153263</span></div></div>' +
-                        '<ul><li data-nav-id = "5"><a href="vipcenter.html">个人中心</a></li><li data-nav-id = "5"><a class = "private-a" href="vipcenter.html#kkk">赏金余额 : <span>10M</span></a></li><li data-nav-id = "5"><a class = "private-b" href="vipcenter.html#kkk">红包余额 : 200.5元</a></li><li><a href="everyday.html">每日任务</a></li><li><a href="jionus.html">加入我们</a></li><li><a href="private.html">私信</a></li><li class="tuichu">退出</li></ul></div>'
+                        '<ul><li data-nav-id = "5"><a href="vipcenter.html">个人中心</a></li><li data-nav-id = "5"><a class = "private-a" href="vipcenter.html#kkk">赏金余额 : <span>10M</span></a></li><li data-nav-id = "5"><a class = "private-b" href="vipcenter.html#kkk">红包余额 : 200.5元</a></li><li><a href="everyday.html">每日任务</a></li><li><a href="jionus.html">加入我们</a></li><li class = "jiaobiao" data-a = "5"><a href="private.html">私信</a></li><li class="tuichu">退出</li></ul></div>'
                 });
             }else{
                 $('.private-btn').attr('key',false);

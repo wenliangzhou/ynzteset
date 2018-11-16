@@ -1,11 +1,7 @@
 (function () {
-    
+    var layer = layui.layer,
+        laypage = layui.laypage;
     $(document).ready(function () {
-        
-        layui.use(['laypage', 'layer'], function () {
-            var  layer = layui.layer;
-            laypage = layui.laypage;
-        });
         // 定义一个全局变量，把公用方法放在这个对象上
         var arr = [];
     

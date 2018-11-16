@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>公告</title>
+    <!-- 公共 -->
+    <link rel="stylesheet" href="js/bootstrap-3.3.7-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="js/layui/css/layui.css">
+    <link rel="stylesheet" href="css/public.css">
+    <!--  私有 -->
+    <link rel="stylesheet" href="css/notice.css">
+</head>
+
+<body>
+    <!-- 头部导航栏 -->
+    <ul class="login">
+        <li class="sign">登陆</li>
+        <li><a class="reg" href="reg.html">注册</a></li>
+    </ul>
+    <img class="private-btn" key="false" src="img/public/menu.png" alt="">
+    <nav class="nav-top">
+        <div class="nav-box center">
+            <img src="img/index/logo.png" alt="">
+            <ul class="nav-ul center">
+                <a href="index.html"><li class="index-nav" data-nav-id="0">首页</li></a>
+                <a href="task.html"><li data-nav-id="1">任务大厅</li></a>
+                <a href="reward.html"><li data-nav-id="2">悬赏大厅</li></a>
+                <a href="dingzhi.html"><li data-nav-id="3">定制中心</li></a>
+                <a href="buscenter.html"><li data-nav-id="4">游戏试玩</li></a>
+                <a href="vipcenter.html"><li data-nav-id="5" data-private="ok">会员中心</li></a>
+                <a href="exchange.html"><li data-nav-id="6">兑换专区</li></a>
+                <a href="newperson.html"><li data-nav-id="7">新人专区</li></a>
+            </ul>
+        </div>
+    </nav>
+    <!-- banner部分 -->
+    <div class="banner">
+
+    </div>
+    <!-- 主体部分 -->
+    <div class="midbox center">
+        <div class="layui-tab" lay-filter="notice">
+            <ul class="layui-tab-title">
+              <li send="0" class="layui-this">系统公告</li>
+              <li send="1">网赚攻略</li>
+              <li send="2">新进悬赏</li>
+              <li send="3">奖励动态</li>
+            </ul>
+            <div class="layui-tab-content">
+              <div class="layui-tab-item layui-show">
+                  <div data-tab-item = "0">
+                      <div class="item-li">
+                          <img src="img/public/gonggao.png" alt="">
+                          <div>
+                              <span class="time">公告 &nbsp;&nbsp;&nbsp;&nbsp;09/10&nbsp;&nbsp;12：51</span>
+                              <p class="title"><a href="noticedetail.html">【活动】棋牌福利期奖励翻倍</a></p>
+                          </div>
+                          <a href="noticedetail.html">阅读全文>></a>
+                      </div>
+                      <div class="item-li">
+                        <img src="img/public/gonggao.png" alt="">
+                        <div>
+                            <span class="time">公告 &nbsp;&nbsp;&nbsp;&nbsp;09/10&nbsp;&nbsp;12：51</span>
+                            <p class="title"><a href="noticedetail.html">【活动】棋牌福利期奖励翻倍</a></p>
+                        </div>
+                        <a href="noticedetail.html">阅读全文>></a>
+                        </div>
+                      <div class="item-li"></div>
+                      <div class="item-li"></div>
+                      <div class="item-li"></div>
+                  </div>
+                  <div data-footer-item = "0"></div>
+              </div>
+              <div class="layui-tab-item">
+                  <div data-tab-item = "1">盒子2</div>
+                  <div data-footer-item = "1"></div>
+              </div>
+              <div class="layui-tab-item">
+                  <div data-tab-item = "2">盒子3</div>
+              </div>
+              <div class="layui-tab-item">
+                  <div data-tab-item = "3">盒子4</div>
+              </div>
+            </div>
+          </div>
+    </div>
+
+    <!-- footer -->
+    <div class="footer">
+        <ul>
+            <li>关于我们</li>
+            <li>联系我们</li>
+            <li>服务条款</li>
+        </ul>
+        <p>备案/许可证号:浙ICP备18012760号-1 Copyright 2018 找财猫 www.doucaishen.com</p>
+        <div>
+            <img src="img/index/yejiao.png" alt="">
+        </div>
+    </div>
+    <!-- JQ > 框架  > 签到日历插件 > 手写公共JS  公共 -->
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/layui/layui.all.js"></script>
+    <script src="js/schedule.js"></script>
+    <script src="js/public.js"></script>
+
+    <!-- 私人 -->
+    <script src="js/notice.js"></script>
+    <!-- 侧边导航栏 -->
+    <div class="nav-wrapper">
+        <div class="nav-item nav-item1">
+        </div>
+        <div class="nav-item nav-item2"></div>
+        <div class="nav-item nav-item3"></div>
+        <div class="nav-item nav-item4"></div>
+        <div class="nav-item nav-item5"></div>
+        <div class="nav-item nav-item6"></div>
+        <div class="nav-item nav-item7"></div>
+        <div class="nav-item nav-item8"></div>
+    </div>
+</body>
+<!-- 侧边导航栏 签到日历 -->
+<div id='schedule-box' class="boxshawv signin-box"></div>
+
+</html>

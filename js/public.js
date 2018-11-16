@@ -378,6 +378,9 @@
         $('.nav-item7').click(function () {
             window.location.href="activity.html";
         });
+        $('.nav-item9').click(function () {
+            window.location.href="notice.html";
+        });
         // 添加导航条的active
         function nav_init() {
             $('.nav-ul li').click(function () {

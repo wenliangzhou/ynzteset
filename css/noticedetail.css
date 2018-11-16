@@ -1,0 +1,85 @@
+.banner{
+    height: 79px;
+    background: black;
+    margin-bottom: 40px;
+}
+body{
+    background: #f4f4f4;
+}
+.midbox{
+    width: 1200px;
+    position: relative;
+    background-color: #ffffff;
+	border-radius: 4px;
+    border: solid 1px #e5e5e5;
+    padding-top: 40px;
+}
+.midbox::before{
+    display: block;
+    width: 100%;
+    content: attr(data-position);
+    height: 40px;
+	background-color: #000000;
+    border-radius: 4px 4px 0px 0px;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    line-height: 40px;
+	letter-spacing: 0px;
+    color: #ffe405;
+    font-size: 16px;
+    padding-left: 20px;
+}
+.midbox h1{
+    font-family: MicrosoftYaHei-Bold;
+	font-size: 16px;
+	line-height: 16px;
+    color: #000000;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.midbox .time{
+    font-size: 12px;
+	font-weight: normal;
+	font-stretch: normal;
+	line-height: 12px;
+	letter-spacing: 0px;
+    color: #666666;
+    text-align: center;
+}
+.midbox .decorate{
+    width: 1070px;
+	height: 1px;
+    border: solid 1px #ffe405;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.midbox .daohang{
+    height: 50px;
+    border-top: solid 1px #e5e5e5;
+}
+.midbox .daohang a{
+    display: block;
+    max-width: 500px;
+    height: 50px;
+    line-height: 50px;
+    float: left;
+    margin-left: 64px;
+}
+.midbox .daohang .next{
+    float: right;
+    margin-right: 64px;
+}
+.midbox .content p{
+    font-size: 14px;
+	font-weight: normal;
+	font-stretch: normal;
+	line-height: 28px;
+	letter-spacing: 0px;
+    color: #333333;
+    padding: 80px;
+}
+.footer{
+    margin-top: 40px;
+}

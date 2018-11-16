@@ -194,7 +194,7 @@ body{
     padding-top: 174px;
     text-align: center;
     line-height: 50px;
-    display: none;
+    /* display: none; */
     letter-spacing: 3px;
 }
 .gongxibox button{
@@ -220,7 +220,7 @@ body{
     width: 490px;
     height: 300px;
     position: relative;
-    display: none;
+    /* display: none; */
 }
 .yihan-bj{
     position: absolute;
@@ -249,4 +249,10 @@ body{
 }
 .yihan-btn:hover{
     background: rgb(172, 228, 41);
+}
+.yihan-wrapper{
+    display: none;
+}
+.gongxibox-wrapper{
+    display: none;
 }

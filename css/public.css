@@ -498,6 +498,7 @@ body .sign-class{
     height: 3rem;
     margin-bottom: 2px;
     position: relative;
+    cursor: pointer;
 }
 .nav-wrapper .nav-item1{
     background:rgba(0, 0, 0, 0.64) url(../img/public/fuwu.png) center center no-repeat;
@@ -531,6 +532,10 @@ body .sign-class{
 .nav-wrapper .nav-item8{
     background:rgba(0, 0, 0, 0.64) url(../img/public/fankui.png) center center no-repeat;
     background-size: 100% 100%;
+}
+.nav-wrapper .nav-item9{
+    background:rgba(0, 0, 0, 0.64) url(../img/public/gonggaonav.png) center center no-repeat;
+    background-size: 100% 100%;
     border-radius: 0rem 0rem 0.8rem 0.8rem;
 }
 .nav-wrapper .nav-item1:hover{
@@ -556,6 +561,9 @@ body .sign-class{
 }
 .nav-wrapper .nav-item8:hover{
     background:rgba(0, 0, 0, 0.64) url(../img/public/fankui2.png) center center no-repeat;    
+}
+.nav-wrapper .nav-item9:hover{
+    background:rgba(0, 0, 0, 0.64) url(../img/public/gongaonav2.png) center center no-repeat;    
 }
 
 .nav-wrapper .nav-item::after{

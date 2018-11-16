@@ -44,7 +44,7 @@ $('#tupBtn').bind('click',function(){
                         shade: 0.8,
                         skin: 'yihan-class',
                         title: false,
-                        content: $('.yihan')
+                        content: $('.yihan-wrapper').html()
                     });
                 });
             }else{
@@ -63,7 +63,7 @@ $('#tupBtn').bind('click',function(){
                         shade: 0.8,
                         skin: 'gongxi-class',
                         title: false,
-                        content: $('.gongxibox')
+                        content: $('.gongxibox-wrapper').html()
                     });
                 });
             }

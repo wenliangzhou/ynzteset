@@ -1,5 +1,6 @@
 
 ;(function (undefined) {
+	console.log('schedule-bagin');
 	var _global;
 	//工具函数
 	//配置合并
@@ -161,5 +162,5 @@
 	}else {
 		!('Schedule' in _global) && (_global.Schedule = Schedule);
 	}
-
+	console.log('schedule-done');
 }());

@@ -1,8 +1,14 @@
 (function () {
     var layer = layui.layer,
             laypage = layui.laypage;
+            console.log('public-bagin');
+            console.log(layer)
     $(document).ready(function () {
+        console.log('public-document-ready');
+        console.log(layer)
         layer.ready(function(){
+        console.log('public-layer-ready');
+        console.log(layer)
         // 定义一个全局变量，把公用方法放在这个对象上
         var arr = [];
     
@@ -401,6 +407,7 @@
             
         }
         nav_init();
+        console.log('public-done');
     })
     });
     

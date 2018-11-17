@@ -1,6 +1,8 @@
 (function () {
     $(document).ready(function () {
+        console.log('vip-document');
         layer.ready(function(){
+        console.log('vip-layer.ready');
         // 初始化提现选项卡
         wlz.tabInit('.tixian-item');
         wlz.tabInit('.mingxi-item');
@@ -570,6 +572,7 @@
                 }
             });
         });
+        console.log('vip-done')
     });
 });
 }());

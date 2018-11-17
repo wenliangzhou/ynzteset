@@ -5,7 +5,9 @@
         /**
          * @ 避免jQuery冲突
          */
+        console.log('index-bagin')
         $(document).ready(function () {
+            console.log('index-document-ready');
             $('.slick-2').slick({
                 dots: false,
                 infinite: true,
@@ -57,6 +59,7 @@
         });
         // 触发分页
         $('[data="leftfan"]').click();
+        console.log('index-done')
         });
         
     })();
